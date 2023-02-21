@@ -43,6 +43,7 @@ from prowlarr.api.log_api import LogApi
 from prowlarr.api.log_file_api import LogFileApi
 from prowlarr.api.newznab_api import NewznabApi
 from prowlarr.api.notification_api import NotificationApi
+from prowlarr.api.ping_api import PingApi
 from prowlarr.api.quality_profile_schema_api import QualityProfileSchemaApi
 from prowlarr.api.search_api import SearchApi
 from prowlarr.api.static_resource_api import StaticResourceApi
@@ -81,6 +82,7 @@ from prowlarr.models.command_resource import CommandResource
 from prowlarr.models.command_status import CommandStatus
 from prowlarr.models.command_trigger import CommandTrigger
 from prowlarr.models.custom_filter_resource import CustomFilterResource
+from prowlarr.models.database_type import DatabaseType
 from prowlarr.models.development_config_resource import DevelopmentConfigResource
 from prowlarr.models.download_client_category import DownloadClientCategory
 from prowlarr.models.download_client_config_resource import DownloadClientConfigResource
@@ -112,13 +114,16 @@ from prowlarr.models.movie_search_param import MovieSearchParam
 from prowlarr.models.music_search_param import MusicSearchParam
 from prowlarr.models.notification_resource import NotificationResource
 from prowlarr.models.paging_resource_filter import PagingResourceFilter
+from prowlarr.models.ping_resource import PingResource
 from prowlarr.models.provider_message import ProviderMessage
 from prowlarr.models.provider_message_type import ProviderMessageType
 from prowlarr.models.proxy_type import ProxyType
 from prowlarr.models.release_resource import ReleaseResource
+from prowlarr.models.runtime_mode import RuntimeMode
 from prowlarr.models.search_param import SearchParam
 from prowlarr.models.select_option import SelectOption
 from prowlarr.models.sort_direction import SortDirection
+from prowlarr.models.system_resource import SystemResource
 from prowlarr.models.tag_details_resource import TagDetailsResource
 from prowlarr.models.tag_resource import TagResource
 from prowlarr.models.task_resource import TaskResource

@@ -468,7 +468,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_system_status**
-> get_system_status()
+> SystemResource get_system_status()
 
 
 
@@ -511,7 +511,9 @@ with prowlarr.ApiClient(configuration) as api_client:
     api_instance = prowlarr.SystemApi(api_client)
 
     try:
-        api_instance.get_system_status()
+        api_response = api_instance.get_system_status()
+        print("The response of SystemApi->get_system_status:\n")
+        pprint(api_response)
     except Exception as e:
         print("Exception when calling SystemApi->get_system_status: %s\n" % e)
 ```
@@ -553,7 +555,9 @@ with prowlarr.ApiClient(configuration) as api_client:
     api_instance = prowlarr.SystemApi(api_client)
 
     try:
-        api_instance.get_system_status()
+        api_response = api_instance.get_system_status()
+        print("The response of SystemApi->get_system_status:\n")
+        pprint(api_response)
     except Exception as e:
         print("Exception when calling SystemApi->get_system_status: %s\n" % e)
 ```
@@ -563,7 +567,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-void (empty response body)
+[**SystemResource**](SystemResource.md)
 
 ### Authorization
 
@@ -572,7 +576,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |

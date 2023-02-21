@@ -55,7 +55,8 @@ class ReleaseResource(BaseModel):
     seeders: Optional[int]
     leechers: Optional[int]
     protocol: Optional[DownloadProtocol]
-    __properties = ["id", "guid", "age", "ageHours", "ageMinutes", "size", "files", "grabs", "indexerId", "indexer", "subGroup", "releaseHash", "title", "approved", "imdbId", "publishDate", "commentUrl", "downloadUrl", "infoUrl", "posterUrl", "indexerFlags", "categories", "magnetUrl", "infoHash", "seeders", "leechers", "protocol"]
+    file_name: Optional[str]
+    __properties = ["id", "guid", "age", "ageHours", "ageMinutes", "size", "files", "grabs", "indexerId", "indexer", "subGroup", "releaseHash", "title", "approved", "imdbId", "publishDate", "commentUrl", "downloadUrl", "infoUrl", "posterUrl", "indexerFlags", "categories", "magnetUrl", "infoHash", "seeders", "leechers", "protocol", "fileName"]
 
     class Config:
         allow_population_by_field_name = True
@@ -82,6 +83,7 @@ class ReleaseResource(BaseModel):
         """Returns the dictionary representation of the model using alias"""
         _dict = self.dict(by_alias=True,
                           exclude={
+                            "file_name",
                           },
                           exclude_none=True)
         # override the default output from pydantic by calling `to_dict()` of each item in categories (list)
@@ -159,6 +161,10 @@ class ReleaseResource(BaseModel):
         if self.leechers is None:
             _dict['leechers'] = None
 
+        # set to None if file_name (nullable) is None
+        if self.file_name is None:
+            _dict['fileName'] = None
+
         return _dict
 
     @classmethod
@@ -197,7 +203,8 @@ class ReleaseResource(BaseModel):
             "info_hash": obj.get("infoHash"),
             "seeders": obj.get("seeders"),
             "leechers": obj.get("leechers"),
-            "protocol": obj.get("protocol")
+            "protocol": obj.get("protocol"),
+            "file_name": obj.get("fileName")
         })
         return _obj
 

@@ -39,6 +39,7 @@ from prowlarr.api.log_api import LogApi
 from prowlarr.api.log_file_api import LogFileApi
 from prowlarr.api.newznab_api import NewznabApi
 from prowlarr.api.notification_api import NotificationApi
+from prowlarr.api.ping_api import PingApi
 from prowlarr.api.quality_profile_schema_api import QualityProfileSchemaApi
 from prowlarr.api.search_api import SearchApi
 from prowlarr.api.static_resource_api import StaticResourceApi

@@ -31,6 +31,7 @@ Name | Type | Description | Notes
 **seeders** | **int** |  | [optional] 
 **leechers** | **int** |  | [optional] 
 **protocol** | [**DownloadProtocol**](DownloadProtocol.md) |  | [optional] 
+**file_name** | **str** |  | [optional] [readonly] 
 
 ## Example
 

@@ -39,13 +39,16 @@ class NotificationResource(BaseModel):
     tags: Optional[List]
     presets: Optional[List]
     link: Optional[str]
+    on_grab: Optional[bool]
     on_health_issue: Optional[bool]
     on_application_update: Optional[bool]
+    supports_on_grab: Optional[bool]
+    include_manual_grabs: Optional[bool]
     supports_on_health_issue: Optional[bool]
     include_health_warnings: Optional[bool]
     supports_on_application_update: Optional[bool]
     test_command: Optional[str]
-    __properties = ["id", "name", "fields", "implementationName", "implementation", "configContract", "infoLink", "message", "tags", "presets", "link", "onHealthIssue", "onApplicationUpdate", "supportsOnHealthIssue", "includeHealthWarnings", "supportsOnApplicationUpdate", "testCommand"]
+    __properties = ["id", "name", "fields", "implementationName", "implementation", "configContract", "infoLink", "message", "tags", "presets", "link", "onGrab", "onHealthIssue", "onApplicationUpdate", "supportsOnGrab", "includeManualGrabs", "supportsOnHealthIssue", "includeHealthWarnings", "supportsOnApplicationUpdate", "testCommand"]
 
     class Config:
         allow_population_by_field_name = True
@@ -154,8 +157,11 @@ class NotificationResource(BaseModel):
             "tags": obj.get("tags"),
             "presets": [NotificationResource.from_dict(_item) for _item in obj.get("presets")] if obj.get("presets") is not None else None,
             "link": obj.get("link"),
+            "on_grab": obj.get("onGrab"),
             "on_health_issue": obj.get("onHealthIssue"),
             "on_application_update": obj.get("onApplicationUpdate"),
+            "supports_on_grab": obj.get("supportsOnGrab"),
+            "include_manual_grabs": obj.get("includeManualGrabs"),
             "supports_on_health_issue": obj.get("supportsOnHealthIssue"),
             "include_health_warnings": obj.get("includeHealthWarnings"),
             "supports_on_application_update": obj.get("supportsOnApplicationUpdate"),

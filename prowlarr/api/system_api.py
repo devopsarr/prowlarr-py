@@ -17,6 +17,7 @@ import re  # noqa: F401
 from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
+from prowlarr.models.system_resource import SystemResource
 
 from prowlarr.api_client import ApiClient
 from prowlarr.exceptions import (  # noqa: F401
@@ -550,7 +551,7 @@ class SystemApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def get_system_status(self, **kwargs) -> None:  # noqa: E501
+    def get_system_status(self, **kwargs) -> SystemResource:  # noqa: E501
         """get_system_status  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -572,7 +573,7 @@ class SystemApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: None
+        :rtype: SystemResource
         """
         kwargs['_return_http_data_only'] = True
         return self.get_system_status_with_http_info(**kwargs)  # noqa: E501
@@ -608,7 +609,7 @@ class SystemApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: None
+        :rtype: tuple(SystemResource, status_code(int), headers(HTTPHeaderDict))
         """
 
         _params = locals()
@@ -655,10 +656,16 @@ class SystemApi(object):
         # process the body parameter
         _body_params = None
 
+        # set the HTTP header `Accept`
+        _header_params['Accept'] = self.api_client.select_header_accept(
+            ['text/plain', 'application/json', 'text/json'])  # noqa: E501
+
         # authentication setting
         _auth_settings = ['X-Api-Key', 'apikey']  # noqa: E501
 
-        _response_types_map = {}
+        _response_types_map = {
+            '200': "SystemResource",
+        }
 
         return self.api_client.call_api(
             '/api/v1/system/status', 'GET',
