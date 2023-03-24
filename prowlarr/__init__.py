@@ -14,7 +14,9 @@
 
 from __future__ import absolute_import
 
-__version__ = "0.0.1"
+# x-release-please-start-version
+__version__ = "0.2.0"
+# x-release-please-end
 
 # import apis into sdk package
 from prowlarr.api.api_info_api import ApiInfoApi
@@ -96,7 +98,6 @@ from prowlarr.models.history_resource import HistoryResource
 from prowlarr.models.history_resource_paging_resource import HistoryResourcePagingResource
 from prowlarr.models.host_config_resource import HostConfigResource
 from prowlarr.models.host_statistics import HostStatistics
-from prowlarr.models.http_uri import HttpUri
 from prowlarr.models.indexer_capability_resource import IndexerCapabilityResource
 from prowlarr.models.indexer_category import IndexerCategory
 from prowlarr.models.indexer_editor_resource import IndexerEditorResource
@@ -127,11 +128,9 @@ from prowlarr.models.system_resource import SystemResource
 from prowlarr.models.tag_details_resource import TagDetailsResource
 from prowlarr.models.tag_resource import TagResource
 from prowlarr.models.task_resource import TaskResource
-from prowlarr.models.time_span import TimeSpan
 from prowlarr.models.tv_search_param import TvSearchParam
 from prowlarr.models.ui_config_resource import UiConfigResource
 from prowlarr.models.update_changes import UpdateChanges
 from prowlarr.models.update_mechanism import UpdateMechanism
 from prowlarr.models.update_resource import UpdateResource
 from prowlarr.models.user_agent_statistics import UserAgentStatistics
-from prowlarr.models.version import Version

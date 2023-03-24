@@ -31,6 +31,6 @@ class CertificateValidationType(str, Enum):
     """
 
     ENABLED = 'enabled'
-    DISABLED_FOR_LOCAL_ADDRESSES = 'disabledForLocalAddresses'
+    DISABLEDFORLOCALADDRESSES = 'disabledForLocalAddresses'
     DISABLED = 'disabled'
 

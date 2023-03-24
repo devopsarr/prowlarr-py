@@ -53,6 +53,7 @@ class IndexerResource(BaseModel):
     supports_rss: Optional[bool]
     supports_search: Optional[bool]
     supports_redirect: Optional[bool]
+    supports_pagination: Optional[bool]
     app_profile_id: Optional[int]
     protocol: Optional[DownloadProtocol]
     privacy: Optional[IndexerPrivacy]
@@ -61,7 +62,7 @@ class IndexerResource(BaseModel):
     added: Optional[datetime]
     status: Optional[IndexerStatusResource]
     sort_name: Optional[str]
-    __properties = ["id", "name", "fields", "implementationName", "implementation", "configContract", "infoLink", "message", "tags", "presets", "indexerUrls", "legacyUrls", "definitionName", "description", "language", "encoding", "enable", "redirect", "supportsRss", "supportsSearch", "supportsRedirect", "appProfileId", "protocol", "privacy", "capabilities", "priority", "added", "status", "sortName"]
+    __properties = ["id", "name", "fields", "implementationName", "implementation", "configContract", "infoLink", "message", "tags", "presets", "indexerUrls", "legacyUrls", "definitionName", "description", "language", "encoding", "enable", "redirect", "supportsRss", "supportsSearch", "supportsRedirect", "supportsPagination", "appProfileId", "protocol", "privacy", "capabilities", "priority", "added", "status", "sortName"]
 
     class Config:
         allow_population_by_field_name = True
@@ -206,6 +207,7 @@ class IndexerResource(BaseModel):
             "supports_rss": obj.get("supportsRss"),
             "supports_search": obj.get("supportsSearch"),
             "supports_redirect": obj.get("supportsRedirect"),
+            "supports_pagination": obj.get("supportsPagination"),
             "app_profile_id": obj.get("appProfileId"),
             "protocol": obj.get("protocol"),
             "privacy": obj.get("privacy"),

@@ -46,7 +46,6 @@ docs/HistoryResourcePagingResource.md
 docs/HostConfigApi.md
 docs/HostConfigResource.md
 docs/HostStatistics.md
-docs/HttpUri.md
 docs/IndexerApi.md
 docs/IndexerCapabilityResource.md
 docs/IndexerCategory.md
@@ -97,7 +96,6 @@ docs/TagDetailsResource.md
 docs/TagResource.md
 docs/TaskApi.md
 docs/TaskResource.md
-docs/TimeSpan.md
 docs/TvSearchParam.md
 docs/UiConfigApi.md
 docs/UiConfigResource.md
@@ -107,7 +105,6 @@ docs/UpdateLogFileApi.md
 docs/UpdateMechanism.md
 docs/UpdateResource.md
 docs/UserAgentStatistics.md
-docs/Version.md
 prowlarr/__init__.py
 prowlarr/api/__init__.py
 prowlarr/api/api_info_api.py
@@ -182,7 +179,6 @@ prowlarr/models/history_resource.py
 prowlarr/models/history_resource_paging_resource.py
 prowlarr/models/host_config_resource.py
 prowlarr/models/host_statistics.py
-prowlarr/models/http_uri.py
 prowlarr/models/indexer_capability_resource.py
 prowlarr/models/indexer_category.py
 prowlarr/models/indexer_editor_resource.py
@@ -213,14 +209,13 @@ prowlarr/models/system_resource.py
 prowlarr/models/tag_details_resource.py
 prowlarr/models/tag_resource.py
 prowlarr/models/task_resource.py
-prowlarr/models/time_span.py
 prowlarr/models/tv_search_param.py
 prowlarr/models/ui_config_resource.py
 prowlarr/models/update_changes.py
 prowlarr/models/update_mechanism.py
 prowlarr/models/update_resource.py
 prowlarr/models/user_agent_statistics.py
-prowlarr/models/version.py
 prowlarr/rest.py
+pyproject.toml
 setup.cfg
 setup.py

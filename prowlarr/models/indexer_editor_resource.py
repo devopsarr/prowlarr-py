@@ -28,7 +28,7 @@ class IndexerEditorResource(BaseModel):
     Do not edit the class manually.
     """
     indexer_ids: Optional[List]
-    enable: Optional[str]
+    enable: Optional[bool]
     app_profile_id: Optional[int]
     tags: Optional[List]
     apply_tags: Optional[ApplyTags]

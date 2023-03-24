@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **indexer_ids** | **List[int]** |  | [optional] 
-**enable** | **str** |  | [optional] 
+**enable** | **bool** |  | [optional] 
 **app_profile_id** | **int** |  | [optional] 
 **tags** | **List[int]** |  | [optional] 
 **apply_tags** | [**ApplyTags**](ApplyTags.md) |  | [optional] 

@@ -41,6 +41,7 @@ class ReleaseResource(BaseModel):
     sub_group: Optional[str]
     release_hash: Optional[str]
     title: Optional[str]
+    sort_title: Optional[str]
     approved: Optional[bool]
     imdb_id: Optional[int]
     publish_date: Optional[datetime]
@@ -56,7 +57,7 @@ class ReleaseResource(BaseModel):
     leechers: Optional[int]
     protocol: Optional[DownloadProtocol]
     file_name: Optional[str]
-    __properties = ["id", "guid", "age", "ageHours", "ageMinutes", "size", "files", "grabs", "indexerId", "indexer", "subGroup", "releaseHash", "title", "approved", "imdbId", "publishDate", "commentUrl", "downloadUrl", "infoUrl", "posterUrl", "indexerFlags", "categories", "magnetUrl", "infoHash", "seeders", "leechers", "protocol", "fileName"]
+    __properties = ["id", "guid", "age", "ageHours", "ageMinutes", "size", "files", "grabs", "indexerId", "indexer", "subGroup", "releaseHash", "title", "sortTitle", "approved", "imdbId", "publishDate", "commentUrl", "downloadUrl", "infoUrl", "posterUrl", "indexerFlags", "categories", "magnetUrl", "infoHash", "seeders", "leechers", "protocol", "fileName"]
 
     class Config:
         allow_population_by_field_name = True
@@ -120,6 +121,10 @@ class ReleaseResource(BaseModel):
         # set to None if title (nullable) is None
         if self.title is None:
             _dict['title'] = None
+
+        # set to None if sort_title (nullable) is None
+        if self.sort_title is None:
+            _dict['sortTitle'] = None
 
         # set to None if comment_url (nullable) is None
         if self.comment_url is None:
@@ -190,6 +195,7 @@ class ReleaseResource(BaseModel):
             "sub_group": obj.get("subGroup"),
             "release_hash": obj.get("releaseHash"),
             "title": obj.get("title"),
+            "sort_title": obj.get("sortTitle"),
             "approved": obj.get("approved"),
             "imdb_id": obj.get("imdbId"),
             "publish_date": obj.get("publishDate"),

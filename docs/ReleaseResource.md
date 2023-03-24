@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **sub_group** | **str** |  | [optional] 
 **release_hash** | **str** |  | [optional] 
 **title** | **str** |  | [optional] 
+**sort_title** | **str** |  | [optional] 
 **approved** | **bool** |  | [optional] 
 **imdb_id** | **int** |  | [optional] 
 **publish_date** | **datetime** |  | [optional] 

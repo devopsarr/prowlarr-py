@@ -31,6 +31,6 @@ class IndexerPrivacy(str, Enum):
     """
 
     PUBLIC = 'public'
-    SEMI_PRIVATE = 'semiPrivate'
+    SEMIPRIVATE = 'semiPrivate'
     PRIVATE = 'private'
 

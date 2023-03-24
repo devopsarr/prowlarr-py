@@ -30,7 +30,7 @@ class AuthenticationType(str, Enum):
     allowed enum values
     """
 
-    var_NONE = 'none'
+    NONE = 'none'
     BASIC = 'basic'
     FORMS = 'forms'
     EXTERNAL = 'external'

@@ -30,6 +30,6 @@ class DatabaseType(str, Enum):
     allowed enum values
     """
 
-    SQ_LITE = 'sqLite'
-    POSTGRE_SQL = 'postgreSQL'
+    SQLITE = 'sqLite'
+    POSTGRESQL = 'postgreSQL'
 

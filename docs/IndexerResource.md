@@ -25,6 +25,7 @@ Name | Type | Description | Notes
 **supports_rss** | **bool** |  | [optional] 
 **supports_search** | **bool** |  | [optional] 
 **supports_redirect** | **bool** |  | [optional] 
+**supports_pagination** | **bool** |  | [optional] 
 **app_profile_id** | **int** |  | [optional] 
 **protocol** | [**DownloadProtocol**](DownloadProtocol.md) |  | [optional] 
 **privacy** | [**IndexerPrivacy**](IndexerPrivacy.md) |  | [optional] 
