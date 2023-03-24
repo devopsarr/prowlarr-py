@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/devopsarr/prowlarr-py/compare/v0.2.0...v0.3.0) (2023-03-24)
+
+
+### Features
+
+* sdk generation alignment ([96923de](https://github.com/devopsarr/prowlarr-py/commit/96923de6f4e2338366051ee41b3f187c33358630))
+
 ## [0.2.0](https://github.com/devopsarr/prowlarr-py/compare/v0.1.0...v0.2.0) (2023-02-21)
 
 
