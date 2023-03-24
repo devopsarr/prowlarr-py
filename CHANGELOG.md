@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/devopsarr/prowlarr-py/compare/v0.3.0...v0.3.1) (2023-03-24)
+
+
+### Bug Fixes
+
+* **devopsarr/radarr-py#6:** indentation error on config ([4ce24a1](https://github.com/devopsarr/prowlarr-py/commit/4ce24a10beaac9cc5947e680e27d8319051e1e8f))
+
 ## [0.3.0](https://github.com/devopsarr/prowlarr-py/compare/v0.2.0...v0.3.0) (2023-03-24)
 
 
