@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **source** | **str** |  | [optional] 
 **type** | [**HealthCheckResult**](HealthCheckResult.md) |  | [optional] 
 **message** | **str** |  | [optional] 
-**wiki_url** | [**HttpUri**](HttpUri.md) |  | [optional] 
+**wiki_url** | **str** |  | [optional] 
 
 ## Example
 

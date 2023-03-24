@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **queued** | **datetime** |  | [optional] 
 **started** | **datetime** |  | [optional] 
 **ended** | **datetime** |  | [optional] 
-**duration** | [**TimeSpan**](TimeSpan.md) |  | [optional] 
+**duration** | **str** |  | [optional] 
 **exception** | **str** |  | [optional] 
 **trigger** | [**CommandTrigger**](CommandTrigger.md) |  | [optional] 
 **client_user_agent** | **str** |  | [optional] 

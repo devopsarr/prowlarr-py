@@ -7,6 +7,8 @@ Name | Type | Description | Notes
 **id** | **int** |  | [optional] 
 **indexer_id** | **int** |  | [optional] 
 **disabled_till** | **datetime** |  | [optional] 
+**most_recent_failure** | **datetime** |  | [optional] 
+**initial_failure** | **datetime** |  | [optional] 
 
 ## Example
 

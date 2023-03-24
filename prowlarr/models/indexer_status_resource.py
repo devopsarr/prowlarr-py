@@ -29,7 +29,9 @@ class IndexerStatusResource(BaseModel):
     id: Optional[int]
     indexer_id: Optional[int]
     disabled_till: Optional[datetime]
-    __properties = ["id", "indexerId", "disabledTill"]
+    most_recent_failure: Optional[datetime]
+    initial_failure: Optional[datetime]
+    __properties = ["id", "indexerId", "disabledTill", "mostRecentFailure", "initialFailure"]
 
     class Config:
         allow_population_by_field_name = True
@@ -62,6 +64,14 @@ class IndexerStatusResource(BaseModel):
         if self.disabled_till is None:
             _dict['disabledTill'] = None
 
+        # set to None if most_recent_failure (nullable) is None
+        if self.most_recent_failure is None:
+            _dict['mostRecentFailure'] = None
+
+        # set to None if initial_failure (nullable) is None
+        if self.initial_failure is None:
+            _dict['initialFailure'] = None
+
         return _dict
 
     @classmethod
@@ -76,7 +86,9 @@ class IndexerStatusResource(BaseModel):
         _obj = IndexerStatusResource.parse_obj({
             "id": obj.get("id"),
             "indexer_id": obj.get("indexerId"),
-            "disabled_till": obj.get("disabledTill")
+            "disabled_till": obj.get("disabledTill"),
+            "most_recent_failure": obj.get("mostRecentFailure"),
+            "initial_failure": obj.get("initialFailure")
         })
         return _obj
 

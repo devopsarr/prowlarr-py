@@ -31,6 +31,6 @@ class ApplicationSyncLevel(str, Enum):
     """
 
     DISABLED = 'disabled'
-    ADD_ONLY = 'addOnly'
-    FULL_SYNC = 'fullSync'
+    ADDONLY = 'addOnly'
+    FULLSYNC = 'fullSync'
 

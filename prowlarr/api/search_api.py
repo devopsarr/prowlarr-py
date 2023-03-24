@@ -17,7 +17,7 @@ import re  # noqa: F401
 from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
-from pydantic import StrictInt, StrictStr
+from pydantic import StrictInt, StrictStr, conlist
 
 from typing import List, Optional
 
@@ -167,7 +167,7 @@ class SearchApi(object):
                 _header_params['Content-Type'] = _content_types_list
 
         # authentication setting
-        _auth_settings = ['X-Api-Key', 'apikey']  # noqa: E501
+        _auth_settings = ['apikey', 'X-Api-Key']  # noqa: E501
 
         _response_types_map = {
             '200': "ReleaseResource",
@@ -191,7 +191,7 @@ class SearchApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def create_search_bulk(self, release_resource : Optional[List[ReleaseResource]] = None, **kwargs) -> ReleaseResource:  # noqa: E501
+    def create_search_bulk(self, release_resource : Optional[conlist(ReleaseResource)] = None, **kwargs) -> ReleaseResource:  # noqa: E501
         """create_search_bulk  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -221,7 +221,7 @@ class SearchApi(object):
         return self.create_search_bulk_with_http_info(release_resource, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def create_search_bulk_with_http_info(self, release_resource : Optional[List[ReleaseResource]] = None, **kwargs):  # noqa: E501
+    def create_search_bulk_with_http_info(self, release_resource : Optional[conlist(ReleaseResource)] = None, **kwargs):  # noqa: E501
         """create_search_bulk  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -315,7 +315,7 @@ class SearchApi(object):
                 _header_params['Content-Type'] = _content_types_list
 
         # authentication setting
-        _auth_settings = ['X-Api-Key', 'apikey']  # noqa: E501
+        _auth_settings = ['apikey', 'X-Api-Key']  # noqa: E501
 
         _response_types_map = {
             '200': "ReleaseResource",
@@ -456,7 +456,7 @@ class SearchApi(object):
             ['text/plain', 'application/json', 'text/json'])  # noqa: E501
 
         # authentication setting
-        _auth_settings = ['X-Api-Key', 'apikey']  # noqa: E501
+        _auth_settings = ['apikey', 'X-Api-Key']  # noqa: E501
 
         _response_types_map = {
             '200': "ReleaseResource",
@@ -480,7 +480,7 @@ class SearchApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def list_search(self, query : Optional[StrictStr] = None, type : Optional[StrictStr] = None, indexer_ids : Optional[List[StrictInt]] = None, categories : Optional[List[StrictInt]] = None, limit : Optional[StrictInt] = None, offset : Optional[StrictInt] = None, **kwargs) -> List[ReleaseResource]:  # noqa: E501
+    def list_search(self, query : Optional[StrictStr] = None, type : Optional[StrictStr] = None, indexer_ids : Optional[conlist(StrictInt)] = None, categories : Optional[conlist(StrictInt)] = None, limit : Optional[StrictInt] = None, offset : Optional[StrictInt] = None, **kwargs) -> List[ReleaseResource]:  # noqa: E501
         """list_search  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -520,7 +520,7 @@ class SearchApi(object):
         return self.list_search_with_http_info(query, type, indexer_ids, categories, limit, offset, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def list_search_with_http_info(self, query : Optional[StrictStr] = None, type : Optional[StrictStr] = None, indexer_ids : Optional[List[StrictInt]] = None, categories : Optional[List[StrictInt]] = None, limit : Optional[StrictInt] = None, offset : Optional[StrictInt] = None, **kwargs):  # noqa: E501
+    def list_search_with_http_info(self, query : Optional[StrictStr] = None, type : Optional[StrictStr] = None, indexer_ids : Optional[conlist(StrictInt)] = None, categories : Optional[conlist(StrictInt)] = None, limit : Optional[StrictInt] = None, offset : Optional[StrictInt] = None, **kwargs):  # noqa: E501
         """list_search  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -634,7 +634,7 @@ class SearchApi(object):
             ['text/plain', 'application/json', 'text/json'])  # noqa: E501
 
         # authentication setting
-        _auth_settings = ['X-Api-Key', 'apikey']  # noqa: E501
+        _auth_settings = ['apikey', 'X-Api-Key']  # noqa: E501
 
         _response_types_map = {
             '200': "List[ReleaseResource]",

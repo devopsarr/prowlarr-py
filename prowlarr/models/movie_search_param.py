@@ -31,12 +31,12 @@ class MovieSearchParam(str, Enum):
     """
 
     Q = 'q'
-    IMDB_ID = 'imdbId'
-    TMDB_ID = 'tmdbId'
-    IMDB_TITLE = 'imdbTitle'
-    IMDB_YEAR = 'imdbYear'
-    TRAKT_ID = 'traktId'
+    IMDBID = 'imdbId'
+    TMDBID = 'tmdbId'
+    IMDBTITLE = 'imdbTitle'
+    IMDBYEAR = 'imdbYear'
+    TRAKTID = 'traktId'
     GENRE = 'genre'
-    DOUBAN_ID = 'doubanId'
+    DOUBANID = 'doubanId'
     YEAR = 'year'
 

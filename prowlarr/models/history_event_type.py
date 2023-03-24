@@ -31,9 +31,9 @@ class HistoryEventType(str, Enum):
     """
 
     UNKNOWN = 'unknown'
-    RELEASE_GRABBED = 'releaseGrabbed'
-    INDEXER_QUERY = 'indexerQuery'
-    INDEXER_RSS = 'indexerRss'
-    INDEXER_AUTH = 'indexerAuth'
-    INDEXER_INFO = 'indexerInfo'
+    RELEASEGRABBED = 'releaseGrabbed'
+    INDEXERQUERY = 'indexerQuery'
+    INDEXERRSS = 'indexerRss'
+    INDEXERAUTH = 'indexerAuth'
+    INDEXERINFO = 'indexerInfo'
 

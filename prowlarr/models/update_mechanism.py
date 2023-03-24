@@ -30,7 +30,7 @@ class UpdateMechanism(str, Enum):
     allowed enum values
     """
 
-    BUILT_IN = 'builtIn'
+    BUILTIN = 'builtIn'
     SCRIPT = 'script'
     EXTERNAL = 'external'
     APT = 'apt'
