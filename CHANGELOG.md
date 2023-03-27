@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.2](https://github.com/devopsarr/prowlarr-py/compare/v0.3.1...v0.3.2) (2023-03-27)
+
+
+### Bug Fixes
+
+* **devopsarr/sonarr-py#6:** remove timespan validator ([df1bfcc](https://github.com/devopsarr/prowlarr-py/commit/df1bfcc4a68661856a240d375c66cacc02807e2c))
+
 ## [0.3.1](https://github.com/devopsarr/prowlarr-py/compare/v0.3.0...v0.3.1) (2023-03-24)
 
 

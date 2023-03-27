@@ -425,7 +425,7 @@ conf = prowlarr.Configuration(
         :return: The report for debugging.
         """
         # x-release-please-start-version
-        sdkversion = '0.3.1'
+        sdkversion = '0.3.2'
         # x-release-please-end
         return "Python SDK Debug Report:\n"\
                "OS: {env}\n"\
