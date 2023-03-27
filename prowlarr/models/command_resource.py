@@ -18,7 +18,7 @@ import json
 
 from datetime import datetime
 from typing import Optional
-from pydantic import BaseModel, validator
+from pydantic import BaseModel
 from prowlarr.models.command import Command
 from prowlarr.models.command_priority import CommandPriority
 from prowlarr.models.command_status import CommandStatus
@@ -49,12 +49,6 @@ class CommandResource(BaseModel):
     update_scheduled_task: Optional[bool]
     last_execution_time: Optional[datetime]
     __properties = ["id", "name", "commandName", "message", "body", "priority", "status", "queued", "started", "ended", "duration", "exception", "trigger", "clientUserAgent", "stateChangeTime", "sendUpdatesToClient", "updateScheduledTask", "lastExecutionTime"]
-
-    @validator('duration')
-    def duration_validate_regular_expression(cls, v):
-        if not re.match(r"\d{2}:\d{2}:\d{2}", v):
-            raise ValueError(r"must validate the regular expression /\d{2}:\d{2}:\d{2}/")
-        return v
 
     class Config:
         allow_population_by_field_name = True
