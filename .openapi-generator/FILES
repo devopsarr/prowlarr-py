@@ -145,6 +145,7 @@ prowlarr/api/ui_config_api.py
 prowlarr/api/update_api.py
 prowlarr/api/update_log_file_api.py
 prowlarr/api_client.py
+prowlarr/api_response.py
 prowlarr/configuration.py
 prowlarr/exceptions.py
 prowlarr/models/__init__.py
