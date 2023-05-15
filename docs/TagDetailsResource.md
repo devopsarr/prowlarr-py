@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **notification_ids** | **List[int]** |  | [optional] 
 **indexer_ids** | **List[int]** |  | [optional] 
 **indexer_proxy_ids** | **List[int]** |  | [optional] 
+**application_ids** | **List[int]** |  | [optional] 
 
 ## Example
 
