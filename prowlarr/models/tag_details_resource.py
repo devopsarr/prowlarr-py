@@ -31,7 +31,8 @@ class TagDetailsResource(BaseModel):
     notification_ids: Optional[List]
     indexer_ids: Optional[List]
     indexer_proxy_ids: Optional[List]
-    __properties = ["id", "label", "notificationIds", "indexerIds", "indexerProxyIds"]
+    application_ids: Optional[List]
+    __properties = ["id", "label", "notificationIds", "indexerIds", "indexerProxyIds", "applicationIds"]
 
     class Config:
         allow_population_by_field_name = True
@@ -76,6 +77,10 @@ class TagDetailsResource(BaseModel):
         if self.indexer_proxy_ids is None:
             _dict['indexerProxyIds'] = None
 
+        # set to None if application_ids (nullable) is None
+        if self.application_ids is None:
+            _dict['applicationIds'] = None
+
         return _dict
 
     @classmethod
@@ -92,7 +97,8 @@ class TagDetailsResource(BaseModel):
             "label": obj.get("label"),
             "notification_ids": obj.get("notificationIds"),
             "indexer_ids": obj.get("indexerIds"),
-            "indexer_proxy_ids": obj.get("indexerProxyIds")
+            "indexer_proxy_ids": obj.get("indexerProxyIds"),
+            "application_ids": obj.get("applicationIds")
         })
         return _obj
 

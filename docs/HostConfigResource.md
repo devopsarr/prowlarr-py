@@ -23,6 +23,7 @@ Name | Type | Description | Notes
 **ssl_cert_password** | **str** |  | [optional] 
 **url_base** | **str** |  | [optional] 
 **instance_name** | **str** |  | [optional] 
+**application_url** | **str** |  | [optional] 
 **update_automatically** | **bool** |  | [optional] 
 **update_mechanism** | [**UpdateMechanism**](UpdateMechanism.md) |  | [optional] 
 **update_script_path** | **str** |  | [optional] 
