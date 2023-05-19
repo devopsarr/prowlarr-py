@@ -972,7 +972,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_applications**
-> ApplicationResource update_applications(id, application_resource=application_resource)
+> ApplicationResource update_applications(id, force_save=force_save, application_resource=application_resource)
 
 
 
@@ -1014,10 +1014,11 @@ with prowlarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = prowlarr.ApplicationApi(api_client)
     id = 'id_example' # str | 
+    force_save = False # bool |  (optional) (default to False)
     application_resource = prowlarr.ApplicationResource() # ApplicationResource |  (optional)
 
     try:
-        api_response = api_instance.update_applications(id, application_resource=application_resource)
+        api_response = api_instance.update_applications(id, force_save=force_save, application_resource=application_resource)
         print("The response of ApplicationApi->update_applications:\n")
         pprint(api_response)
     except Exception as e:
@@ -1060,10 +1061,11 @@ with prowlarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = prowlarr.ApplicationApi(api_client)
     id = 'id_example' # str | 
+    force_save = False # bool |  (optional) (default to False)
     application_resource = prowlarr.ApplicationResource() # ApplicationResource |  (optional)
 
     try:
-        api_response = api_instance.update_applications(id, application_resource=application_resource)
+        api_response = api_instance.update_applications(id, force_save=force_save, application_resource=application_resource)
         print("The response of ApplicationApi->update_applications:\n")
         pprint(api_response)
     except Exception as e:
@@ -1075,6 +1077,7 @@ with prowlarr.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
+ **force_save** | **bool**|  | [optional] [default to False]
  **application_resource** | [**ApplicationResource**](ApplicationResource.md)|  | [optional] 
 
 ### Return type

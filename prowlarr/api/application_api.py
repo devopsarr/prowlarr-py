@@ -17,7 +17,7 @@ import re  # noqa: F401
 from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
-from pydantic import StrictInt, StrictStr
+from pydantic import StrictBool, StrictInt, StrictStr
 
 from typing import List, Optional
 
@@ -1154,17 +1154,19 @@ class ApplicationApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def update_applications(self, id : StrictStr, application_resource : Optional[ApplicationResource] = None, **kwargs) -> ApplicationResource:  # noqa: E501
+    def update_applications(self, id : StrictStr, force_save : Optional[StrictBool] = None, application_resource : Optional[ApplicationResource] = None, **kwargs) -> ApplicationResource:  # noqa: E501
         """update_applications  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.update_applications(id, application_resource, async_req=True)
+        >>> thread = api.update_applications(id, force_save, application_resource, async_req=True)
         >>> result = thread.get()
 
         :param id: (required)
         :type id: str
+        :param force_save:
+        :type force_save: bool
         :param application_resource:
         :type application_resource: ApplicationResource
         :param async_req: Whether to execute the request asynchronously.
@@ -1183,20 +1185,22 @@ class ApplicationApi(object):
         :rtype: ApplicationResource
         """
         kwargs['_return_http_data_only'] = True
-        return self.update_applications_with_http_info(id, application_resource, **kwargs)  # noqa: E501
+        return self.update_applications_with_http_info(id, force_save, application_resource, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def update_applications_with_http_info(self, id : StrictStr, application_resource : Optional[ApplicationResource] = None, **kwargs):  # noqa: E501
+    def update_applications_with_http_info(self, id : StrictStr, force_save : Optional[StrictBool] = None, application_resource : Optional[ApplicationResource] = None, **kwargs):  # noqa: E501
         """update_applications  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.update_applications_with_http_info(id, application_resource, async_req=True)
+        >>> thread = api.update_applications_with_http_info(id, force_save, application_resource, async_req=True)
         >>> result = thread.get()
 
         :param id: (required)
         :type id: str
+        :param force_save:
+        :type force_save: bool
         :param application_resource:
         :type application_resource: ApplicationResource
         :param async_req: Whether to execute the request asynchronously.
@@ -1227,6 +1231,7 @@ class ApplicationApi(object):
 
         _all_params = [
             'id',
+            'force_save',
             'application_resource'
         ]
         _all_params.extend(
@@ -1260,6 +1265,8 @@ class ApplicationApi(object):
 
         # process the query parameters
         _query_params = []
+        if _params.get('force_save') is not None:  # noqa: E501
+            _query_params.append(('forceSave', _params['force_save']))
 
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))

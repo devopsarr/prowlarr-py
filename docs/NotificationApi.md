@@ -972,7 +972,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_notification**
-> NotificationResource update_notification(id, notification_resource=notification_resource)
+> NotificationResource update_notification(id, force_save=force_save, notification_resource=notification_resource)
 
 
 
@@ -1014,10 +1014,11 @@ with prowlarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = prowlarr.NotificationApi(api_client)
     id = 'id_example' # str | 
+    force_save = False # bool |  (optional) (default to False)
     notification_resource = prowlarr.NotificationResource() # NotificationResource |  (optional)
 
     try:
-        api_response = api_instance.update_notification(id, notification_resource=notification_resource)
+        api_response = api_instance.update_notification(id, force_save=force_save, notification_resource=notification_resource)
         print("The response of NotificationApi->update_notification:\n")
         pprint(api_response)
     except Exception as e:
@@ -1060,10 +1061,11 @@ with prowlarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = prowlarr.NotificationApi(api_client)
     id = 'id_example' # str | 
+    force_save = False # bool |  (optional) (default to False)
     notification_resource = prowlarr.NotificationResource() # NotificationResource |  (optional)
 
     try:
-        api_response = api_instance.update_notification(id, notification_resource=notification_resource)
+        api_response = api_instance.update_notification(id, force_save=force_save, notification_resource=notification_resource)
         print("The response of NotificationApi->update_notification:\n")
         pprint(api_response)
     except Exception as e:
@@ -1075,6 +1077,7 @@ with prowlarr.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
+ **force_save** | **bool**|  | [optional] [default to False]
  **notification_resource** | [**NotificationResource**](NotificationResource.md)|  | [optional] 
 
 ### Return type
