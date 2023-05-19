@@ -17,7 +17,7 @@ import re  # noqa: F401
 from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
-from pydantic import StrictInt, StrictStr
+from pydantic import StrictBool, StrictInt, StrictStr
 
 from typing import List, Optional
 
@@ -1154,17 +1154,19 @@ class IndexerProxyApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def update_indexer_proxy(self, id : StrictStr, indexer_proxy_resource : Optional[IndexerProxyResource] = None, **kwargs) -> IndexerProxyResource:  # noqa: E501
+    def update_indexer_proxy(self, id : StrictStr, force_save : Optional[StrictBool] = None, indexer_proxy_resource : Optional[IndexerProxyResource] = None, **kwargs) -> IndexerProxyResource:  # noqa: E501
         """update_indexer_proxy  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.update_indexer_proxy(id, indexer_proxy_resource, async_req=True)
+        >>> thread = api.update_indexer_proxy(id, force_save, indexer_proxy_resource, async_req=True)
         >>> result = thread.get()
 
         :param id: (required)
         :type id: str
+        :param force_save:
+        :type force_save: bool
         :param indexer_proxy_resource:
         :type indexer_proxy_resource: IndexerProxyResource
         :param async_req: Whether to execute the request asynchronously.
@@ -1183,20 +1185,22 @@ class IndexerProxyApi(object):
         :rtype: IndexerProxyResource
         """
         kwargs['_return_http_data_only'] = True
-        return self.update_indexer_proxy_with_http_info(id, indexer_proxy_resource, **kwargs)  # noqa: E501
+        return self.update_indexer_proxy_with_http_info(id, force_save, indexer_proxy_resource, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def update_indexer_proxy_with_http_info(self, id : StrictStr, indexer_proxy_resource : Optional[IndexerProxyResource] = None, **kwargs):  # noqa: E501
+    def update_indexer_proxy_with_http_info(self, id : StrictStr, force_save : Optional[StrictBool] = None, indexer_proxy_resource : Optional[IndexerProxyResource] = None, **kwargs):  # noqa: E501
         """update_indexer_proxy  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.update_indexer_proxy_with_http_info(id, indexer_proxy_resource, async_req=True)
+        >>> thread = api.update_indexer_proxy_with_http_info(id, force_save, indexer_proxy_resource, async_req=True)
         >>> result = thread.get()
 
         :param id: (required)
         :type id: str
+        :param force_save:
+        :type force_save: bool
         :param indexer_proxy_resource:
         :type indexer_proxy_resource: IndexerProxyResource
         :param async_req: Whether to execute the request asynchronously.
@@ -1227,6 +1231,7 @@ class IndexerProxyApi(object):
 
         _all_params = [
             'id',
+            'force_save',
             'indexer_proxy_resource'
         ]
         _all_params.extend(
@@ -1260,6 +1265,8 @@ class IndexerProxyApi(object):
 
         # process the query parameters
         _query_params = []
+        if _params.get('force_save') is not None:  # noqa: E501
+            _query_params.append(('forceSave', _params['force_save']))
 
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
