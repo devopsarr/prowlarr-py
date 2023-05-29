@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.0](https://github.com/devopsarr/prowlarr-py/compare/v0.3.2...v0.4.0) (2023-05-19)
+
+
+### Features
+
+* **devopsarr/prowlarr-py#11:** add request timeout to config ([046bdfb](https://github.com/devopsarr/prowlarr-py/commit/046bdfb56c4862a818edca82812feb5c9aaa68f6))
+* pin openapi version and add version management ([658c5d6](https://github.com/devopsarr/prowlarr-py/commit/658c5d68b5b516b460c25aaf5a09424972ddb5a4))
+
 ## [0.3.2](https://github.com/devopsarr/prowlarr-py/compare/v0.3.1...v0.3.2) (2023-03-27)
 
 
