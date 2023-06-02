@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **create_applications**
-> ApplicationResource create_applications(application_resource=application_resource)
+> ApplicationResource create_applications(force_save=force_save, application_resource=application_resource)
 
 
 
@@ -57,10 +57,11 @@ configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
 with prowlarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = prowlarr.ApplicationApi(api_client)
+    force_save = False # bool |  (optional) (default to False)
     application_resource = prowlarr.ApplicationResource() # ApplicationResource |  (optional)
 
     try:
-        api_response = api_instance.create_applications(application_resource=application_resource)
+        api_response = api_instance.create_applications(force_save=force_save, application_resource=application_resource)
         print("The response of ApplicationApi->create_applications:\n")
         pprint(api_response)
     except Exception as e:
@@ -102,10 +103,11 @@ configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
 with prowlarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = prowlarr.ApplicationApi(api_client)
+    force_save = False # bool |  (optional) (default to False)
     application_resource = prowlarr.ApplicationResource() # ApplicationResource |  (optional)
 
     try:
-        api_response = api_instance.create_applications(application_resource=application_resource)
+        api_response = api_instance.create_applications(force_save=force_save, application_resource=application_resource)
         print("The response of ApplicationApi->create_applications:\n")
         pprint(api_response)
     except Exception as e:
@@ -116,6 +118,7 @@ with prowlarr.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **force_save** | **bool**|  | [optional] [default to False]
  **application_resource** | [**ApplicationResource**](ApplicationResource.md)|  | [optional] 
 
 ### Return type

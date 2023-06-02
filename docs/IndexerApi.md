@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **create_indexer**
-> IndexerResource create_indexer(indexer_resource=indexer_resource)
+> IndexerResource create_indexer(force_save=force_save, indexer_resource=indexer_resource)
 
 
 
@@ -57,10 +57,11 @@ configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
 with prowlarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = prowlarr.IndexerApi(api_client)
+    force_save = False # bool |  (optional) (default to False)
     indexer_resource = prowlarr.IndexerResource() # IndexerResource |  (optional)
 
     try:
-        api_response = api_instance.create_indexer(indexer_resource=indexer_resource)
+        api_response = api_instance.create_indexer(force_save=force_save, indexer_resource=indexer_resource)
         print("The response of IndexerApi->create_indexer:\n")
         pprint(api_response)
     except Exception as e:
@@ -102,10 +103,11 @@ configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
 with prowlarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = prowlarr.IndexerApi(api_client)
+    force_save = False # bool |  (optional) (default to False)
     indexer_resource = prowlarr.IndexerResource() # IndexerResource |  (optional)
 
     try:
-        api_response = api_instance.create_indexer(indexer_resource=indexer_resource)
+        api_response = api_instance.create_indexer(force_save=force_save, indexer_resource=indexer_resource)
         print("The response of IndexerApi->create_indexer:\n")
         pprint(api_response)
     except Exception as e:
@@ -116,6 +118,7 @@ with prowlarr.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **force_save** | **bool**|  | [optional] [default to False]
  **indexer_resource** | [**IndexerResource**](IndexerResource.md)|  | [optional] 
 
 ### Return type

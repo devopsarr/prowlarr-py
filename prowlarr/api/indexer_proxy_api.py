@@ -43,15 +43,17 @@ class IndexerProxyApi(object):
         self.api_client = api_client
 
     @validate_arguments
-    def create_indexer_proxy(self, indexer_proxy_resource : Optional[IndexerProxyResource] = None, **kwargs) -> IndexerProxyResource:  # noqa: E501
+    def create_indexer_proxy(self, force_save : Optional[StrictBool] = None, indexer_proxy_resource : Optional[IndexerProxyResource] = None, **kwargs) -> IndexerProxyResource:  # noqa: E501
         """create_indexer_proxy  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.create_indexer_proxy(indexer_proxy_resource, async_req=True)
+        >>> thread = api.create_indexer_proxy(force_save, indexer_proxy_resource, async_req=True)
         >>> result = thread.get()
 
+        :param force_save:
+        :type force_save: bool
         :param indexer_proxy_resource:
         :type indexer_proxy_resource: IndexerProxyResource
         :param async_req: Whether to execute the request asynchronously.
@@ -70,18 +72,20 @@ class IndexerProxyApi(object):
         :rtype: IndexerProxyResource
         """
         kwargs['_return_http_data_only'] = True
-        return self.create_indexer_proxy_with_http_info(indexer_proxy_resource, **kwargs)  # noqa: E501
+        return self.create_indexer_proxy_with_http_info(force_save, indexer_proxy_resource, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def create_indexer_proxy_with_http_info(self, indexer_proxy_resource : Optional[IndexerProxyResource] = None, **kwargs):  # noqa: E501
+    def create_indexer_proxy_with_http_info(self, force_save : Optional[StrictBool] = None, indexer_proxy_resource : Optional[IndexerProxyResource] = None, **kwargs):  # noqa: E501
         """create_indexer_proxy  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.create_indexer_proxy_with_http_info(indexer_proxy_resource, async_req=True)
+        >>> thread = api.create_indexer_proxy_with_http_info(force_save, indexer_proxy_resource, async_req=True)
         >>> result = thread.get()
 
+        :param force_save:
+        :type force_save: bool
         :param indexer_proxy_resource:
         :type indexer_proxy_resource: IndexerProxyResource
         :param async_req: Whether to execute the request asynchronously.
@@ -111,6 +115,7 @@ class IndexerProxyApi(object):
         _params = locals()
 
         _all_params = [
+            'force_save',
             'indexer_proxy_resource'
         ]
         _all_params.extend(
@@ -142,6 +147,8 @@ class IndexerProxyApi(object):
 
         # process the query parameters
         _query_params = []
+        if _params.get('force_save') is not None:  # noqa: E501
+            _query_params.append(('forceSave', _params['force_save']))
 
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
