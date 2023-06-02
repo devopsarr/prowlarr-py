@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **create_indexer_proxy**
-> IndexerProxyResource create_indexer_proxy(indexer_proxy_resource=indexer_proxy_resource)
+> IndexerProxyResource create_indexer_proxy(force_save=force_save, indexer_proxy_resource=indexer_proxy_resource)
 
 
 
@@ -57,10 +57,11 @@ configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
 with prowlarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = prowlarr.IndexerProxyApi(api_client)
+    force_save = False # bool |  (optional) (default to False)
     indexer_proxy_resource = prowlarr.IndexerProxyResource() # IndexerProxyResource |  (optional)
 
     try:
-        api_response = api_instance.create_indexer_proxy(indexer_proxy_resource=indexer_proxy_resource)
+        api_response = api_instance.create_indexer_proxy(force_save=force_save, indexer_proxy_resource=indexer_proxy_resource)
         print("The response of IndexerProxyApi->create_indexer_proxy:\n")
         pprint(api_response)
     except Exception as e:
@@ -102,10 +103,11 @@ configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
 with prowlarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = prowlarr.IndexerProxyApi(api_client)
+    force_save = False # bool |  (optional) (default to False)
     indexer_proxy_resource = prowlarr.IndexerProxyResource() # IndexerProxyResource |  (optional)
 
     try:
-        api_response = api_instance.create_indexer_proxy(indexer_proxy_resource=indexer_proxy_resource)
+        api_response = api_instance.create_indexer_proxy(force_save=force_save, indexer_proxy_resource=indexer_proxy_resource)
         print("The response of IndexerProxyApi->create_indexer_proxy:\n")
         pprint(api_response)
     except Exception as e:
@@ -116,6 +118,7 @@ with prowlarr.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **force_save** | **bool**|  | [optional] [default to False]
  **indexer_proxy_resource** | [**IndexerProxyResource**](IndexerProxyResource.md)|  | [optional] 
 
 ### Return type

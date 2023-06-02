@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **create_notification**
-> NotificationResource create_notification(notification_resource=notification_resource)
+> NotificationResource create_notification(force_save=force_save, notification_resource=notification_resource)
 
 
 
@@ -57,10 +57,11 @@ configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
 with prowlarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = prowlarr.NotificationApi(api_client)
+    force_save = False # bool |  (optional) (default to False)
     notification_resource = prowlarr.NotificationResource() # NotificationResource |  (optional)
 
     try:
-        api_response = api_instance.create_notification(notification_resource=notification_resource)
+        api_response = api_instance.create_notification(force_save=force_save, notification_resource=notification_resource)
         print("The response of NotificationApi->create_notification:\n")
         pprint(api_response)
     except Exception as e:
@@ -102,10 +103,11 @@ configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
 with prowlarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = prowlarr.NotificationApi(api_client)
+    force_save = False # bool |  (optional) (default to False)
     notification_resource = prowlarr.NotificationResource() # NotificationResource |  (optional)
 
     try:
-        api_response = api_instance.create_notification(notification_resource=notification_resource)
+        api_response = api_instance.create_notification(force_save=force_save, notification_resource=notification_resource)
         print("The response of NotificationApi->create_notification:\n")
         pprint(api_response)
     except Exception as e:
@@ -116,6 +118,7 @@ with prowlarr.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **force_save** | **bool**|  | [optional] [default to False]
  **notification_resource** | [**NotificationResource**](NotificationResource.md)|  | [optional] 
 
 ### Return type

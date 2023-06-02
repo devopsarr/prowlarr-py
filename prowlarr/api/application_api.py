@@ -43,15 +43,17 @@ class ApplicationApi(object):
         self.api_client = api_client
 
     @validate_arguments
-    def create_applications(self, application_resource : Optional[ApplicationResource] = None, **kwargs) -> ApplicationResource:  # noqa: E501
+    def create_applications(self, force_save : Optional[StrictBool] = None, application_resource : Optional[ApplicationResource] = None, **kwargs) -> ApplicationResource:  # noqa: E501
         """create_applications  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.create_applications(application_resource, async_req=True)
+        >>> thread = api.create_applications(force_save, application_resource, async_req=True)
         >>> result = thread.get()
 
+        :param force_save:
+        :type force_save: bool
         :param application_resource:
         :type application_resource: ApplicationResource
         :param async_req: Whether to execute the request asynchronously.
@@ -70,18 +72,20 @@ class ApplicationApi(object):
         :rtype: ApplicationResource
         """
         kwargs['_return_http_data_only'] = True
-        return self.create_applications_with_http_info(application_resource, **kwargs)  # noqa: E501
+        return self.create_applications_with_http_info(force_save, application_resource, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def create_applications_with_http_info(self, application_resource : Optional[ApplicationResource] = None, **kwargs):  # noqa: E501
+    def create_applications_with_http_info(self, force_save : Optional[StrictBool] = None, application_resource : Optional[ApplicationResource] = None, **kwargs):  # noqa: E501
         """create_applications  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.create_applications_with_http_info(application_resource, async_req=True)
+        >>> thread = api.create_applications_with_http_info(force_save, application_resource, async_req=True)
         >>> result = thread.get()
 
+        :param force_save:
+        :type force_save: bool
         :param application_resource:
         :type application_resource: ApplicationResource
         :param async_req: Whether to execute the request asynchronously.
@@ -111,6 +115,7 @@ class ApplicationApi(object):
         _params = locals()
 
         _all_params = [
+            'force_save',
             'application_resource'
         ]
         _all_params.extend(
@@ -142,6 +147,8 @@ class ApplicationApi(object):
 
         # process the query parameters
         _query_params = []
+        if _params.get('force_save') is not None:  # noqa: E501
+            _query_params.append(('forceSave', _params['force_save']))
 
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))

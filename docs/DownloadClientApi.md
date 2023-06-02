@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **create_download_client**
-> DownloadClientResource create_download_client(download_client_resource=download_client_resource)
+> DownloadClientResource create_download_client(force_save=force_save, download_client_resource=download_client_resource)
 
 
 
@@ -57,10 +57,11 @@ configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
 with prowlarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = prowlarr.DownloadClientApi(api_client)
+    force_save = False # bool |  (optional) (default to False)
     download_client_resource = prowlarr.DownloadClientResource() # DownloadClientResource |  (optional)
 
     try:
-        api_response = api_instance.create_download_client(download_client_resource=download_client_resource)
+        api_response = api_instance.create_download_client(force_save=force_save, download_client_resource=download_client_resource)
         print("The response of DownloadClientApi->create_download_client:\n")
         pprint(api_response)
     except Exception as e:
@@ -102,10 +103,11 @@ configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
 with prowlarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = prowlarr.DownloadClientApi(api_client)
+    force_save = False # bool |  (optional) (default to False)
     download_client_resource = prowlarr.DownloadClientResource() # DownloadClientResource |  (optional)
 
     try:
-        api_response = api_instance.create_download_client(download_client_resource=download_client_resource)
+        api_response = api_instance.create_download_client(force_save=force_save, download_client_resource=download_client_resource)
         print("The response of DownloadClientApi->create_download_client:\n")
         pprint(api_response)
     except Exception as e:
@@ -116,6 +118,7 @@ with prowlarr.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **force_save** | **bool**|  | [optional] [default to False]
  **download_client_resource** | [**DownloadClientResource**](DownloadClientResource.md)|  | [optional] 
 
 ### Return type
