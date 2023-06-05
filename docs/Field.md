@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **label** | **str** |  | [optional] 
 **unit** | **str** |  | [optional] 
 **help_text** | **str** |  | [optional] 
+**help_text_warning** | **str** |  | [optional] 
 **help_link** | **str** |  | [optional] 
 **value** | **object** |  | [optional] 
 **type** | **str** |  | [optional] 
