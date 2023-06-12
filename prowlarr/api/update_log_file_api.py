@@ -19,7 +19,7 @@ from typing_extensions import Annotated
 
 from pydantic import constr, validator
 
-from typing import List
+from typing import Any, Dict, List
 
 from prowlarr.models.log_file_resource import LogFileResource
 
@@ -43,7 +43,7 @@ class UpdateLogFileApi(object):
         self.api_client = api_client
 
     @validate_arguments
-    def get_log_file_update_by_filename(self, filename : constr(strict=True), **kwargs) -> None:  # noqa: E501
+    def get_log_file_update_by_filename(self, filename : constr(strict=True), **kwargs) -> object:  # noqa: E501
         """get_log_file_update_by_filename  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -67,7 +67,7 @@ class UpdateLogFileApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: None
+        :rtype: object
         """
         kwargs['_return_http_data_only'] = True
         return self.get_log_file_update_by_filename_with_http_info(filename, **kwargs)  # noqa: E501
@@ -105,7 +105,7 @@ class UpdateLogFileApi(object):
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: None
+        :rtype: tuple(object, status_code(int), headers(HTTPHeaderDict))
         """
 
         _params = locals()
@@ -155,10 +155,16 @@ class UpdateLogFileApi(object):
         # process the body parameter
         _body_params = None
 
+        # set the HTTP header `Accept`
+        _header_params['Accept'] = self.api_client.select_header_accept(
+            ['text/plain'])  # noqa: E501
+
         # authentication setting
         _auth_settings = ['apikey', 'X-Api-Key']  # noqa: E501
 
-        _response_types_map = {}
+        _response_types_map = {
+            '200': "object",
+        }
 
         return self.api_client.call_api(
             '/api/v1/log/file/update/{filename}', 'GET',
@@ -285,7 +291,7 @@ class UpdateLogFileApi(object):
 
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['text/plain', 'application/json', 'text/json'])  # noqa: E501
+            ['application/json'])  # noqa: E501
 
         # authentication setting
         _auth_settings = ['apikey', 'X-Api-Key']  # noqa: E501
