@@ -147,7 +147,6 @@ Class | Method | HTTP request | Description
 *DownloadClientConfigApi* | [**update_download_client_config**](docs/DownloadClientConfigApi.md#update_download_client_config) | **PUT** /api/v1/config/downloadclient/{id} | 
 *FileSystemApi* | [**get_file_system**](docs/FileSystemApi.md#get_file_system) | **GET** /api/v1/filesystem | 
 *FileSystemApi* | [**get_file_system_type**](docs/FileSystemApi.md#get_file_system_type) | **GET** /api/v1/filesystem/type | 
-*HealthApi* | [**get_health_by_id**](docs/HealthApi.md#get_health_by_id) | **GET** /api/v1/health/{id} | 
 *HealthApi* | [**list_health**](docs/HealthApi.md#list_health) | **GET** /api/v1/health | 
 *HistoryApi* | [**get_history**](docs/HistoryApi.md#get_history) | **GET** /api/v1/history | 
 *HistoryApi* | [**list_history_indexer**](docs/HistoryApi.md#list_history_indexer) | **GET** /api/v1/history/indexer | 
@@ -177,7 +176,6 @@ Class | Method | HTTP request | Description
 *IndexerProxyApi* | [**testall_indexer_proxy**](docs/IndexerProxyApi.md#testall_indexer_proxy) | **POST** /api/v1/indexerproxy/testall | 
 *IndexerProxyApi* | [**update_indexer_proxy**](docs/IndexerProxyApi.md#update_indexer_proxy) | **PUT** /api/v1/indexerproxy/{id} | 
 *IndexerStatsApi* | [**get_indexer_stats**](docs/IndexerStatsApi.md#get_indexer_stats) | **GET** /api/v1/indexerstats | 
-*IndexerStatusApi* | [**get_indexer_status_by_id**](docs/IndexerStatusApi.md#get_indexer_status_by_id) | **GET** /api/v1/indexerstatus/{id} | 
 *IndexerStatusApi* | [**list_indexer_status**](docs/IndexerStatusApi.md#list_indexer_status) | **GET** /api/v1/indexerstatus | 
 *InitializeJsApi* | [**get_initialize_js**](docs/InitializeJsApi.md#get_initialize_js) | **GET** /initialize.js | 
 *LocalizationApi* | [**get_localization**](docs/LocalizationApi.md#get_localization) | **GET** /api/v1/localization | 
@@ -202,7 +200,6 @@ Class | Method | HTTP request | Description
 *QualityProfileSchemaApi* | [**get_appprofile_schema**](docs/QualityProfileSchemaApi.md#get_appprofile_schema) | **GET** /api/v1/appprofile/schema | 
 *SearchApi* | [**create_search**](docs/SearchApi.md#create_search) | **POST** /api/v1/search | 
 *SearchApi* | [**create_search_bulk**](docs/SearchApi.md#create_search_bulk) | **POST** /api/v1/search/bulk | 
-*SearchApi* | [**get_search_by_id**](docs/SearchApi.md#get_search_by_id) | **GET** /api/v1/search/{id} | 
 *SearchApi* | [**list_search**](docs/SearchApi.md#list_search) | **GET** /api/v1/search | 
 *StaticResourceApi* | [**get**](docs/StaticResourceApi.md#get) | **GET** / | 
 *StaticResourceApi* | [**get_by_path**](docs/StaticResourceApi.md#get_by_path) | **GET** /{path} | 
