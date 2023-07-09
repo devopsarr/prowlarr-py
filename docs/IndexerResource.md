@@ -31,6 +31,7 @@ Name | Type | Description | Notes
 **privacy** | [**IndexerPrivacy**](IndexerPrivacy.md) |  | [optional] 
 **capabilities** | [**IndexerCapabilityResource**](IndexerCapabilityResource.md) |  | [optional] 
 **priority** | **int** |  | [optional] 
+**download_client_id** | **int** |  | [optional] 
 **added** | **datetime** |  | [optional] 
 **status** | [**IndexerStatusResource**](IndexerStatusResource.md) |  | [optional] 
 **sort_name** | **str** |  | [optional] 

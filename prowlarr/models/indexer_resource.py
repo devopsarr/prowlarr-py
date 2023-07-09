@@ -59,10 +59,11 @@ class IndexerResource(BaseModel):
     privacy: Optional[IndexerPrivacy]
     capabilities: Optional[IndexerCapabilityResource]
     priority: Optional[int]
+    download_client_id: Optional[int]
     added: Optional[datetime]
     status: Optional[IndexerStatusResource]
     sort_name: Optional[str]
-    __properties = ["id", "name", "fields", "implementationName", "implementation", "configContract", "infoLink", "message", "tags", "presets", "indexerUrls", "legacyUrls", "definitionName", "description", "language", "encoding", "enable", "redirect", "supportsRss", "supportsSearch", "supportsRedirect", "supportsPagination", "appProfileId", "protocol", "privacy", "capabilities", "priority", "added", "status", "sortName"]
+    __properties = ["id", "name", "fields", "implementationName", "implementation", "configContract", "infoLink", "message", "tags", "presets", "indexerUrls", "legacyUrls", "definitionName", "description", "language", "encoding", "enable", "redirect", "supportsRss", "supportsSearch", "supportsRedirect", "supportsPagination", "appProfileId", "protocol", "privacy", "capabilities", "priority", "downloadClientId", "added", "status", "sortName"]
 
     class Config:
         allow_population_by_field_name = True
@@ -213,6 +214,7 @@ class IndexerResource(BaseModel):
             "privacy": obj.get("privacy"),
             "capabilities": IndexerCapabilityResource.from_dict(obj.get("capabilities")) if obj.get("capabilities") is not None else None,
             "priority": obj.get("priority"),
+            "download_client_id": obj.get("downloadClientId"),
             "added": obj.get("added"),
             "status": IndexerStatusResource.from_dict(obj.get("status")) if obj.get("status") is not None else None,
             "sort_name": obj.get("sortName")

@@ -30,9 +30,10 @@ class IndexerEditorResource(BaseModel):
     indexer_ids: Optional[List]
     enable: Optional[bool]
     app_profile_id: Optional[int]
+    priority: Optional[int]
     tags: Optional[List]
     apply_tags: Optional[ApplyTags]
-    __properties = ["indexerIds", "enable", "appProfileId", "tags", "applyTags"]
+    __properties = ["indexerIds", "enable", "appProfileId", "priority", "tags", "applyTags"]
 
     class Config:
         allow_population_by_field_name = True
@@ -73,6 +74,10 @@ class IndexerEditorResource(BaseModel):
         if self.app_profile_id is None:
             _dict['appProfileId'] = None
 
+        # set to None if priority (nullable) is None
+        if self.priority is None:
+            _dict['priority'] = None
+
         # set to None if tags (nullable) is None
         if self.tags is None:
             _dict['tags'] = None
@@ -92,6 +97,7 @@ class IndexerEditorResource(BaseModel):
             "indexer_ids": obj.get("indexerIds"),
             "enable": obj.get("enable"),
             "app_profile_id": obj.get("appProfileId"),
+            "priority": obj.get("priority"),
             "tags": obj.get("tags"),
             "apply_tags": obj.get("applyTags")
         })
