@@ -17,6 +17,7 @@ from __future__ import absolute_import
 # import models into model package
 from prowlarr.models.api_info_resource import ApiInfoResource
 from prowlarr.models.app_profile_resource import AppProfileResource
+from prowlarr.models.application_bulk_resource import ApplicationBulkResource
 from prowlarr.models.application_resource import ApplicationResource
 from prowlarr.models.application_sync_level import ApplicationSyncLevel
 from prowlarr.models.apply_tags import ApplyTags
@@ -34,6 +35,7 @@ from prowlarr.models.command_trigger import CommandTrigger
 from prowlarr.models.custom_filter_resource import CustomFilterResource
 from prowlarr.models.database_type import DatabaseType
 from prowlarr.models.development_config_resource import DevelopmentConfigResource
+from prowlarr.models.download_client_bulk_resource import DownloadClientBulkResource
 from prowlarr.models.download_client_category import DownloadClientCategory
 from prowlarr.models.download_client_config_resource import DownloadClientConfigResource
 from prowlarr.models.download_client_resource import DownloadClientResource
@@ -46,9 +48,9 @@ from prowlarr.models.history_resource import HistoryResource
 from prowlarr.models.history_resource_paging_resource import HistoryResourcePagingResource
 from prowlarr.models.host_config_resource import HostConfigResource
 from prowlarr.models.host_statistics import HostStatistics
+from prowlarr.models.indexer_bulk_resource import IndexerBulkResource
 from prowlarr.models.indexer_capability_resource import IndexerCapabilityResource
 from prowlarr.models.indexer_category import IndexerCategory
-from prowlarr.models.indexer_editor_resource import IndexerEditorResource
 from prowlarr.models.indexer_privacy import IndexerPrivacy
 from prowlarr.models.indexer_proxy_resource import IndexerProxyResource
 from prowlarr.models.indexer_resource import IndexerResource

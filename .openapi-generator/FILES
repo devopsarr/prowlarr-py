@@ -6,6 +6,7 @@ docs/ApiInfoResource.md
 docs/AppProfileApi.md
 docs/AppProfileResource.md
 docs/ApplicationApi.md
+docs/ApplicationBulkResource.md
 docs/ApplicationResource.md
 docs/ApplicationSyncLevel.md
 docs/ApplyTags.md
@@ -29,6 +30,7 @@ docs/DatabaseType.md
 docs/DevelopmentConfigApi.md
 docs/DevelopmentConfigResource.md
 docs/DownloadClientApi.md
+docs/DownloadClientBulkResource.md
 docs/DownloadClientCategory.md
 docs/DownloadClientConfigApi.md
 docs/DownloadClientConfigResource.md
@@ -47,11 +49,10 @@ docs/HostConfigApi.md
 docs/HostConfigResource.md
 docs/HostStatistics.md
 docs/IndexerApi.md
+docs/IndexerBulkResource.md
 docs/IndexerCapabilityResource.md
 docs/IndexerCategory.md
 docs/IndexerDefaultCategoriesApi.md
-docs/IndexerEditorApi.md
-docs/IndexerEditorResource.md
 docs/IndexerPrivacy.md
 docs/IndexerProxyApi.md
 docs/IndexerProxyResource.md
@@ -123,7 +124,6 @@ prowlarr/api/history_api.py
 prowlarr/api/host_config_api.py
 prowlarr/api/indexer_api.py
 prowlarr/api/indexer_default_categories_api.py
-prowlarr/api/indexer_editor_api.py
 prowlarr/api/indexer_proxy_api.py
 prowlarr/api/indexer_stats_api.py
 prowlarr/api/indexer_status_api.py
@@ -151,6 +151,7 @@ prowlarr/exceptions.py
 prowlarr/models/__init__.py
 prowlarr/models/api_info_resource.py
 prowlarr/models/app_profile_resource.py
+prowlarr/models/application_bulk_resource.py
 prowlarr/models/application_resource.py
 prowlarr/models/application_sync_level.py
 prowlarr/models/apply_tags.py
@@ -168,6 +169,7 @@ prowlarr/models/command_trigger.py
 prowlarr/models/custom_filter_resource.py
 prowlarr/models/database_type.py
 prowlarr/models/development_config_resource.py
+prowlarr/models/download_client_bulk_resource.py
 prowlarr/models/download_client_category.py
 prowlarr/models/download_client_config_resource.py
 prowlarr/models/download_client_resource.py
@@ -180,9 +182,9 @@ prowlarr/models/history_resource.py
 prowlarr/models/history_resource_paging_resource.py
 prowlarr/models/host_config_resource.py
 prowlarr/models/host_statistics.py
+prowlarr/models/indexer_bulk_resource.py
 prowlarr/models/indexer_capability_resource.py
 prowlarr/models/indexer_category.py
-prowlarr/models/indexer_editor_resource.py
 prowlarr/models/indexer_privacy.py
 prowlarr/models/indexer_proxy_resource.py
 prowlarr/models/indexer_resource.py
