@@ -29,7 +29,6 @@ from prowlarr.api.history_api import HistoryApi
 from prowlarr.api.host_config_api import HostConfigApi
 from prowlarr.api.indexer_api import IndexerApi
 from prowlarr.api.indexer_default_categories_api import IndexerDefaultCategoriesApi
-from prowlarr.api.indexer_editor_api import IndexerEditorApi
 from prowlarr.api.indexer_proxy_api import IndexerProxyApi
 from prowlarr.api.indexer_stats_api import IndexerStatsApi
 from prowlarr.api.indexer_status_api import IndexerStatusApi

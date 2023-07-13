@@ -109,9 +109,11 @@ Class | Method | HTTP request | Description
 *ApplicationApi* | [**create_applications**](docs/ApplicationApi.md#create_applications) | **POST** /api/v1/applications | 
 *ApplicationApi* | [**create_applications_action_by_name**](docs/ApplicationApi.md#create_applications_action_by_name) | **POST** /api/v1/applications/action/{name} | 
 *ApplicationApi* | [**delete_applications**](docs/ApplicationApi.md#delete_applications) | **DELETE** /api/v1/applications/{id} | 
+*ApplicationApi* | [**delete_applications_bulk**](docs/ApplicationApi.md#delete_applications_bulk) | **DELETE** /api/v1/applications/bulk | 
 *ApplicationApi* | [**get_applications_by_id**](docs/ApplicationApi.md#get_applications_by_id) | **GET** /api/v1/applications/{id} | 
 *ApplicationApi* | [**list_applications**](docs/ApplicationApi.md#list_applications) | **GET** /api/v1/applications | 
 *ApplicationApi* | [**list_applications_schema**](docs/ApplicationApi.md#list_applications_schema) | **GET** /api/v1/applications/schema | 
+*ApplicationApi* | [**put_applications_bulk**](docs/ApplicationApi.md#put_applications_bulk) | **PUT** /api/v1/applications/bulk | 
 *ApplicationApi* | [**test_applications**](docs/ApplicationApi.md#test_applications) | **POST** /api/v1/applications/test | 
 *ApplicationApi* | [**testall_applications**](docs/ApplicationApi.md#testall_applications) | **POST** /api/v1/applications/testall | 
 *ApplicationApi* | [**update_applications**](docs/ApplicationApi.md#update_applications) | **PUT** /api/v1/applications/{id} | 
@@ -136,9 +138,11 @@ Class | Method | HTTP request | Description
 *DownloadClientApi* | [**create_download_client**](docs/DownloadClientApi.md#create_download_client) | **POST** /api/v1/downloadclient | 
 *DownloadClientApi* | [**create_download_client_action_by_name**](docs/DownloadClientApi.md#create_download_client_action_by_name) | **POST** /api/v1/downloadclient/action/{name} | 
 *DownloadClientApi* | [**delete_download_client**](docs/DownloadClientApi.md#delete_download_client) | **DELETE** /api/v1/downloadclient/{id} | 
+*DownloadClientApi* | [**delete_download_client_bulk**](docs/DownloadClientApi.md#delete_download_client_bulk) | **DELETE** /api/v1/downloadclient/bulk | 
 *DownloadClientApi* | [**get_download_client_by_id**](docs/DownloadClientApi.md#get_download_client_by_id) | **GET** /api/v1/downloadclient/{id} | 
 *DownloadClientApi* | [**list_download_client**](docs/DownloadClientApi.md#list_download_client) | **GET** /api/v1/downloadclient | 
 *DownloadClientApi* | [**list_download_client_schema**](docs/DownloadClientApi.md#list_download_client_schema) | **GET** /api/v1/downloadclient/schema | 
+*DownloadClientApi* | [**put_download_client_bulk**](docs/DownloadClientApi.md#put_download_client_bulk) | **PUT** /api/v1/downloadclient/bulk | 
 *DownloadClientApi* | [**test_download_client**](docs/DownloadClientApi.md#test_download_client) | **POST** /api/v1/downloadclient/test | 
 *DownloadClientApi* | [**testall_download_client**](docs/DownloadClientApi.md#testall_download_client) | **POST** /api/v1/downloadclient/testall | 
 *DownloadClientApi* | [**update_download_client**](docs/DownloadClientApi.md#update_download_client) | **PUT** /api/v1/downloadclient/{id} | 
@@ -157,15 +161,15 @@ Class | Method | HTTP request | Description
 *IndexerApi* | [**create_indexer**](docs/IndexerApi.md#create_indexer) | **POST** /api/v1/indexer | 
 *IndexerApi* | [**create_indexer_action_by_name**](docs/IndexerApi.md#create_indexer_action_by_name) | **POST** /api/v1/indexer/action/{name} | 
 *IndexerApi* | [**delete_indexer**](docs/IndexerApi.md#delete_indexer) | **DELETE** /api/v1/indexer/{id} | 
+*IndexerApi* | [**delete_indexer_bulk**](docs/IndexerApi.md#delete_indexer_bulk) | **DELETE** /api/v1/indexer/bulk | 
 *IndexerApi* | [**get_indexer_by_id**](docs/IndexerApi.md#get_indexer_by_id) | **GET** /api/v1/indexer/{id} | 
 *IndexerApi* | [**list_indexer**](docs/IndexerApi.md#list_indexer) | **GET** /api/v1/indexer | 
 *IndexerApi* | [**list_indexer_schema**](docs/IndexerApi.md#list_indexer_schema) | **GET** /api/v1/indexer/schema | 
+*IndexerApi* | [**put_indexer_bulk**](docs/IndexerApi.md#put_indexer_bulk) | **PUT** /api/v1/indexer/bulk | 
 *IndexerApi* | [**test_indexer**](docs/IndexerApi.md#test_indexer) | **POST** /api/v1/indexer/test | 
 *IndexerApi* | [**testall_indexer**](docs/IndexerApi.md#testall_indexer) | **POST** /api/v1/indexer/testall | 
 *IndexerApi* | [**update_indexer**](docs/IndexerApi.md#update_indexer) | **PUT** /api/v1/indexer/{id} | 
 *IndexerDefaultCategoriesApi* | [**list_indexer_categories**](docs/IndexerDefaultCategoriesApi.md#list_indexer_categories) | **GET** /api/v1/indexer/categories | 
-*IndexerEditorApi* | [**delete_indexer_editor**](docs/IndexerEditorApi.md#delete_indexer_editor) | **DELETE** /api/v1/indexer/editor | 
-*IndexerEditorApi* | [**put_indexer_editor**](docs/IndexerEditorApi.md#put_indexer_editor) | **PUT** /api/v1/indexer/editor | 
 *IndexerProxyApi* | [**create_indexer_proxy**](docs/IndexerProxyApi.md#create_indexer_proxy) | **POST** /api/v1/indexerproxy | 
 *IndexerProxyApi* | [**create_indexer_proxy_action_by_name**](docs/IndexerProxyApi.md#create_indexer_proxy_action_by_name) | **POST** /api/v1/indexerproxy/action/{name} | 
 *IndexerProxyApi* | [**delete_indexer_proxy**](docs/IndexerProxyApi.md#delete_indexer_proxy) | **DELETE** /api/v1/indexerproxy/{id} | 
@@ -231,6 +235,7 @@ Class | Method | HTTP request | Description
 
  - [ApiInfoResource](docs/ApiInfoResource.md)
  - [AppProfileResource](docs/AppProfileResource.md)
+ - [ApplicationBulkResource](docs/ApplicationBulkResource.md)
  - [ApplicationResource](docs/ApplicationResource.md)
  - [ApplicationSyncLevel](docs/ApplicationSyncLevel.md)
  - [ApplyTags](docs/ApplyTags.md)
@@ -248,6 +253,7 @@ Class | Method | HTTP request | Description
  - [CustomFilterResource](docs/CustomFilterResource.md)
  - [DatabaseType](docs/DatabaseType.md)
  - [DevelopmentConfigResource](docs/DevelopmentConfigResource.md)
+ - [DownloadClientBulkResource](docs/DownloadClientBulkResource.md)
  - [DownloadClientCategory](docs/DownloadClientCategory.md)
  - [DownloadClientConfigResource](docs/DownloadClientConfigResource.md)
  - [DownloadClientResource](docs/DownloadClientResource.md)
@@ -260,9 +266,9 @@ Class | Method | HTTP request | Description
  - [HistoryResourcePagingResource](docs/HistoryResourcePagingResource.md)
  - [HostConfigResource](docs/HostConfigResource.md)
  - [HostStatistics](docs/HostStatistics.md)
+ - [IndexerBulkResource](docs/IndexerBulkResource.md)
  - [IndexerCapabilityResource](docs/IndexerCapabilityResource.md)
  - [IndexerCategory](docs/IndexerCategory.md)
- - [IndexerEditorResource](docs/IndexerEditorResource.md)
  - [IndexerPrivacy](docs/IndexerPrivacy.md)
  - [IndexerProxyResource](docs/IndexerProxyResource.md)
  - [IndexerResource](docs/IndexerResource.md)

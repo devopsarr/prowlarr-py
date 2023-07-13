@@ -7,9 +7,11 @@ Method | HTTP request | Description
 [**create_applications**](ApplicationApi.md#create_applications) | **POST** /api/v1/applications | 
 [**create_applications_action_by_name**](ApplicationApi.md#create_applications_action_by_name) | **POST** /api/v1/applications/action/{name} | 
 [**delete_applications**](ApplicationApi.md#delete_applications) | **DELETE** /api/v1/applications/{id} | 
+[**delete_applications_bulk**](ApplicationApi.md#delete_applications_bulk) | **DELETE** /api/v1/applications/bulk | 
 [**get_applications_by_id**](ApplicationApi.md#get_applications_by_id) | **GET** /api/v1/applications/{id} | 
 [**list_applications**](ApplicationApi.md#list_applications) | **GET** /api/v1/applications | 
 [**list_applications_schema**](ApplicationApi.md#list_applications_schema) | **GET** /api/v1/applications/schema | 
+[**put_applications_bulk**](ApplicationApi.md#put_applications_bulk) | **PUT** /api/v1/applications/bulk | 
 [**test_applications**](ApplicationApi.md#test_applications) | **POST** /api/v1/applications/test | 
 [**testall_applications**](ApplicationApi.md#testall_applications) | **POST** /api/v1/applications/testall | 
 [**update_applications**](ApplicationApi.md#update_applications) | **PUT** /api/v1/applications/{id} | 
@@ -382,6 +384,125 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **delete_applications_bulk**
+> delete_applications_bulk(application_bulk_resource=application_bulk_resource)
+
+
+
+### Example
+
+* Api Key Authentication (apikey):
+```python
+from __future__ import print_function
+import time
+import os
+import prowlarr
+from prowlarr.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost:9696
+# See configuration.py for a list of all supported configuration parameters.
+configuration = prowlarr.Configuration(
+    host = "http://localhost:9696"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: apikey
+configuration.api_key['apikey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apikey'] = 'Bearer'
+
+# Configure API key authorization: X-Api-Key
+configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with prowlarr.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = prowlarr.ApplicationApi(api_client)
+    application_bulk_resource = prowlarr.ApplicationBulkResource() # ApplicationBulkResource |  (optional)
+
+    try:
+        api_instance.delete_applications_bulk(application_bulk_resource=application_bulk_resource)
+    except Exception as e:
+        print("Exception when calling ApplicationApi->delete_applications_bulk: %s\n" % e)
+```
+
+* Api Key Authentication (X-Api-Key):
+```python
+from __future__ import print_function
+import time
+import os
+import prowlarr
+from prowlarr.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost:9696
+# See configuration.py for a list of all supported configuration parameters.
+configuration = prowlarr.Configuration(
+    host = "http://localhost:9696"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: apikey
+configuration.api_key['apikey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apikey'] = 'Bearer'
+
+# Configure API key authorization: X-Api-Key
+configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with prowlarr.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = prowlarr.ApplicationApi(api_client)
+    application_bulk_resource = prowlarr.ApplicationBulkResource() # ApplicationBulkResource |  (optional)
+
+    try:
+        api_instance.delete_applications_bulk(application_bulk_resource=application_bulk_resource)
+    except Exception as e:
+        print("Exception when calling ApplicationApi->delete_applications_bulk: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **application_bulk_resource** | [**ApplicationBulkResource**](ApplicationBulkResource.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[apikey](../README.md#apikey), [X-Api-Key](../README.md#X-Api-Key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **get_applications_by_id**
 > ApplicationResource get_applications_by_id(id)
 
@@ -732,6 +853,129 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **put_applications_bulk**
+> ApplicationResource put_applications_bulk(application_bulk_resource=application_bulk_resource)
+
+
+
+### Example
+
+* Api Key Authentication (apikey):
+```python
+from __future__ import print_function
+import time
+import os
+import prowlarr
+from prowlarr.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost:9696
+# See configuration.py for a list of all supported configuration parameters.
+configuration = prowlarr.Configuration(
+    host = "http://localhost:9696"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: apikey
+configuration.api_key['apikey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apikey'] = 'Bearer'
+
+# Configure API key authorization: X-Api-Key
+configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with prowlarr.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = prowlarr.ApplicationApi(api_client)
+    application_bulk_resource = prowlarr.ApplicationBulkResource() # ApplicationBulkResource |  (optional)
+
+    try:
+        api_response = api_instance.put_applications_bulk(application_bulk_resource=application_bulk_resource)
+        print("The response of ApplicationApi->put_applications_bulk:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ApplicationApi->put_applications_bulk: %s\n" % e)
+```
+
+* Api Key Authentication (X-Api-Key):
+```python
+from __future__ import print_function
+import time
+import os
+import prowlarr
+from prowlarr.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost:9696
+# See configuration.py for a list of all supported configuration parameters.
+configuration = prowlarr.Configuration(
+    host = "http://localhost:9696"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: apikey
+configuration.api_key['apikey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apikey'] = 'Bearer'
+
+# Configure API key authorization: X-Api-Key
+configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with prowlarr.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = prowlarr.ApplicationApi(api_client)
+    application_bulk_resource = prowlarr.ApplicationBulkResource() # ApplicationBulkResource |  (optional)
+
+    try:
+        api_response = api_instance.put_applications_bulk(application_bulk_resource=application_bulk_resource)
+        print("The response of ApplicationApi->put_applications_bulk:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ApplicationApi->put_applications_bulk: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **application_bulk_resource** | [**ApplicationBulkResource**](ApplicationBulkResource.md)|  | [optional] 
+
+### Return type
+
+[**ApplicationResource**](ApplicationResource.md)
+
+### Authorization
+
+[apikey](../README.md#apikey), [X-Api-Key](../README.md#X-Api-Key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
