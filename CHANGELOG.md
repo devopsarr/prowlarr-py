@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.1](https://github.com/devopsarr/prowlarr-py/compare/v0.4.0...v0.4.1) (2023-07-21)
+
+
+### Bug Fixes
+
+* set pydantic version ([908b230](https://github.com/devopsarr/prowlarr-py/commit/908b2304bec9c14bffda872b41b590fc5fbcc71d))
+
 ## [0.4.0](https://github.com/devopsarr/prowlarr-py/compare/v0.3.2...v0.4.0) (2023-05-19)
 
 
