@@ -38,7 +38,6 @@ from prowlarr.api.indexer_default_categories_api import IndexerDefaultCategories
 from prowlarr.api.indexer_proxy_api import IndexerProxyApi
 from prowlarr.api.indexer_stats_api import IndexerStatsApi
 from prowlarr.api.indexer_status_api import IndexerStatusApi
-from prowlarr.api.initialize_js_api import InitializeJsApi
 from prowlarr.api.localization_api import LocalizationApi
 from prowlarr.api.log_api import LogApi
 from prowlarr.api.log_file_api import LogFileApi

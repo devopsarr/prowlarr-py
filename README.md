@@ -181,7 +181,6 @@ Class | Method | HTTP request | Description
 *IndexerProxyApi* | [**update_indexer_proxy**](docs/IndexerProxyApi.md#update_indexer_proxy) | **PUT** /api/v1/indexerproxy/{id} | 
 *IndexerStatsApi* | [**get_indexer_stats**](docs/IndexerStatsApi.md#get_indexer_stats) | **GET** /api/v1/indexerstats | 
 *IndexerStatusApi* | [**list_indexer_status**](docs/IndexerStatusApi.md#list_indexer_status) | **GET** /api/v1/indexerstatus | 
-*InitializeJsApi* | [**get_initialize_js**](docs/InitializeJsApi.md#get_initialize_js) | **GET** /initialize.js | 
 *LocalizationApi* | [**get_localization**](docs/LocalizationApi.md#get_localization) | **GET** /api/v1/localization | 
 *LocalizationApi* | [**list_localization_options**](docs/LocalizationApi.md#list_localization_options) | **GET** /api/v1/localization/options | 
 *LogApi* | [**get_log**](docs/LogApi.md#get_log) | **GET** /api/v1/log | 

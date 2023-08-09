@@ -62,7 +62,6 @@ docs/IndexerStatsApi.md
 docs/IndexerStatsResource.md
 docs/IndexerStatusApi.md
 docs/IndexerStatusResource.md
-docs/InitializeJsApi.md
 docs/LocalizationApi.md
 docs/LocalizationOption.md
 docs/LogApi.md
@@ -127,7 +126,6 @@ prowlarr/api/indexer_default_categories_api.py
 prowlarr/api/indexer_proxy_api.py
 prowlarr/api/indexer_stats_api.py
 prowlarr/api/indexer_status_api.py
-prowlarr/api/initialize_js_api.py
 prowlarr/api/localization_api.py
 prowlarr/api/log_api.py
 prowlarr/api/log_file_api.py
