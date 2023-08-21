@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **section** | **str** |  | [optional] 
 **hidden** | **str** |  | [optional] 
 **placeholder** | **str** |  | [optional] 
+**is_float** | **bool** |  | [optional] 
 
 ## Example
 
