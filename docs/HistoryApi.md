@@ -128,7 +128,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_history_indexer**
-> List[HistoryResource] list_history_indexer(indexer_id=indexer_id, event_type=event_type)
+> List[HistoryResource] list_history_indexer(indexer_id=indexer_id, event_type=event_type, limit=limit)
 
 
 
@@ -171,9 +171,10 @@ with prowlarr.ApiClient(configuration) as api_client:
     api_instance = prowlarr.HistoryApi(api_client)
     indexer_id = 56 # int |  (optional)
     event_type = prowlarr.HistoryEventType() # HistoryEventType |  (optional)
+    limit = 56 # int |  (optional)
 
     try:
-        api_response = api_instance.list_history_indexer(indexer_id=indexer_id, event_type=event_type)
+        api_response = api_instance.list_history_indexer(indexer_id=indexer_id, event_type=event_type, limit=limit)
         print("The response of HistoryApi->list_history_indexer:\n")
         pprint(api_response)
     except Exception as e:
@@ -217,9 +218,10 @@ with prowlarr.ApiClient(configuration) as api_client:
     api_instance = prowlarr.HistoryApi(api_client)
     indexer_id = 56 # int |  (optional)
     event_type = prowlarr.HistoryEventType() # HistoryEventType |  (optional)
+    limit = 56 # int |  (optional)
 
     try:
-        api_response = api_instance.list_history_indexer(indexer_id=indexer_id, event_type=event_type)
+        api_response = api_instance.list_history_indexer(indexer_id=indexer_id, event_type=event_type, limit=limit)
         print("The response of HistoryApi->list_history_indexer:\n")
         pprint(api_response)
     except Exception as e:
@@ -232,6 +234,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **indexer_id** | **int**|  | [optional] 
  **event_type** | [**HistoryEventType**](.md)|  | [optional] 
+ **limit** | **int**|  | [optional] 
 
 ### Return type
 
