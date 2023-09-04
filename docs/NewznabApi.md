@@ -136,7 +136,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_indexerid_newznab**
-> get_indexerid_newznab(id, t=t, q=q, cat=cat, imdbid=imdbid, tmdbid=tmdbid, extended=extended, limit=limit, offset=offset, rid=rid, tvmazeid=tvmazeid, traktid=traktid, tvdbid=tvdbid, doubanid=doubanid, season=season, ep=ep, album=album, artist=artist, label=label, track=track, year=year, genre=genre, author=author, title=title, publisher=publisher, configured=configured, source=source, host=host, server=server)
+> get_indexerid_newznab(id, t=t, q=q, cat=cat, imdbid=imdbid, tmdbid=tmdbid, extended=extended, limit=limit, offset=offset, minage=minage, maxage=maxage, minsize=minsize, maxsize=maxsize, rid=rid, tvmazeid=tvmazeid, traktid=traktid, tvdbid=tvdbid, doubanid=doubanid, season=season, ep=ep, album=album, artist=artist, label=label, track=track, year=year, genre=genre, author=author, title=title, publisher=publisher, configured=configured, source=source, host=host, server=server)
 
 
 
@@ -186,6 +186,10 @@ with prowlarr.ApiClient(configuration) as api_client:
     extended = 'extended_example' # str |  (optional)
     limit = 56 # int |  (optional)
     offset = 56 # int |  (optional)
+    minage = 56 # int |  (optional)
+    maxage = 56 # int |  (optional)
+    minsize = 56 # int |  (optional)
+    maxsize = 56 # int |  (optional)
     rid = 56 # int |  (optional)
     tvmazeid = 56 # int |  (optional)
     traktid = 56 # int |  (optional)
@@ -208,7 +212,7 @@ with prowlarr.ApiClient(configuration) as api_client:
     server = 'server_example' # str |  (optional)
 
     try:
-        api_instance.get_indexerid_newznab(id, t=t, q=q, cat=cat, imdbid=imdbid, tmdbid=tmdbid, extended=extended, limit=limit, offset=offset, rid=rid, tvmazeid=tvmazeid, traktid=traktid, tvdbid=tvdbid, doubanid=doubanid, season=season, ep=ep, album=album, artist=artist, label=label, track=track, year=year, genre=genre, author=author, title=title, publisher=publisher, configured=configured, source=source, host=host, server=server)
+        api_instance.get_indexerid_newznab(id, t=t, q=q, cat=cat, imdbid=imdbid, tmdbid=tmdbid, extended=extended, limit=limit, offset=offset, minage=minage, maxage=maxage, minsize=minsize, maxsize=maxsize, rid=rid, tvmazeid=tvmazeid, traktid=traktid, tvdbid=tvdbid, doubanid=doubanid, season=season, ep=ep, album=album, artist=artist, label=label, track=track, year=year, genre=genre, author=author, title=title, publisher=publisher, configured=configured, source=source, host=host, server=server)
     except Exception as e:
         print("Exception when calling NewznabApi->get_indexerid_newznab: %s\n" % e)
 ```
@@ -257,6 +261,10 @@ with prowlarr.ApiClient(configuration) as api_client:
     extended = 'extended_example' # str |  (optional)
     limit = 56 # int |  (optional)
     offset = 56 # int |  (optional)
+    minage = 56 # int |  (optional)
+    maxage = 56 # int |  (optional)
+    minsize = 56 # int |  (optional)
+    maxsize = 56 # int |  (optional)
     rid = 56 # int |  (optional)
     tvmazeid = 56 # int |  (optional)
     traktid = 56 # int |  (optional)
@@ -279,7 +287,7 @@ with prowlarr.ApiClient(configuration) as api_client:
     server = 'server_example' # str |  (optional)
 
     try:
-        api_instance.get_indexerid_newznab(id, t=t, q=q, cat=cat, imdbid=imdbid, tmdbid=tmdbid, extended=extended, limit=limit, offset=offset, rid=rid, tvmazeid=tvmazeid, traktid=traktid, tvdbid=tvdbid, doubanid=doubanid, season=season, ep=ep, album=album, artist=artist, label=label, track=track, year=year, genre=genre, author=author, title=title, publisher=publisher, configured=configured, source=source, host=host, server=server)
+        api_instance.get_indexerid_newznab(id, t=t, q=q, cat=cat, imdbid=imdbid, tmdbid=tmdbid, extended=extended, limit=limit, offset=offset, minage=minage, maxage=maxage, minsize=minsize, maxsize=maxsize, rid=rid, tvmazeid=tvmazeid, traktid=traktid, tvdbid=tvdbid, doubanid=doubanid, season=season, ep=ep, album=album, artist=artist, label=label, track=track, year=year, genre=genre, author=author, title=title, publisher=publisher, configured=configured, source=source, host=host, server=server)
     except Exception as e:
         print("Exception when calling NewznabApi->get_indexerid_newznab: %s\n" % e)
 ```
@@ -297,6 +305,10 @@ Name | Type | Description  | Notes
  **extended** | **str**|  | [optional] 
  **limit** | **int**|  | [optional] 
  **offset** | **int**|  | [optional] 
+ **minage** | **int**|  | [optional] 
+ **maxage** | **int**|  | [optional] 
+ **minsize** | **int**|  | [optional] 
+ **maxsize** | **int**|  | [optional] 
  **rid** | **int**|  | [optional] 
  **tvmazeid** | **int**|  | [optional] 
  **traktid** | **int**|  | [optional] 
@@ -339,7 +351,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **getid_api**
-> getid_api(id, t=t, q=q, cat=cat, imdbid=imdbid, tmdbid=tmdbid, extended=extended, limit=limit, offset=offset, rid=rid, tvmazeid=tvmazeid, traktid=traktid, tvdbid=tvdbid, doubanid=doubanid, season=season, ep=ep, album=album, artist=artist, label=label, track=track, year=year, genre=genre, author=author, title=title, publisher=publisher, configured=configured, source=source, host=host, server=server)
+> getid_api(id, t=t, q=q, cat=cat, imdbid=imdbid, tmdbid=tmdbid, extended=extended, limit=limit, offset=offset, minage=minage, maxage=maxage, minsize=minsize, maxsize=maxsize, rid=rid, tvmazeid=tvmazeid, traktid=traktid, tvdbid=tvdbid, doubanid=doubanid, season=season, ep=ep, album=album, artist=artist, label=label, track=track, year=year, genre=genre, author=author, title=title, publisher=publisher, configured=configured, source=source, host=host, server=server)
 
 
 
@@ -389,6 +401,10 @@ with prowlarr.ApiClient(configuration) as api_client:
     extended = 'extended_example' # str |  (optional)
     limit = 56 # int |  (optional)
     offset = 56 # int |  (optional)
+    minage = 56 # int |  (optional)
+    maxage = 56 # int |  (optional)
+    minsize = 56 # int |  (optional)
+    maxsize = 56 # int |  (optional)
     rid = 56 # int |  (optional)
     tvmazeid = 56 # int |  (optional)
     traktid = 56 # int |  (optional)
@@ -411,7 +427,7 @@ with prowlarr.ApiClient(configuration) as api_client:
     server = 'server_example' # str |  (optional)
 
     try:
-        api_instance.getid_api(id, t=t, q=q, cat=cat, imdbid=imdbid, tmdbid=tmdbid, extended=extended, limit=limit, offset=offset, rid=rid, tvmazeid=tvmazeid, traktid=traktid, tvdbid=tvdbid, doubanid=doubanid, season=season, ep=ep, album=album, artist=artist, label=label, track=track, year=year, genre=genre, author=author, title=title, publisher=publisher, configured=configured, source=source, host=host, server=server)
+        api_instance.getid_api(id, t=t, q=q, cat=cat, imdbid=imdbid, tmdbid=tmdbid, extended=extended, limit=limit, offset=offset, minage=minage, maxage=maxage, minsize=minsize, maxsize=maxsize, rid=rid, tvmazeid=tvmazeid, traktid=traktid, tvdbid=tvdbid, doubanid=doubanid, season=season, ep=ep, album=album, artist=artist, label=label, track=track, year=year, genre=genre, author=author, title=title, publisher=publisher, configured=configured, source=source, host=host, server=server)
     except Exception as e:
         print("Exception when calling NewznabApi->getid_api: %s\n" % e)
 ```
@@ -460,6 +476,10 @@ with prowlarr.ApiClient(configuration) as api_client:
     extended = 'extended_example' # str |  (optional)
     limit = 56 # int |  (optional)
     offset = 56 # int |  (optional)
+    minage = 56 # int |  (optional)
+    maxage = 56 # int |  (optional)
+    minsize = 56 # int |  (optional)
+    maxsize = 56 # int |  (optional)
     rid = 56 # int |  (optional)
     tvmazeid = 56 # int |  (optional)
     traktid = 56 # int |  (optional)
@@ -482,7 +502,7 @@ with prowlarr.ApiClient(configuration) as api_client:
     server = 'server_example' # str |  (optional)
 
     try:
-        api_instance.getid_api(id, t=t, q=q, cat=cat, imdbid=imdbid, tmdbid=tmdbid, extended=extended, limit=limit, offset=offset, rid=rid, tvmazeid=tvmazeid, traktid=traktid, tvdbid=tvdbid, doubanid=doubanid, season=season, ep=ep, album=album, artist=artist, label=label, track=track, year=year, genre=genre, author=author, title=title, publisher=publisher, configured=configured, source=source, host=host, server=server)
+        api_instance.getid_api(id, t=t, q=q, cat=cat, imdbid=imdbid, tmdbid=tmdbid, extended=extended, limit=limit, offset=offset, minage=minage, maxage=maxage, minsize=minsize, maxsize=maxsize, rid=rid, tvmazeid=tvmazeid, traktid=traktid, tvdbid=tvdbid, doubanid=doubanid, season=season, ep=ep, album=album, artist=artist, label=label, track=track, year=year, genre=genre, author=author, title=title, publisher=publisher, configured=configured, source=source, host=host, server=server)
     except Exception as e:
         print("Exception when calling NewznabApi->getid_api: %s\n" % e)
 ```
@@ -500,6 +520,10 @@ Name | Type | Description  | Notes
  **extended** | **str**|  | [optional] 
  **limit** | **int**|  | [optional] 
  **offset** | **int**|  | [optional] 
+ **minage** | **int**|  | [optional] 
+ **maxage** | **int**|  | [optional] 
+ **minsize** | **int**|  | [optional] 
+ **maxsize** | **int**|  | [optional] 
  **rid** | **int**|  | [optional] 
  **tvmazeid** | **int**|  | [optional] 
  **traktid** | **int**|  | [optional] 

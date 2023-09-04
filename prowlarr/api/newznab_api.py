@@ -191,13 +191,13 @@ class NewznabApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def get_indexerid_newznab(self, id : StrictInt, t : Optional[StrictStr] = None, q : Optional[StrictStr] = None, cat : Optional[StrictStr] = None, imdbid : Optional[StrictStr] = None, tmdbid : Optional[StrictInt] = None, extended : Optional[StrictStr] = None, limit : Optional[StrictInt] = None, offset : Optional[StrictInt] = None, rid : Optional[StrictInt] = None, tvmazeid : Optional[StrictInt] = None, traktid : Optional[StrictInt] = None, tvdbid : Optional[StrictInt] = None, doubanid : Optional[StrictInt] = None, season : Optional[StrictInt] = None, ep : Optional[StrictStr] = None, album : Optional[StrictStr] = None, artist : Optional[StrictStr] = None, label : Optional[StrictStr] = None, track : Optional[StrictStr] = None, year : Optional[StrictInt] = None, genre : Optional[StrictStr] = None, author : Optional[StrictStr] = None, title : Optional[StrictStr] = None, publisher : Optional[StrictStr] = None, configured : Optional[StrictStr] = None, source : Optional[StrictStr] = None, host : Optional[StrictStr] = None, server : Optional[StrictStr] = None, **kwargs) -> None:  # noqa: E501
+    def get_indexerid_newznab(self, id : StrictInt, t : Optional[StrictStr] = None, q : Optional[StrictStr] = None, cat : Optional[StrictStr] = None, imdbid : Optional[StrictStr] = None, tmdbid : Optional[StrictInt] = None, extended : Optional[StrictStr] = None, limit : Optional[StrictInt] = None, offset : Optional[StrictInt] = None, minage : Optional[StrictInt] = None, maxage : Optional[StrictInt] = None, minsize : Optional[StrictInt] = None, maxsize : Optional[StrictInt] = None, rid : Optional[StrictInt] = None, tvmazeid : Optional[StrictInt] = None, traktid : Optional[StrictInt] = None, tvdbid : Optional[StrictInt] = None, doubanid : Optional[StrictInt] = None, season : Optional[StrictInt] = None, ep : Optional[StrictStr] = None, album : Optional[StrictStr] = None, artist : Optional[StrictStr] = None, label : Optional[StrictStr] = None, track : Optional[StrictStr] = None, year : Optional[StrictInt] = None, genre : Optional[StrictStr] = None, author : Optional[StrictStr] = None, title : Optional[StrictStr] = None, publisher : Optional[StrictStr] = None, configured : Optional[StrictStr] = None, source : Optional[StrictStr] = None, host : Optional[StrictStr] = None, server : Optional[StrictStr] = None, **kwargs) -> None:  # noqa: E501
         """get_indexerid_newznab  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_indexerid_newznab(id, t, q, cat, imdbid, tmdbid, extended, limit, offset, rid, tvmazeid, traktid, tvdbid, doubanid, season, ep, album, artist, label, track, year, genre, author, title, publisher, configured, source, host, server, async_req=True)
+        >>> thread = api.get_indexerid_newznab(id, t, q, cat, imdbid, tmdbid, extended, limit, offset, minage, maxage, minsize, maxsize, rid, tvmazeid, traktid, tvdbid, doubanid, season, ep, album, artist, label, track, year, genre, author, title, publisher, configured, source, host, server, async_req=True)
         >>> result = thread.get()
 
         :param id: (required)
@@ -218,6 +218,14 @@ class NewznabApi(object):
         :type limit: int
         :param offset:
         :type offset: int
+        :param minage:
+        :type minage: int
+        :param maxage:
+        :type maxage: int
+        :param minsize:
+        :type minsize: int
+        :param maxsize:
+        :type maxsize: int
         :param rid:
         :type rid: int
         :param tvmazeid:
@@ -274,16 +282,16 @@ class NewznabApi(object):
         :rtype: None
         """
         kwargs['_return_http_data_only'] = True
-        return self.get_indexerid_newznab_with_http_info(id, t, q, cat, imdbid, tmdbid, extended, limit, offset, rid, tvmazeid, traktid, tvdbid, doubanid, season, ep, album, artist, label, track, year, genre, author, title, publisher, configured, source, host, server, **kwargs)  # noqa: E501
+        return self.get_indexerid_newznab_with_http_info(id, t, q, cat, imdbid, tmdbid, extended, limit, offset, minage, maxage, minsize, maxsize, rid, tvmazeid, traktid, tvdbid, doubanid, season, ep, album, artist, label, track, year, genre, author, title, publisher, configured, source, host, server, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def get_indexerid_newznab_with_http_info(self, id : StrictInt, t : Optional[StrictStr] = None, q : Optional[StrictStr] = None, cat : Optional[StrictStr] = None, imdbid : Optional[StrictStr] = None, tmdbid : Optional[StrictInt] = None, extended : Optional[StrictStr] = None, limit : Optional[StrictInt] = None, offset : Optional[StrictInt] = None, rid : Optional[StrictInt] = None, tvmazeid : Optional[StrictInt] = None, traktid : Optional[StrictInt] = None, tvdbid : Optional[StrictInt] = None, doubanid : Optional[StrictInt] = None, season : Optional[StrictInt] = None, ep : Optional[StrictStr] = None, album : Optional[StrictStr] = None, artist : Optional[StrictStr] = None, label : Optional[StrictStr] = None, track : Optional[StrictStr] = None, year : Optional[StrictInt] = None, genre : Optional[StrictStr] = None, author : Optional[StrictStr] = None, title : Optional[StrictStr] = None, publisher : Optional[StrictStr] = None, configured : Optional[StrictStr] = None, source : Optional[StrictStr] = None, host : Optional[StrictStr] = None, server : Optional[StrictStr] = None, **kwargs):  # noqa: E501
+    def get_indexerid_newznab_with_http_info(self, id : StrictInt, t : Optional[StrictStr] = None, q : Optional[StrictStr] = None, cat : Optional[StrictStr] = None, imdbid : Optional[StrictStr] = None, tmdbid : Optional[StrictInt] = None, extended : Optional[StrictStr] = None, limit : Optional[StrictInt] = None, offset : Optional[StrictInt] = None, minage : Optional[StrictInt] = None, maxage : Optional[StrictInt] = None, minsize : Optional[StrictInt] = None, maxsize : Optional[StrictInt] = None, rid : Optional[StrictInt] = None, tvmazeid : Optional[StrictInt] = None, traktid : Optional[StrictInt] = None, tvdbid : Optional[StrictInt] = None, doubanid : Optional[StrictInt] = None, season : Optional[StrictInt] = None, ep : Optional[StrictStr] = None, album : Optional[StrictStr] = None, artist : Optional[StrictStr] = None, label : Optional[StrictStr] = None, track : Optional[StrictStr] = None, year : Optional[StrictInt] = None, genre : Optional[StrictStr] = None, author : Optional[StrictStr] = None, title : Optional[StrictStr] = None, publisher : Optional[StrictStr] = None, configured : Optional[StrictStr] = None, source : Optional[StrictStr] = None, host : Optional[StrictStr] = None, server : Optional[StrictStr] = None, **kwargs):  # noqa: E501
         """get_indexerid_newznab  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_indexerid_newznab_with_http_info(id, t, q, cat, imdbid, tmdbid, extended, limit, offset, rid, tvmazeid, traktid, tvdbid, doubanid, season, ep, album, artist, label, track, year, genre, author, title, publisher, configured, source, host, server, async_req=True)
+        >>> thread = api.get_indexerid_newznab_with_http_info(id, t, q, cat, imdbid, tmdbid, extended, limit, offset, minage, maxage, minsize, maxsize, rid, tvmazeid, traktid, tvdbid, doubanid, season, ep, album, artist, label, track, year, genre, author, title, publisher, configured, source, host, server, async_req=True)
         >>> result = thread.get()
 
         :param id: (required)
@@ -304,6 +312,14 @@ class NewznabApi(object):
         :type limit: int
         :param offset:
         :type offset: int
+        :param minage:
+        :type minage: int
+        :param maxage:
+        :type maxage: int
+        :param minsize:
+        :type minsize: int
+        :param maxsize:
+        :type maxsize: int
         :param rid:
         :type rid: int
         :param tvmazeid:
@@ -380,6 +396,10 @@ class NewznabApi(object):
             'extended',
             'limit',
             'offset',
+            'minage',
+            'maxage',
+            'minsize',
+            'maxsize',
             'rid',
             'tvmazeid',
             'traktid',
@@ -448,6 +468,14 @@ class NewznabApi(object):
             _query_params.append(('limit', _params['limit']))
         if _params.get('offset') is not None:  # noqa: E501
             _query_params.append(('offset', _params['offset']))
+        if _params.get('minage') is not None:  # noqa: E501
+            _query_params.append(('minage', _params['minage']))
+        if _params.get('maxage') is not None:  # noqa: E501
+            _query_params.append(('maxage', _params['maxage']))
+        if _params.get('minsize') is not None:  # noqa: E501
+            _query_params.append(('minsize', _params['minsize']))
+        if _params.get('maxsize') is not None:  # noqa: E501
+            _query_params.append(('maxsize', _params['maxsize']))
         if _params.get('rid') is not None:  # noqa: E501
             _query_params.append(('rid', _params['rid']))
         if _params.get('tvmazeid') is not None:  # noqa: E501
@@ -522,13 +550,13 @@ class NewznabApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def getid_api(self, id : StrictInt, t : Optional[StrictStr] = None, q : Optional[StrictStr] = None, cat : Optional[StrictStr] = None, imdbid : Optional[StrictStr] = None, tmdbid : Optional[StrictInt] = None, extended : Optional[StrictStr] = None, limit : Optional[StrictInt] = None, offset : Optional[StrictInt] = None, rid : Optional[StrictInt] = None, tvmazeid : Optional[StrictInt] = None, traktid : Optional[StrictInt] = None, tvdbid : Optional[StrictInt] = None, doubanid : Optional[StrictInt] = None, season : Optional[StrictInt] = None, ep : Optional[StrictStr] = None, album : Optional[StrictStr] = None, artist : Optional[StrictStr] = None, label : Optional[StrictStr] = None, track : Optional[StrictStr] = None, year : Optional[StrictInt] = None, genre : Optional[StrictStr] = None, author : Optional[StrictStr] = None, title : Optional[StrictStr] = None, publisher : Optional[StrictStr] = None, configured : Optional[StrictStr] = None, source : Optional[StrictStr] = None, host : Optional[StrictStr] = None, server : Optional[StrictStr] = None, **kwargs) -> None:  # noqa: E501
+    def getid_api(self, id : StrictInt, t : Optional[StrictStr] = None, q : Optional[StrictStr] = None, cat : Optional[StrictStr] = None, imdbid : Optional[StrictStr] = None, tmdbid : Optional[StrictInt] = None, extended : Optional[StrictStr] = None, limit : Optional[StrictInt] = None, offset : Optional[StrictInt] = None, minage : Optional[StrictInt] = None, maxage : Optional[StrictInt] = None, minsize : Optional[StrictInt] = None, maxsize : Optional[StrictInt] = None, rid : Optional[StrictInt] = None, tvmazeid : Optional[StrictInt] = None, traktid : Optional[StrictInt] = None, tvdbid : Optional[StrictInt] = None, doubanid : Optional[StrictInt] = None, season : Optional[StrictInt] = None, ep : Optional[StrictStr] = None, album : Optional[StrictStr] = None, artist : Optional[StrictStr] = None, label : Optional[StrictStr] = None, track : Optional[StrictStr] = None, year : Optional[StrictInt] = None, genre : Optional[StrictStr] = None, author : Optional[StrictStr] = None, title : Optional[StrictStr] = None, publisher : Optional[StrictStr] = None, configured : Optional[StrictStr] = None, source : Optional[StrictStr] = None, host : Optional[StrictStr] = None, server : Optional[StrictStr] = None, **kwargs) -> None:  # noqa: E501
         """getid_api  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.getid_api(id, t, q, cat, imdbid, tmdbid, extended, limit, offset, rid, tvmazeid, traktid, tvdbid, doubanid, season, ep, album, artist, label, track, year, genre, author, title, publisher, configured, source, host, server, async_req=True)
+        >>> thread = api.getid_api(id, t, q, cat, imdbid, tmdbid, extended, limit, offset, minage, maxage, minsize, maxsize, rid, tvmazeid, traktid, tvdbid, doubanid, season, ep, album, artist, label, track, year, genre, author, title, publisher, configured, source, host, server, async_req=True)
         >>> result = thread.get()
 
         :param id: (required)
@@ -549,6 +577,14 @@ class NewznabApi(object):
         :type limit: int
         :param offset:
         :type offset: int
+        :param minage:
+        :type minage: int
+        :param maxage:
+        :type maxage: int
+        :param minsize:
+        :type minsize: int
+        :param maxsize:
+        :type maxsize: int
         :param rid:
         :type rid: int
         :param tvmazeid:
@@ -605,16 +641,16 @@ class NewznabApi(object):
         :rtype: None
         """
         kwargs['_return_http_data_only'] = True
-        return self.getid_api_with_http_info(id, t, q, cat, imdbid, tmdbid, extended, limit, offset, rid, tvmazeid, traktid, tvdbid, doubanid, season, ep, album, artist, label, track, year, genre, author, title, publisher, configured, source, host, server, **kwargs)  # noqa: E501
+        return self.getid_api_with_http_info(id, t, q, cat, imdbid, tmdbid, extended, limit, offset, minage, maxage, minsize, maxsize, rid, tvmazeid, traktid, tvdbid, doubanid, season, ep, album, artist, label, track, year, genre, author, title, publisher, configured, source, host, server, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def getid_api_with_http_info(self, id : StrictInt, t : Optional[StrictStr] = None, q : Optional[StrictStr] = None, cat : Optional[StrictStr] = None, imdbid : Optional[StrictStr] = None, tmdbid : Optional[StrictInt] = None, extended : Optional[StrictStr] = None, limit : Optional[StrictInt] = None, offset : Optional[StrictInt] = None, rid : Optional[StrictInt] = None, tvmazeid : Optional[StrictInt] = None, traktid : Optional[StrictInt] = None, tvdbid : Optional[StrictInt] = None, doubanid : Optional[StrictInt] = None, season : Optional[StrictInt] = None, ep : Optional[StrictStr] = None, album : Optional[StrictStr] = None, artist : Optional[StrictStr] = None, label : Optional[StrictStr] = None, track : Optional[StrictStr] = None, year : Optional[StrictInt] = None, genre : Optional[StrictStr] = None, author : Optional[StrictStr] = None, title : Optional[StrictStr] = None, publisher : Optional[StrictStr] = None, configured : Optional[StrictStr] = None, source : Optional[StrictStr] = None, host : Optional[StrictStr] = None, server : Optional[StrictStr] = None, **kwargs):  # noqa: E501
+    def getid_api_with_http_info(self, id : StrictInt, t : Optional[StrictStr] = None, q : Optional[StrictStr] = None, cat : Optional[StrictStr] = None, imdbid : Optional[StrictStr] = None, tmdbid : Optional[StrictInt] = None, extended : Optional[StrictStr] = None, limit : Optional[StrictInt] = None, offset : Optional[StrictInt] = None, minage : Optional[StrictInt] = None, maxage : Optional[StrictInt] = None, minsize : Optional[StrictInt] = None, maxsize : Optional[StrictInt] = None, rid : Optional[StrictInt] = None, tvmazeid : Optional[StrictInt] = None, traktid : Optional[StrictInt] = None, tvdbid : Optional[StrictInt] = None, doubanid : Optional[StrictInt] = None, season : Optional[StrictInt] = None, ep : Optional[StrictStr] = None, album : Optional[StrictStr] = None, artist : Optional[StrictStr] = None, label : Optional[StrictStr] = None, track : Optional[StrictStr] = None, year : Optional[StrictInt] = None, genre : Optional[StrictStr] = None, author : Optional[StrictStr] = None, title : Optional[StrictStr] = None, publisher : Optional[StrictStr] = None, configured : Optional[StrictStr] = None, source : Optional[StrictStr] = None, host : Optional[StrictStr] = None, server : Optional[StrictStr] = None, **kwargs):  # noqa: E501
         """getid_api  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.getid_api_with_http_info(id, t, q, cat, imdbid, tmdbid, extended, limit, offset, rid, tvmazeid, traktid, tvdbid, doubanid, season, ep, album, artist, label, track, year, genre, author, title, publisher, configured, source, host, server, async_req=True)
+        >>> thread = api.getid_api_with_http_info(id, t, q, cat, imdbid, tmdbid, extended, limit, offset, minage, maxage, minsize, maxsize, rid, tvmazeid, traktid, tvdbid, doubanid, season, ep, album, artist, label, track, year, genre, author, title, publisher, configured, source, host, server, async_req=True)
         >>> result = thread.get()
 
         :param id: (required)
@@ -635,6 +671,14 @@ class NewznabApi(object):
         :type limit: int
         :param offset:
         :type offset: int
+        :param minage:
+        :type minage: int
+        :param maxage:
+        :type maxage: int
+        :param minsize:
+        :type minsize: int
+        :param maxsize:
+        :type maxsize: int
         :param rid:
         :type rid: int
         :param tvmazeid:
@@ -711,6 +755,10 @@ class NewznabApi(object):
             'extended',
             'limit',
             'offset',
+            'minage',
+            'maxage',
+            'minsize',
+            'maxsize',
             'rid',
             'tvmazeid',
             'traktid',
@@ -779,6 +827,14 @@ class NewznabApi(object):
             _query_params.append(('limit', _params['limit']))
         if _params.get('offset') is not None:  # noqa: E501
             _query_params.append(('offset', _params['offset']))
+        if _params.get('minage') is not None:  # noqa: E501
+            _query_params.append(('minage', _params['minage']))
+        if _params.get('maxage') is not None:  # noqa: E501
+            _query_params.append(('maxage', _params['maxage']))
+        if _params.get('minsize') is not None:  # noqa: E501
+            _query_params.append(('minsize', _params['minsize']))
+        if _params.get('maxsize') is not None:  # noqa: E501
+            _query_params.append(('maxsize', _params['maxsize']))
         if _params.get('rid') is not None:  # noqa: E501
             _query_params.append(('rid', _params['rid']))
         if _params.get('tvmazeid') is not None:  # noqa: E501
