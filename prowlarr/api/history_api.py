@@ -181,19 +181,21 @@ class HistoryApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def list_history_indexer(self, indexer_id : Optional[StrictInt] = None, event_type : Optional[HistoryEventType] = None, **kwargs) -> List[HistoryResource]:  # noqa: E501
+    def list_history_indexer(self, indexer_id : Optional[StrictInt] = None, event_type : Optional[HistoryEventType] = None, limit : Optional[StrictInt] = None, **kwargs) -> List[HistoryResource]:  # noqa: E501
         """list_history_indexer  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.list_history_indexer(indexer_id, event_type, async_req=True)
+        >>> thread = api.list_history_indexer(indexer_id, event_type, limit, async_req=True)
         >>> result = thread.get()
 
         :param indexer_id:
         :type indexer_id: int
         :param event_type:
         :type event_type: HistoryEventType
+        :param limit:
+        :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -210,22 +212,24 @@ class HistoryApi(object):
         :rtype: List[HistoryResource]
         """
         kwargs['_return_http_data_only'] = True
-        return self.list_history_indexer_with_http_info(indexer_id, event_type, **kwargs)  # noqa: E501
+        return self.list_history_indexer_with_http_info(indexer_id, event_type, limit, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def list_history_indexer_with_http_info(self, indexer_id : Optional[StrictInt] = None, event_type : Optional[HistoryEventType] = None, **kwargs):  # noqa: E501
+    def list_history_indexer_with_http_info(self, indexer_id : Optional[StrictInt] = None, event_type : Optional[HistoryEventType] = None, limit : Optional[StrictInt] = None, **kwargs):  # noqa: E501
         """list_history_indexer  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.list_history_indexer_with_http_info(indexer_id, event_type, async_req=True)
+        >>> thread = api.list_history_indexer_with_http_info(indexer_id, event_type, limit, async_req=True)
         >>> result = thread.get()
 
         :param indexer_id:
         :type indexer_id: int
         :param event_type:
         :type event_type: HistoryEventType
+        :param limit:
+        :type limit: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -254,7 +258,8 @@ class HistoryApi(object):
 
         _all_params = [
             'indexer_id',
-            'event_type'
+            'event_type',
+            'limit'
         ]
         _all_params.extend(
             [
@@ -289,6 +294,8 @@ class HistoryApi(object):
             _query_params.append(('indexerId', _params['indexer_id']))
         if _params.get('event_type') is not None:  # noqa: E501
             _query_params.append(('eventType', _params['event_type']))
+        if _params.get('limit') is not None:  # noqa: E501
+            _query_params.append(('limit', _params['limit']))
 
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
