@@ -45,13 +45,13 @@ class IndexerStatsApi(object):
         self.api_client = api_client
 
     @validate_arguments
-    def get_indexer_stats(self, start_date : Optional[datetime] = None, end_date : Optional[datetime] = None, indexers : Optional[StrictStr] = None, tags : Optional[StrictStr] = None, **kwargs) -> IndexerStatsResource:  # noqa: E501
+    def get_indexer_stats(self, start_date : Optional[datetime] = None, end_date : Optional[datetime] = None, indexers : Optional[StrictStr] = None, protocols : Optional[StrictStr] = None, tags : Optional[StrictStr] = None, **kwargs) -> IndexerStatsResource:  # noqa: E501
         """get_indexer_stats  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_indexer_stats(start_date, end_date, indexers, tags, async_req=True)
+        >>> thread = api.get_indexer_stats(start_date, end_date, indexers, protocols, tags, async_req=True)
         >>> result = thread.get()
 
         :param start_date:
@@ -60,6 +60,8 @@ class IndexerStatsApi(object):
         :type end_date: datetime
         :param indexers:
         :type indexers: str
+        :param protocols:
+        :type protocols: str
         :param tags:
         :type tags: str
         :param async_req: Whether to execute the request asynchronously.
@@ -78,16 +80,16 @@ class IndexerStatsApi(object):
         :rtype: IndexerStatsResource
         """
         kwargs['_return_http_data_only'] = True
-        return self.get_indexer_stats_with_http_info(start_date, end_date, indexers, tags, **kwargs)  # noqa: E501
+        return self.get_indexer_stats_with_http_info(start_date, end_date, indexers, protocols, tags, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def get_indexer_stats_with_http_info(self, start_date : Optional[datetime] = None, end_date : Optional[datetime] = None, indexers : Optional[StrictStr] = None, tags : Optional[StrictStr] = None, **kwargs):  # noqa: E501
+    def get_indexer_stats_with_http_info(self, start_date : Optional[datetime] = None, end_date : Optional[datetime] = None, indexers : Optional[StrictStr] = None, protocols : Optional[StrictStr] = None, tags : Optional[StrictStr] = None, **kwargs):  # noqa: E501
         """get_indexer_stats  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_indexer_stats_with_http_info(start_date, end_date, indexers, tags, async_req=True)
+        >>> thread = api.get_indexer_stats_with_http_info(start_date, end_date, indexers, protocols, tags, async_req=True)
         >>> result = thread.get()
 
         :param start_date:
@@ -96,6 +98,8 @@ class IndexerStatsApi(object):
         :type end_date: datetime
         :param indexers:
         :type indexers: str
+        :param protocols:
+        :type protocols: str
         :param tags:
         :type tags: str
         :param async_req: Whether to execute the request asynchronously.
@@ -128,6 +132,7 @@ class IndexerStatsApi(object):
             'start_date',
             'end_date',
             'indexers',
+            'protocols',
             'tags'
         ]
         _all_params.extend(
@@ -165,6 +170,8 @@ class IndexerStatsApi(object):
             _query_params.append(('endDate', _params['end_date']))
         if _params.get('indexers') is not None:  # noqa: E501
             _query_params.append(('indexers', _params['indexers']))
+        if _params.get('protocols') is not None:  # noqa: E501
+            _query_params.append(('protocols', _params['protocols']))
         if _params.get('tags') is not None:  # noqa: E501
             _query_params.append(('tags', _params['tags']))
 
