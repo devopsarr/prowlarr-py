@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **get_indexer_stats**
-> IndexerStatsResource get_indexer_stats(start_date=start_date, end_date=end_date, indexers=indexers, tags=tags)
+> IndexerStatsResource get_indexer_stats(start_date=start_date, end_date=end_date, indexers=indexers, protocols=protocols, tags=tags)
 
 
 
@@ -52,10 +52,11 @@ with prowlarr.ApiClient(configuration) as api_client:
     start_date = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
     end_date = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
     indexers = 'indexers_example' # str |  (optional)
+    protocols = 'protocols_example' # str |  (optional)
     tags = 'tags_example' # str |  (optional)
 
     try:
-        api_response = api_instance.get_indexer_stats(start_date=start_date, end_date=end_date, indexers=indexers, tags=tags)
+        api_response = api_instance.get_indexer_stats(start_date=start_date, end_date=end_date, indexers=indexers, protocols=protocols, tags=tags)
         print("The response of IndexerStatsApi->get_indexer_stats:\n")
         pprint(api_response)
     except Exception as e:
@@ -100,10 +101,11 @@ with prowlarr.ApiClient(configuration) as api_client:
     start_date = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
     end_date = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
     indexers = 'indexers_example' # str |  (optional)
+    protocols = 'protocols_example' # str |  (optional)
     tags = 'tags_example' # str |  (optional)
 
     try:
-        api_response = api_instance.get_indexer_stats(start_date=start_date, end_date=end_date, indexers=indexers, tags=tags)
+        api_response = api_instance.get_indexer_stats(start_date=start_date, end_date=end_date, indexers=indexers, protocols=protocols, tags=tags)
         print("The response of IndexerStatsApi->get_indexer_stats:\n")
         pprint(api_response)
     except Exception as e:
@@ -117,6 +119,7 @@ Name | Type | Description  | Notes
  **start_date** | **datetime**|  | [optional] 
  **end_date** | **datetime**|  | [optional] 
  **indexers** | **str**|  | [optional] 
+ **protocols** | **str**|  | [optional] 
  **tags** | **str**|  | [optional] 
 
 ### Return type
