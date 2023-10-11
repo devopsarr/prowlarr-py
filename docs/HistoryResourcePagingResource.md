@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 **page_size** | **int** |  | [optional] 
 **sort_key** | **str** |  | [optional] 
 **sort_direction** | [**SortDirection**](SortDirection.md) |  | [optional] 
-**filters** | [**List[PagingResourceFilter]**](PagingResourceFilter.md) |  | [optional] 
 **total_records** | **int** |  | [optional] 
 **records** | [**List[HistoryResource]**](HistoryResource.md) |  | [optional] 
 

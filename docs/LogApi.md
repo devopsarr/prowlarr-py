@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **get_log**
-> LogResourcePagingResource get_log()
+> LogResourcePagingResource get_log(page=page, page_size=page_size, sort_key=sort_key, sort_direction=sort_direction, level=level)
 
 
 
@@ -49,9 +49,14 @@ configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
 with prowlarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = prowlarr.LogApi(api_client)
+    page = 1 # int |  (optional) (default to 1)
+    page_size = 10 # int |  (optional) (default to 10)
+    sort_key = 'sort_key_example' # str |  (optional)
+    sort_direction = prowlarr.SortDirection() # SortDirection |  (optional)
+    level = 'level_example' # str |  (optional)
 
     try:
-        api_response = api_instance.get_log()
+        api_response = api_instance.get_log(page=page, page_size=page_size, sort_key=sort_key, sort_direction=sort_direction, level=level)
         print("The response of LogApi->get_log:\n")
         pprint(api_response)
     except Exception as e:
@@ -93,9 +98,14 @@ configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
 with prowlarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = prowlarr.LogApi(api_client)
+    page = 1 # int |  (optional) (default to 1)
+    page_size = 10 # int |  (optional) (default to 10)
+    sort_key = 'sort_key_example' # str |  (optional)
+    sort_direction = prowlarr.SortDirection() # SortDirection |  (optional)
+    level = 'level_example' # str |  (optional)
 
     try:
-        api_response = api_instance.get_log()
+        api_response = api_instance.get_log(page=page, page_size=page_size, sort_key=sort_key, sort_direction=sort_direction, level=level)
         print("The response of LogApi->get_log:\n")
         pprint(api_response)
     except Exception as e:
@@ -103,7 +113,14 @@ with prowlarr.ApiClient(configuration) as api_client:
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**|  | [optional] [default to 1]
+ **page_size** | **int**|  | [optional] [default to 10]
+ **sort_key** | **str**|  | [optional] 
+ **sort_direction** | [**SortDirection**](.md)|  | [optional] 
+ **level** | **str**|  | [optional] 
 
 ### Return type
 

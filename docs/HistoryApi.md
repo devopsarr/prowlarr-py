@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **get_history**
-> HistoryResourcePagingResource get_history()
+> HistoryResourcePagingResource get_history(page=page, page_size=page_size, sort_key=sort_key, sort_direction=sort_direction, event_type=event_type, successful=successful, download_id=download_id)
 
 
 
@@ -51,9 +51,16 @@ configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
 with prowlarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = prowlarr.HistoryApi(api_client)
+    page = 1 # int |  (optional) (default to 1)
+    page_size = 10 # int |  (optional) (default to 10)
+    sort_key = 'sort_key_example' # str |  (optional)
+    sort_direction = prowlarr.SortDirection() # SortDirection |  (optional)
+    event_type = 56 # int |  (optional)
+    successful = True # bool |  (optional)
+    download_id = 'download_id_example' # str |  (optional)
 
     try:
-        api_response = api_instance.get_history()
+        api_response = api_instance.get_history(page=page, page_size=page_size, sort_key=sort_key, sort_direction=sort_direction, event_type=event_type, successful=successful, download_id=download_id)
         print("The response of HistoryApi->get_history:\n")
         pprint(api_response)
     except Exception as e:
@@ -95,9 +102,16 @@ configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
 with prowlarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = prowlarr.HistoryApi(api_client)
+    page = 1 # int |  (optional) (default to 1)
+    page_size = 10 # int |  (optional) (default to 10)
+    sort_key = 'sort_key_example' # str |  (optional)
+    sort_direction = prowlarr.SortDirection() # SortDirection |  (optional)
+    event_type = 56 # int |  (optional)
+    successful = True # bool |  (optional)
+    download_id = 'download_id_example' # str |  (optional)
 
     try:
-        api_response = api_instance.get_history()
+        api_response = api_instance.get_history(page=page, page_size=page_size, sort_key=sort_key, sort_direction=sort_direction, event_type=event_type, successful=successful, download_id=download_id)
         print("The response of HistoryApi->get_history:\n")
         pprint(api_response)
     except Exception as e:
@@ -105,7 +119,16 @@ with prowlarr.ApiClient(configuration) as api_client:
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**|  | [optional] [default to 1]
+ **page_size** | **int**|  | [optional] [default to 10]
+ **sort_key** | **str**|  | [optional] 
+ **sort_direction** | [**SortDirection**](.md)|  | [optional] 
+ **event_type** | **int**|  | [optional] 
+ **successful** | **bool**|  | [optional] 
+ **download_id** | **str**|  | [optional] 
 
 ### Return type
 

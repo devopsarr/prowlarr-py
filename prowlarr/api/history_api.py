@@ -19,13 +19,14 @@ from typing_extensions import Annotated
 
 from datetime import datetime
 
-from pydantic import StrictInt
+from pydantic import StrictBool, StrictInt, StrictStr
 
 from typing import List, Optional
 
 from prowlarr.models.history_event_type import HistoryEventType
 from prowlarr.models.history_resource import HistoryResource
 from prowlarr.models.history_resource_paging_resource import HistoryResourcePagingResource
+from prowlarr.models.sort_direction import SortDirection
 
 from prowlarr.api_client import ApiClient
 from prowlarr.exceptions import (  # noqa: F401
@@ -47,15 +48,29 @@ class HistoryApi(object):
         self.api_client = api_client
 
     @validate_arguments
-    def get_history(self, **kwargs) -> HistoryResourcePagingResource:  # noqa: E501
+    def get_history(self, page : Optional[StrictInt] = None, page_size : Optional[StrictInt] = None, sort_key : Optional[StrictStr] = None, sort_direction : Optional[SortDirection] = None, event_type : Optional[StrictInt] = None, successful : Optional[StrictBool] = None, download_id : Optional[StrictStr] = None, **kwargs) -> HistoryResourcePagingResource:  # noqa: E501
         """get_history  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_history(async_req=True)
+        >>> thread = api.get_history(page, page_size, sort_key, sort_direction, event_type, successful, download_id, async_req=True)
         >>> result = thread.get()
 
+        :param page:
+        :type page: int
+        :param page_size:
+        :type page_size: int
+        :param sort_key:
+        :type sort_key: str
+        :param sort_direction:
+        :type sort_direction: SortDirection
+        :param event_type:
+        :type event_type: int
+        :param successful:
+        :type successful: bool
+        :param download_id:
+        :type download_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -72,18 +87,32 @@ class HistoryApi(object):
         :rtype: HistoryResourcePagingResource
         """
         kwargs['_return_http_data_only'] = True
-        return self.get_history_with_http_info(**kwargs)  # noqa: E501
+        return self.get_history_with_http_info(page, page_size, sort_key, sort_direction, event_type, successful, download_id, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def get_history_with_http_info(self, **kwargs):  # noqa: E501
+    def get_history_with_http_info(self, page : Optional[StrictInt] = None, page_size : Optional[StrictInt] = None, sort_key : Optional[StrictStr] = None, sort_direction : Optional[SortDirection] = None, event_type : Optional[StrictInt] = None, successful : Optional[StrictBool] = None, download_id : Optional[StrictStr] = None, **kwargs):  # noqa: E501
         """get_history  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_history_with_http_info(async_req=True)
+        >>> thread = api.get_history_with_http_info(page, page_size, sort_key, sort_direction, event_type, successful, download_id, async_req=True)
         >>> result = thread.get()
 
+        :param page:
+        :type page: int
+        :param page_size:
+        :type page_size: int
+        :param sort_key:
+        :type sort_key: str
+        :param sort_direction:
+        :type sort_direction: SortDirection
+        :param event_type:
+        :type event_type: int
+        :param successful:
+        :type successful: bool
+        :param download_id:
+        :type download_id: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -111,6 +140,13 @@ class HistoryApi(object):
         _params = locals()
 
         _all_params = [
+            'page',
+            'page_size',
+            'sort_key',
+            'sort_direction',
+            'event_type',
+            'successful',
+            'download_id'
         ]
         _all_params.extend(
             [
@@ -141,6 +177,20 @@ class HistoryApi(object):
 
         # process the query parameters
         _query_params = []
+        if _params.get('page') is not None:  # noqa: E501
+            _query_params.append(('page', _params['page']))
+        if _params.get('page_size') is not None:  # noqa: E501
+            _query_params.append(('pageSize', _params['page_size']))
+        if _params.get('sort_key') is not None:  # noqa: E501
+            _query_params.append(('sortKey', _params['sort_key']))
+        if _params.get('sort_direction') is not None:  # noqa: E501
+            _query_params.append(('sortDirection', _params['sort_direction']))
+        if _params.get('event_type') is not None:  # noqa: E501
+            _query_params.append(('eventType', _params['event_type']))
+        if _params.get('successful') is not None:  # noqa: E501
+            _query_params.append(('successful', _params['successful']))
+        if _params.get('download_id') is not None:  # noqa: E501
+            _query_params.append(('downloadId', _params['download_id']))
 
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
