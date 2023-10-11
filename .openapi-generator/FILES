@@ -74,7 +74,6 @@ docs/MusicSearchParam.md
 docs/NewznabApi.md
 docs/NotificationApi.md
 docs/NotificationResource.md
-docs/PagingResourceFilter.md
 docs/PingApi.md
 docs/PingResource.md
 docs/ProviderMessage.md
@@ -196,7 +195,6 @@ prowlarr/models/log_resource_paging_resource.py
 prowlarr/models/movie_search_param.py
 prowlarr/models/music_search_param.py
 prowlarr/models/notification_resource.py
-prowlarr/models/paging_resource_filter.py
 prowlarr/models/ping_resource.py
 prowlarr/models/provider_message.py
 prowlarr/models/provider_message_type.py

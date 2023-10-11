@@ -17,7 +17,12 @@ import re  # noqa: F401
 from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
+from pydantic import StrictInt, StrictStr
+
+from typing import Optional
+
 from prowlarr.models.log_resource_paging_resource import LogResourcePagingResource
+from prowlarr.models.sort_direction import SortDirection
 
 from prowlarr.api_client import ApiClient
 from prowlarr.exceptions import (  # noqa: F401
@@ -39,15 +44,25 @@ class LogApi(object):
         self.api_client = api_client
 
     @validate_arguments
-    def get_log(self, **kwargs) -> LogResourcePagingResource:  # noqa: E501
+    def get_log(self, page : Optional[StrictInt] = None, page_size : Optional[StrictInt] = None, sort_key : Optional[StrictStr] = None, sort_direction : Optional[SortDirection] = None, level : Optional[StrictStr] = None, **kwargs) -> LogResourcePagingResource:  # noqa: E501
         """get_log  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_log(async_req=True)
+        >>> thread = api.get_log(page, page_size, sort_key, sort_direction, level, async_req=True)
         >>> result = thread.get()
 
+        :param page:
+        :type page: int
+        :param page_size:
+        :type page_size: int
+        :param sort_key:
+        :type sort_key: str
+        :param sort_direction:
+        :type sort_direction: SortDirection
+        :param level:
+        :type level: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -64,18 +79,28 @@ class LogApi(object):
         :rtype: LogResourcePagingResource
         """
         kwargs['_return_http_data_only'] = True
-        return self.get_log_with_http_info(**kwargs)  # noqa: E501
+        return self.get_log_with_http_info(page, page_size, sort_key, sort_direction, level, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def get_log_with_http_info(self, **kwargs):  # noqa: E501
+    def get_log_with_http_info(self, page : Optional[StrictInt] = None, page_size : Optional[StrictInt] = None, sort_key : Optional[StrictStr] = None, sort_direction : Optional[SortDirection] = None, level : Optional[StrictStr] = None, **kwargs):  # noqa: E501
         """get_log  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_log_with_http_info(async_req=True)
+        >>> thread = api.get_log_with_http_info(page, page_size, sort_key, sort_direction, level, async_req=True)
         >>> result = thread.get()
 
+        :param page:
+        :type page: int
+        :param page_size:
+        :type page_size: int
+        :param sort_key:
+        :type sort_key: str
+        :param sort_direction:
+        :type sort_direction: SortDirection
+        :param level:
+        :type level: str
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -103,6 +128,11 @@ class LogApi(object):
         _params = locals()
 
         _all_params = [
+            'page',
+            'page_size',
+            'sort_key',
+            'sort_direction',
+            'level'
         ]
         _all_params.extend(
             [
@@ -133,6 +163,16 @@ class LogApi(object):
 
         # process the query parameters
         _query_params = []
+        if _params.get('page') is not None:  # noqa: E501
+            _query_params.append(('page', _params['page']))
+        if _params.get('page_size') is not None:  # noqa: E501
+            _query_params.append(('pageSize', _params['page_size']))
+        if _params.get('sort_key') is not None:  # noqa: E501
+            _query_params.append(('sortKey', _params['sort_key']))
+        if _params.get('sort_direction') is not None:  # noqa: E501
+            _query_params.append(('sortDirection', _params['sort_direction']))
+        if _params.get('level') is not None:  # noqa: E501
+            _query_params.append(('level', _params['level']))
 
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))

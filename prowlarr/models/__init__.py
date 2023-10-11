@@ -64,7 +64,6 @@ from prowlarr.models.log_resource_paging_resource import LogResourcePagingResour
 from prowlarr.models.movie_search_param import MovieSearchParam
 from prowlarr.models.music_search_param import MusicSearchParam
 from prowlarr.models.notification_resource import NotificationResource
-from prowlarr.models.paging_resource_filter import PagingResourceFilter
 from prowlarr.models.ping_resource import PingResource
 from prowlarr.models.provider_message import ProviderMessage
 from prowlarr.models.provider_message_type import ProviderMessageType

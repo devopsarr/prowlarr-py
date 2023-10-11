@@ -20,7 +20,6 @@ import json
 from typing import List, Optional
 from pydantic import BaseModel
 from prowlarr.models.history_resource import HistoryResource
-from prowlarr.models.paging_resource_filter import PagingResourceFilter
 from prowlarr.models.sort_direction import SortDirection
 
 class HistoryResourcePagingResource(BaseModel):
@@ -33,10 +32,9 @@ class HistoryResourcePagingResource(BaseModel):
     page_size: Optional[int]
     sort_key: Optional[str]
     sort_direction: Optional[SortDirection]
-    filters: Optional[List]
     total_records: Optional[int]
     records: Optional[List]
-    __properties = ["page", "pageSize", "sortKey", "sortDirection", "filters", "totalRecords", "records"]
+    __properties = ["page", "pageSize", "sortKey", "sortDirection", "totalRecords", "records"]
 
     class Config:
         allow_population_by_field_name = True
@@ -65,13 +63,6 @@ class HistoryResourcePagingResource(BaseModel):
                           exclude={
                           },
                           exclude_none=True)
-        # override the default output from pydantic by calling `to_dict()` of each item in filters (list)
-        _items = []
-        if self.filters:
-            for _item in self.filters:
-                if _item:
-                    _items.append(_item.to_dict())
-            _dict['filters'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in records (list)
         _items = []
         if self.records:
@@ -82,10 +73,6 @@ class HistoryResourcePagingResource(BaseModel):
         # set to None if sort_key (nullable) is None
         if self.sort_key is None:
             _dict['sortKey'] = None
-
-        # set to None if filters (nullable) is None
-        if self.filters is None:
-            _dict['filters'] = None
 
         # set to None if records (nullable) is None
         if self.records is None:
@@ -107,7 +94,6 @@ class HistoryResourcePagingResource(BaseModel):
             "page_size": obj.get("pageSize"),
             "sort_key": obj.get("sortKey"),
             "sort_direction": obj.get("sortDirection"),
-            "filters": [PagingResourceFilter.from_dict(_item) for _item in obj.get("filters")] if obj.get("filters") is not None else None,
             "total_records": obj.get("totalRecords"),
             "records": [HistoryResource.from_dict(_item) for _item in obj.get("records")] if obj.get("records") is not None else None
         })

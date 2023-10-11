@@ -166,11 +166,11 @@ class AuthenticationApi(object):
         _form_params = []
         _files = {}
         if _params['username']:
-            _form_params.append(('Username', _params['username']))
+            _form_params.append(('username', _params['username']))
         if _params['password']:
-            _form_params.append(('Password', _params['password']))
+            _form_params.append(('password', _params['password']))
         if _params['remember_me']:
-            _form_params.append(('RememberMe', _params['remember_me']))
+            _form_params.append(('rememberMe', _params['remember_me']))
 
         # process the body parameter
         _body_params = None

@@ -464,19 +464,19 @@ class SearchApi(object):
         # process the query parameters
         _query_params = []
         if _params.get('query') is not None:  # noqa: E501
-            _query_params.append(('Query', _params['query']))
+            _query_params.append(('query', _params['query']))
         if _params.get('type') is not None:  # noqa: E501
-            _query_params.append(('Type', _params['type']))
+            _query_params.append(('type', _params['type']))
         if _params.get('indexer_ids') is not None:  # noqa: E501
-            _query_params.append(('IndexerIds', _params['indexer_ids']))
-            _collection_formats['IndexerIds'] = 'multi'
+            _query_params.append(('indexerIds', _params['indexer_ids']))
+            _collection_formats['indexerIds'] = 'multi'
         if _params.get('categories') is not None:  # noqa: E501
-            _query_params.append(('Categories', _params['categories']))
-            _collection_formats['Categories'] = 'multi'
+            _query_params.append(('categories', _params['categories']))
+            _collection_formats['categories'] = 'multi'
         if _params.get('limit') is not None:  # noqa: E501
-            _query_params.append(('Limit', _params['limit']))
+            _query_params.append(('limit', _params['limit']))
         if _params.get('offset') is not None:  # noqa: E501
-            _query_params.append(('Offset', _params['offset']))
+            _query_params.append(('offset', _params['offset']))
 
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))

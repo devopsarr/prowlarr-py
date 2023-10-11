@@ -281,7 +281,6 @@ Class | Method | HTTP request | Description
  - [MovieSearchParam](docs/MovieSearchParam.md)
  - [MusicSearchParam](docs/MusicSearchParam.md)
  - [NotificationResource](docs/NotificationResource.md)
- - [PagingResourceFilter](docs/PagingResourceFilter.md)
  - [PingResource](docs/PingResource.md)
  - [ProviderMessage](docs/ProviderMessage.md)
  - [ProviderMessageType](docs/ProviderMessageType.md)
