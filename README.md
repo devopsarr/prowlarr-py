@@ -186,10 +186,8 @@ Class | Method | HTTP request | Description
 *LogApi* | [**get_log**](docs/LogApi.md#get_log) | **GET** /api/v1/log | 
 *LogFileApi* | [**get_log_file_by_filename**](docs/LogFileApi.md#get_log_file_by_filename) | **GET** /api/v1/log/file/{filename} | 
 *LogFileApi* | [**list_log_file**](docs/LogFileApi.md#list_log_file) | **GET** /api/v1/log/file | 
-*NewznabApi* | [**get_indexerid_download**](docs/NewznabApi.md#get_indexerid_download) | **GET** /api/v1/indexer/{id}/download | 
-*NewznabApi* | [**get_indexerid_newznab**](docs/NewznabApi.md#get_indexerid_newznab) | **GET** /api/v1/indexer/{id}/newznab | 
-*NewznabApi* | [**getid_api**](docs/NewznabApi.md#getid_api) | **GET** /{id}/api | 
-*NewznabApi* | [**getid_download**](docs/NewznabApi.md#getid_download) | **GET** /{id}/download | 
+*NewznabApi* | [**get_indexer_download**](docs/NewznabApi.md#get_indexer_download) | **GET** /api/v1/indexer/{id}/download | 
+*NewznabApi* | [**get_indexer_newznab**](docs/NewznabApi.md#get_indexer_newznab) | **GET** /api/v1/indexer/{id}/newznab | 
 *NotificationApi* | [**create_notification**](docs/NotificationApi.md#create_notification) | **POST** /api/v1/notification | 
 *NotificationApi* | [**create_notification_action_by_name**](docs/NotificationApi.md#create_notification_action_by_name) | **POST** /api/v1/notification/action/{name} | 
 *NotificationApi* | [**delete_notification**](docs/NotificationApi.md#delete_notification) | **DELETE** /api/v1/notification/{id} | 
