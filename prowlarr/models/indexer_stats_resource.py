@@ -17,7 +17,7 @@ import re  # noqa: F401
 import json
 
 
-from typing import List, Optional
+from typing import Any, Dict, List, Optional
 from pydantic import BaseModel
 from prowlarr.models.host_statistics import HostStatistics
 from prowlarr.models.indexer_statistics import IndexerStatistics

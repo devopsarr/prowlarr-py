@@ -214,6 +214,7 @@ prowlarr/models/update_changes.py
 prowlarr/models/update_mechanism.py
 prowlarr/models/update_resource.py
 prowlarr/models/user_agent_statistics.py
+prowlarr/py.typed
 prowlarr/rest.py
 pyproject.toml
 setup.cfg

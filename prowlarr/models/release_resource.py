@@ -17,7 +17,7 @@ import re  # noqa: F401
 import json
 
 from datetime import datetime
-from typing import List, Optional, Union
+from typing import Any, Dict, List, Optional, Union
 from pydantic import BaseModel
 from prowlarr.models.download_protocol import DownloadProtocol
 from prowlarr.models.indexer_category import IndexerCategory
