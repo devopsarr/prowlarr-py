@@ -79,7 +79,6 @@ docs/PingResource.md
 docs/ProviderMessage.md
 docs/ProviderMessageType.md
 docs/ProxyType.md
-docs/QualityProfileSchemaApi.md
 docs/ReleaseResource.md
 docs/RuntimeMode.md
 docs/SearchApi.md
@@ -131,7 +130,6 @@ prowlarr/api/log_file_api.py
 prowlarr/api/newznab_api.py
 prowlarr/api/notification_api.py
 prowlarr/api/ping_api.py
-prowlarr/api/quality_profile_schema_api.py
 prowlarr/api/search_api.py
 prowlarr/api/static_resource_api.py
 prowlarr/api/system_api.py
