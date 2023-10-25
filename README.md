@@ -104,6 +104,7 @@ Class | Method | HTTP request | Description
 *AppProfileApi* | [**create_app_profile**](docs/AppProfileApi.md#create_app_profile) | **POST** /api/v1/appprofile | 
 *AppProfileApi* | [**delete_app_profile**](docs/AppProfileApi.md#delete_app_profile) | **DELETE** /api/v1/appprofile/{id} | 
 *AppProfileApi* | [**get_app_profile_by_id**](docs/AppProfileApi.md#get_app_profile_by_id) | **GET** /api/v1/appprofile/{id} | 
+*AppProfileApi* | [**get_app_profile_schema**](docs/AppProfileApi.md#get_app_profile_schema) | **GET** /api/v1/appprofile/schema | 
 *AppProfileApi* | [**list_app_profile**](docs/AppProfileApi.md#list_app_profile) | **GET** /api/v1/appprofile | 
 *AppProfileApi* | [**update_app_profile**](docs/AppProfileApi.md#update_app_profile) | **PUT** /api/v1/appprofile/{id} | 
 *ApplicationApi* | [**create_applications**](docs/ApplicationApi.md#create_applications) | **POST** /api/v1/applications | 
@@ -198,7 +199,6 @@ Class | Method | HTTP request | Description
 *NotificationApi* | [**testall_notification**](docs/NotificationApi.md#testall_notification) | **POST** /api/v1/notification/testall | 
 *NotificationApi* | [**update_notification**](docs/NotificationApi.md#update_notification) | **PUT** /api/v1/notification/{id} | 
 *PingApi* | [**get_ping**](docs/PingApi.md#get_ping) | **GET** /ping | 
-*QualityProfileSchemaApi* | [**get_appprofile_schema**](docs/QualityProfileSchemaApi.md#get_appprofile_schema) | **GET** /api/v1/appprofile/schema | 
 *SearchApi* | [**create_search**](docs/SearchApi.md#create_search) | **POST** /api/v1/search | 
 *SearchApi* | [**create_search_bulk**](docs/SearchApi.md#create_search_bulk) | **POST** /api/v1/search/bulk | 
 *SearchApi* | [**list_search**](docs/SearchApi.md#list_search) | **GET** /api/v1/search | 
