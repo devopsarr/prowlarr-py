@@ -17,7 +17,7 @@ import re  # noqa: F401
 import json
 
 from datetime import datetime
-from typing import Any, Dict, Optional
+from typing import Any, ClassVar, Dict, Optional
 from pydantic import BaseModel
 
 class LogFileResource(BaseModel):
