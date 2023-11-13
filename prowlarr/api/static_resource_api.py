@@ -17,7 +17,9 @@ import re  # noqa: F401
 from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
-from pydantic import StrictStr, constr, validator
+from pydantic import Field
+from typing_extensions import Annotated
+from pydantic import StrictStr, field_validator
 
 
 from prowlarr.api_client import ApiClient
@@ -175,7 +177,7 @@ class StaticResourceApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def get_by_path(self, path : constr(strict=True), **kwargs) -> None:  # noqa: E501
+    def get_by_path(self, path : Annotated[str, Field(strict=True)], **kwargs) -> None:  # noqa: E501
         """get_by_path  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -205,7 +207,7 @@ class StaticResourceApi(object):
         return self.get_by_path_with_http_info(path, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def get_by_path_with_http_info(self, path : constr(strict=True), **kwargs):  # noqa: E501
+    def get_by_path_with_http_info(self, path : Annotated[str, Field(strict=True)], **kwargs):  # noqa: E501
         """get_by_path  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -310,7 +312,7 @@ class StaticResourceApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def get_content_by_path(self, path : constr(strict=True), **kwargs) -> None:  # noqa: E501
+    def get_content_by_path(self, path : Annotated[str, Field(strict=True)], **kwargs) -> None:  # noqa: E501
         """get_content_by_path  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -340,7 +342,7 @@ class StaticResourceApi(object):
         return self.get_content_by_path_with_http_info(path, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def get_content_by_path_with_http_info(self, path : constr(strict=True), **kwargs):  # noqa: E501
+    def get_content_by_path_with_http_info(self, path : Annotated[str, Field(strict=True)], **kwargs):  # noqa: E501
         """get_content_by_path  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an

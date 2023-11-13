@@ -17,7 +17,7 @@ import re  # noqa: F401
 import json
 
 
-from typing import Any, Dict, List, Optional
+from typing import Any, ClassVar, Dict, List, Optional
 from pydantic import BaseModel
 from prowlarr.models.download_client_category import DownloadClientCategory
 from prowlarr.models.download_protocol import DownloadProtocol
