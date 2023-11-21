@@ -42,6 +42,7 @@ class HostConfigResource(BaseModel):
     analytics_enabled: Optional[bool]
     username: Optional[str]
     password: Optional[str]
+    password_confirmation: Optional[str]
     log_level: Optional[str]
     console_log_level: Optional[str]
     branch: Optional[str]
@@ -67,7 +68,7 @@ class HostConfigResource(BaseModel):
     backup_interval: Optional[int]
     backup_retention: Optional[int]
     history_cleanup_days: Optional[int]
-    __properties = ["id", "bindAddress", "port", "sslPort", "enableSsl", "launchBrowser", "authenticationMethod", "authenticationRequired", "analyticsEnabled", "username", "password", "logLevel", "consoleLogLevel", "branch", "apiKey", "sslCertPath", "sslCertPassword", "urlBase", "instanceName", "applicationUrl", "updateAutomatically", "updateMechanism", "updateScriptPath", "proxyEnabled", "proxyType", "proxyHostname", "proxyPort", "proxyUsername", "proxyPassword", "proxyBypassFilter", "proxyBypassLocalAddresses", "certificateValidation", "backupFolder", "backupInterval", "backupRetention", "historyCleanupDays"]
+    __properties = ["id", "bindAddress", "port", "sslPort", "enableSsl", "launchBrowser", "authenticationMethod", "authenticationRequired", "analyticsEnabled", "username", "password", "passwordConfirmation", "logLevel", "consoleLogLevel", "branch", "apiKey", "sslCertPath", "sslCertPassword", "urlBase", "instanceName", "applicationUrl", "updateAutomatically", "updateMechanism", "updateScriptPath", "proxyEnabled", "proxyType", "proxyHostname", "proxyPort", "proxyUsername", "proxyPassword", "proxyBypassFilter", "proxyBypassLocalAddresses", "certificateValidation", "backupFolder", "backupInterval", "backupRetention", "historyCleanupDays"]
 
     class Config:
         allow_population_by_field_name = True
@@ -107,6 +108,10 @@ class HostConfigResource(BaseModel):
         # set to None if password (nullable) is None
         if self.password is None:
             _dict['password'] = None
+
+        # set to None if password_confirmation (nullable) is None
+        if self.password_confirmation is None:
+            _dict['passwordConfirmation'] = None
 
         # set to None if log_level (nullable) is None
         if self.log_level is None:
@@ -191,6 +196,7 @@ class HostConfigResource(BaseModel):
             "analytics_enabled": obj.get("analyticsEnabled"),
             "username": obj.get("username"),
             "password": obj.get("password"),
+            "password_confirmation": obj.get("passwordConfirmation"),
             "log_level": obj.get("logLevel"),
             "console_log_level": obj.get("consoleLogLevel"),
             "branch": obj.get("branch"),
