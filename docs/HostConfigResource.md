@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **analytics_enabled** | **bool** |  | [optional] 
 **username** | **str** |  | [optional] 
 **password** | **str** |  | [optional] 
+**password_confirmation** | **str** |  | [optional] 
 **log_level** | **str** |  | [optional] 
 **console_log_level** | **str** |  | [optional] 
 **branch** | **str** |  | [optional] 
