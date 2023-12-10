@@ -42,8 +42,10 @@ class ReleaseResource(BaseModel):
     release_hash: Optional[str]
     title: Optional[str]
     sort_title: Optional[str]
-    approved: Optional[bool]
     imdb_id: Optional[int]
+    tmdb_id: Optional[int]
+    tvdb_id: Optional[int]
+    tv_maze_id: Optional[int]
     publish_date: Optional[datetime]
     comment_url: Optional[str]
     download_url: Optional[str]
@@ -57,7 +59,7 @@ class ReleaseResource(BaseModel):
     leechers: Optional[int]
     protocol: Optional[DownloadProtocol]
     file_name: Optional[str]
-    __properties = ["id", "guid", "age", "ageHours", "ageMinutes", "size", "files", "grabs", "indexerId", "indexer", "subGroup", "releaseHash", "title", "sortTitle", "approved", "imdbId", "publishDate", "commentUrl", "downloadUrl", "infoUrl", "posterUrl", "indexerFlags", "categories", "magnetUrl", "infoHash", "seeders", "leechers", "protocol", "fileName"]
+    __properties = ["id", "guid", "age", "ageHours", "ageMinutes", "size", "files", "grabs", "indexerId", "indexer", "subGroup", "releaseHash", "title", "sortTitle", "imdbId", "tmdbId", "tvdbId", "tvMazeId", "publishDate", "commentUrl", "downloadUrl", "infoUrl", "posterUrl", "indexerFlags", "categories", "magnetUrl", "infoHash", "seeders", "leechers", "protocol", "fileName"]
 
     class Config:
         allow_population_by_field_name = True
@@ -196,8 +198,10 @@ class ReleaseResource(BaseModel):
             "release_hash": obj.get("releaseHash"),
             "title": obj.get("title"),
             "sort_title": obj.get("sortTitle"),
-            "approved": obj.get("approved"),
             "imdb_id": obj.get("imdbId"),
+            "tmdb_id": obj.get("tmdbId"),
+            "tvdb_id": obj.get("tvdbId"),
+            "tv_maze_id": obj.get("tvMazeId"),
             "publish_date": obj.get("publishDate"),
             "comment_url": obj.get("commentUrl"),
             "download_url": obj.get("downloadUrl"),
