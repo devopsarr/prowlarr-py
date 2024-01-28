@@ -7,8 +7,8 @@ Name | Type | Description | Notes
 **id** | **int** |  | [optional] 
 **name** | **str** |  | [optional] 
 **enable_rss** | **bool** |  | [optional] 
-**enable_interactive_search** | **bool** |  | [optional] 
 **enable_automatic_search** | **bool** |  | [optional] 
+**enable_interactive_search** | **bool** |  | [optional] 
 **minimum_seeders** | **int** |  | [optional] 
 
 ## Example

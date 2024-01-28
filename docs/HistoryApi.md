@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **get_history**
-> HistoryResourcePagingResource get_history(page=page, page_size=page_size, sort_key=sort_key, sort_direction=sort_direction, event_type=event_type, successful=successful, download_id=download_id)
+> HistoryResourcePagingResource get_history(page=page, page_size=page_size, sort_key=sort_key, sort_direction=sort_direction, event_type=event_type, successful=successful, download_id=download_id, indexer_ids=indexer_ids)
 
 
 
@@ -55,12 +55,13 @@ with prowlarr.ApiClient(configuration) as api_client:
     page_size = 10 # int |  (optional) (default to 10)
     sort_key = 'sort_key_example' # str |  (optional)
     sort_direction = prowlarr.SortDirection() # SortDirection |  (optional)
-    event_type = 56 # int |  (optional)
+    event_type = [56] # List[int] |  (optional)
     successful = True # bool |  (optional)
     download_id = 'download_id_example' # str |  (optional)
+    indexer_ids = [56] # List[int] |  (optional)
 
     try:
-        api_response = api_instance.get_history(page=page, page_size=page_size, sort_key=sort_key, sort_direction=sort_direction, event_type=event_type, successful=successful, download_id=download_id)
+        api_response = api_instance.get_history(page=page, page_size=page_size, sort_key=sort_key, sort_direction=sort_direction, event_type=event_type, successful=successful, download_id=download_id, indexer_ids=indexer_ids)
         print("The response of HistoryApi->get_history:\n")
         pprint(api_response)
     except Exception as e:
@@ -106,12 +107,13 @@ with prowlarr.ApiClient(configuration) as api_client:
     page_size = 10 # int |  (optional) (default to 10)
     sort_key = 'sort_key_example' # str |  (optional)
     sort_direction = prowlarr.SortDirection() # SortDirection |  (optional)
-    event_type = 56 # int |  (optional)
+    event_type = [56] # List[int] |  (optional)
     successful = True # bool |  (optional)
     download_id = 'download_id_example' # str |  (optional)
+    indexer_ids = [56] # List[int] |  (optional)
 
     try:
-        api_response = api_instance.get_history(page=page, page_size=page_size, sort_key=sort_key, sort_direction=sort_direction, event_type=event_type, successful=successful, download_id=download_id)
+        api_response = api_instance.get_history(page=page, page_size=page_size, sort_key=sort_key, sort_direction=sort_direction, event_type=event_type, successful=successful, download_id=download_id, indexer_ids=indexer_ids)
         print("The response of HistoryApi->get_history:\n")
         pprint(api_response)
     except Exception as e:
@@ -126,9 +128,10 @@ Name | Type | Description  | Notes
  **page_size** | **int**|  | [optional] [default to 10]
  **sort_key** | **str**|  | [optional] 
  **sort_direction** | [**SortDirection**](.md)|  | [optional] 
- **event_type** | **int**|  | [optional] 
+ **event_type** | [**List[int]**](int.md)|  | [optional] 
  **successful** | **bool**|  | [optional] 
  **download_id** | **str**|  | [optional] 
+ **indexer_ids** | [**List[int]**](int.md)|  | [optional] 
 
 ### Return type
 
