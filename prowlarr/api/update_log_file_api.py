@@ -21,7 +21,7 @@ from pydantic import Field
 from typing_extensions import Annotated
 from pydantic import field_validator
 
-from typing import Any, Dict, List, Union
+from typing import Any, Dict, List
 
 from prowlarr.models.log_file_resource import LogFileResource
 
