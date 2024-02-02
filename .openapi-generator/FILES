@@ -76,7 +76,6 @@ docs/NotificationApi.md
 docs/NotificationResource.md
 docs/PingApi.md
 docs/PingResource.md
-docs/PrivacyLevel.md
 docs/ProviderMessage.md
 docs/ProviderMessageType.md
 docs/ProxyType.md
@@ -195,7 +194,6 @@ prowlarr/models/movie_search_param.py
 prowlarr/models/music_search_param.py
 prowlarr/models/notification_resource.py
 prowlarr/models/ping_resource.py
-prowlarr/models/privacy_level.py
 prowlarr/models/provider_message.py
 prowlarr/models/provider_message_type.py
 prowlarr/models/proxy_type.py

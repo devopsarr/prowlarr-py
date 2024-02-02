@@ -48,13 +48,13 @@ class HistoryApi(object):
         self.api_client = api_client
 
     @validate_arguments
-    def get_history(self, page : Optional[StrictInt] = None, page_size : Optional[StrictInt] = None, sort_key : Optional[StrictStr] = None, sort_direction : Optional[SortDirection] = None, event_type : Optional[List[StrictInt]] = None, successful : Optional[StrictBool] = None, download_id : Optional[StrictStr] = None, indexer_ids : Optional[List[StrictInt]] = None, **kwargs) -> HistoryResourcePagingResource:  # noqa: E501
+    def get_history(self, page : Optional[StrictInt] = None, page_size : Optional[StrictInt] = None, sort_key : Optional[StrictStr] = None, sort_direction : Optional[SortDirection] = None, event_type : Optional[StrictInt] = None, successful : Optional[StrictBool] = None, download_id : Optional[StrictStr] = None, **kwargs) -> HistoryResourcePagingResource:  # noqa: E501
         """get_history  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_history(page, page_size, sort_key, sort_direction, event_type, successful, download_id, indexer_ids, async_req=True)
+        >>> thread = api.get_history(page, page_size, sort_key, sort_direction, event_type, successful, download_id, async_req=True)
         >>> result = thread.get()
 
         :param page:
@@ -66,13 +66,11 @@ class HistoryApi(object):
         :param sort_direction:
         :type sort_direction: SortDirection
         :param event_type:
-        :type event_type: List[int]
+        :type event_type: int
         :param successful:
         :type successful: bool
         :param download_id:
         :type download_id: str
-        :param indexer_ids:
-        :type indexer_ids: List[int]
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -89,16 +87,16 @@ class HistoryApi(object):
         :rtype: HistoryResourcePagingResource
         """
         kwargs['_return_http_data_only'] = True
-        return self.get_history_with_http_info(page, page_size, sort_key, sort_direction, event_type, successful, download_id, indexer_ids, **kwargs)  # noqa: E501
+        return self.get_history_with_http_info(page, page_size, sort_key, sort_direction, event_type, successful, download_id, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def get_history_with_http_info(self, page : Optional[StrictInt] = None, page_size : Optional[StrictInt] = None, sort_key : Optional[StrictStr] = None, sort_direction : Optional[SortDirection] = None, event_type : Optional[List[StrictInt]] = None, successful : Optional[StrictBool] = None, download_id : Optional[StrictStr] = None, indexer_ids : Optional[List[StrictInt]] = None, **kwargs):  # noqa: E501
+    def get_history_with_http_info(self, page : Optional[StrictInt] = None, page_size : Optional[StrictInt] = None, sort_key : Optional[StrictStr] = None, sort_direction : Optional[SortDirection] = None, event_type : Optional[StrictInt] = None, successful : Optional[StrictBool] = None, download_id : Optional[StrictStr] = None, **kwargs):  # noqa: E501
         """get_history  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_history_with_http_info(page, page_size, sort_key, sort_direction, event_type, successful, download_id, indexer_ids, async_req=True)
+        >>> thread = api.get_history_with_http_info(page, page_size, sort_key, sort_direction, event_type, successful, download_id, async_req=True)
         >>> result = thread.get()
 
         :param page:
@@ -110,13 +108,11 @@ class HistoryApi(object):
         :param sort_direction:
         :type sort_direction: SortDirection
         :param event_type:
-        :type event_type: List[int]
+        :type event_type: int
         :param successful:
         :type successful: bool
         :param download_id:
         :type download_id: str
-        :param indexer_ids:
-        :type indexer_ids: List[int]
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -150,8 +146,7 @@ class HistoryApi(object):
             'sort_direction',
             'event_type',
             'successful',
-            'download_id',
-            'indexer_ids'
+            'download_id'
         ]
         _all_params.extend(
             [
@@ -192,14 +187,10 @@ class HistoryApi(object):
             _query_params.append(('sortDirection', _params['sort_direction']))
         if _params.get('event_type') is not None:  # noqa: E501
             _query_params.append(('eventType', _params['event_type']))
-            _collection_formats['eventType'] = 'multi'
         if _params.get('successful') is not None:  # noqa: E501
             _query_params.append(('successful', _params['successful']))
         if _params.get('download_id') is not None:  # noqa: E501
             _query_params.append(('downloadId', _params['download_id']))
-        if _params.get('indexer_ids') is not None:  # noqa: E501
-            _query_params.append(('indexerIds', _params['indexer_ids']))
-            _collection_formats['indexerIds'] = 'multi'
 
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
