@@ -29,10 +29,10 @@ class AppProfileResource(BaseModel):
     id: Optional[int]
     name: Optional[str]
     enable_rss: Optional[bool]
-    enable_automatic_search: Optional[bool]
     enable_interactive_search: Optional[bool]
+    enable_automatic_search: Optional[bool]
     minimum_seeders: Optional[int]
-    __properties = ["id", "name", "enableRss", "enableAutomaticSearch", "enableInteractiveSearch", "minimumSeeders"]
+    __properties = ["id", "name", "enableRss", "enableInteractiveSearch", "enableAutomaticSearch", "minimumSeeders"]
 
     class Config:
         allow_population_by_field_name = True
@@ -80,8 +80,8 @@ class AppProfileResource(BaseModel):
             "id": obj.get("id"),
             "name": obj.get("name"),
             "enable_rss": obj.get("enableRss"),
-            "enable_automatic_search": obj.get("enableAutomaticSearch"),
             "enable_interactive_search": obj.get("enableInteractiveSearch"),
+            "enable_automatic_search": obj.get("enableAutomaticSearch"),
             "minimum_seeders": obj.get("minimumSeeders")
         })
         return _obj
