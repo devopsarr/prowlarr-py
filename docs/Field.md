@@ -18,7 +18,6 @@ Name | Type | Description | Notes
 **select_options_provider_action** | **str** |  | [optional] 
 **section** | **str** |  | [optional] 
 **hidden** | **str** |  | [optional] 
-**privacy** | [**PrivacyLevel**](PrivacyLevel.md) |  | [optional] 
 **placeholder** | **str** |  | [optional] 
 **is_float** | **bool** |  | [optional] 
 
