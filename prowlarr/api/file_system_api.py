@@ -18,9 +18,7 @@ from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
 from pydantic import StrictBool, StrictStr
-
 from typing import Optional
-
 
 from prowlarr.api_client import ApiClient
 from prowlarr.exceptions import (  # noqa: F401

@@ -17,8 +17,6 @@ import re  # noqa: F401
 from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
-from typing import List
-
 from prowlarr.models.health_resource import HealthResource
 
 from prowlarr.api_client import ApiClient

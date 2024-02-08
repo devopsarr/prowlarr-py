@@ -18,9 +18,7 @@ from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
 from pydantic import StrictInt, StrictStr
-
 from typing import Optional
-
 from prowlarr.models.log_resource_paging_resource import LogResourcePagingResource
 from prowlarr.models.sort_direction import SortDirection
 

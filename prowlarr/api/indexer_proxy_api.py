@@ -18,9 +18,7 @@ from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
 from pydantic import StrictBool, StrictInt, StrictStr
-
-from typing import List, Optional
-
+from typing import Optional
 from prowlarr.models.indexer_proxy_resource import IndexerProxyResource
 
 from prowlarr.api_client import ApiClient

@@ -17,12 +17,8 @@ import re  # noqa: F401
 from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
-from pydantic import Field
+from pydantic import Field, field_validator
 from typing_extensions import Annotated
-from pydantic import field_validator
-
-from typing import Any, Dict, List
-
 from prowlarr.models.log_file_resource import LogFileResource
 
 from prowlarr.api_client import ApiClient

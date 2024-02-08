@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **download_id** | **str** |  | [optional] 
 **successful** | **bool** |  | [optional] 
 **event_type** | [**HistoryEventType**](HistoryEventType.md) |  | [optional] 
-**data** | **Dict[str, str]** |  | [optional] 
+**data** | **Dict[str, Optional[str]]** |  | [optional] 
 
 ## Example
 

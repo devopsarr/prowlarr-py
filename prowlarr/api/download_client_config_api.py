@@ -18,9 +18,7 @@ from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
 from pydantic import StrictInt, StrictStr
-
 from typing import Optional
-
 from prowlarr.models.download_client_config_resource import DownloadClientConfigResource
 
 from prowlarr.api_client import ApiClient
