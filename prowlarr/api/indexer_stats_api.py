@@ -18,11 +18,8 @@ from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
 from datetime import datetime
-
 from pydantic import StrictStr
-
 from typing import Optional
-
 from prowlarr.models.indexer_stats_resource import IndexerStatsResource
 
 from prowlarr.api_client import ApiClient

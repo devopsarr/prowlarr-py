@@ -17,8 +17,6 @@ import re  # noqa: F401
 from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
-from typing import List
-
 from prowlarr.models.indexer_status_resource import IndexerStatusResource
 
 from prowlarr.api_client import ApiClient

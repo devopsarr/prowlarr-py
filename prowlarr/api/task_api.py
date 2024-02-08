@@ -18,9 +18,6 @@ from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
 from pydantic import StrictInt
-
-from typing import List
-
 from prowlarr.models.task_resource import TaskResource
 
 from prowlarr.api_client import ApiClient

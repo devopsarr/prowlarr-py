@@ -17,7 +17,7 @@ import re  # noqa: F401
 import json
 
 
-from typing import Any, ClassVar, Dict, List, Optional
+
 from pydantic import BaseModel
 from prowlarr.models.application_sync_level import ApplicationSyncLevel
 from prowlarr.models.apply_tags import ApplyTags
