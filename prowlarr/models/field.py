@@ -19,6 +19,7 @@ import json
 
 from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
+from prowlarr.models.privacy_level import PrivacyLevel
 from prowlarr.models.select_option import SelectOption
 from typing import Optional, Set
 from typing_extensions import Self
@@ -41,9 +42,10 @@ class Field(BaseModel):
     select_options_provider_action: Optional[StrictStr] = Field(default=None, alias="selectOptionsProviderAction")
     section: Optional[StrictStr] = None
     hidden: Optional[StrictStr] = None
+    privacy: Optional[PrivacyLevel] = None
     placeholder: Optional[StrictStr] = None
     is_float: Optional[StrictBool] = Field(default=None, alias="isFloat")
-    __properties: ClassVar[List[str]] = ["order", "name", "label", "unit", "helpText", "helpTextWarning", "helpLink", "value", "type", "advanced", "selectOptions", "selectOptionsProviderAction", "section", "hidden", "placeholder", "isFloat"]
+    __properties: ClassVar[List[str]] = ["order", "name", "label", "unit", "helpText", "helpTextWarning", "helpLink", "value", "type", "advanced", "selectOptions", "selectOptionsProviderAction", "section", "hidden", "privacy", "placeholder", "isFloat"]
 
     model_config = {
         "populate_by_name": True,
@@ -182,6 +184,7 @@ class Field(BaseModel):
             "selectOptionsProviderAction": obj.get("selectOptionsProviderAction"),
             "section": obj.get("section"),
             "hidden": obj.get("hidden"),
+            "privacy": obj.get("privacy"),
             "placeholder": obj.get("placeholder"),
             "isFloat": obj.get("isFloat")
         })
