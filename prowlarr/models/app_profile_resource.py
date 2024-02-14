@@ -29,10 +29,10 @@ class AppProfileResource(BaseModel):
     id: Optional[StrictInt] = None
     name: Optional[StrictStr] = None
     enable_rss: Optional[StrictBool] = Field(default=None, alias="enableRss")
-    enable_interactive_search: Optional[StrictBool] = Field(default=None, alias="enableInteractiveSearch")
     enable_automatic_search: Optional[StrictBool] = Field(default=None, alias="enableAutomaticSearch")
+    enable_interactive_search: Optional[StrictBool] = Field(default=None, alias="enableInteractiveSearch")
     minimum_seeders: Optional[StrictInt] = Field(default=None, alias="minimumSeeders")
-    __properties: ClassVar[List[str]] = ["id", "name", "enableRss", "enableInteractiveSearch", "enableAutomaticSearch", "minimumSeeders"]
+    __properties: ClassVar[List[str]] = ["id", "name", "enableRss", "enableAutomaticSearch", "enableInteractiveSearch", "minimumSeeders"]
 
     model_config = {
         "populate_by_name": True,
@@ -93,8 +93,8 @@ class AppProfileResource(BaseModel):
             "id": obj.get("id"),
             "name": obj.get("name"),
             "enableRss": obj.get("enableRss"),
-            "enableInteractiveSearch": obj.get("enableInteractiveSearch"),
             "enableAutomaticSearch": obj.get("enableAutomaticSearch"),
+            "enableInteractiveSearch": obj.get("enableInteractiveSearch"),
             "minimumSeeders": obj.get("minimumSeeders")
         })
         return _obj

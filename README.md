@@ -280,6 +280,7 @@ Class | Method | HTTP request | Description
  - [MusicSearchParam](docs/MusicSearchParam.md)
  - [NotificationResource](docs/NotificationResource.md)
  - [PingResource](docs/PingResource.md)
+ - [PrivacyLevel](docs/PrivacyLevel.md)
  - [ProviderMessage](docs/ProviderMessage.md)
  - [ProviderMessageType](docs/ProviderMessageType.md)
  - [ProxyType](docs/ProxyType.md)
