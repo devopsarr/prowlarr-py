@@ -399,7 +399,6 @@ conf = prowlarr.Configuration(
             }
         return auth
 
-# x-release-please-start-version$
     def to_debug_report(self):
         """Gets the essential information for debugging.
 
@@ -409,10 +408,9 @@ conf = prowlarr.Configuration(
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
                "Version of the API: v1.13.3.4273\n"\
-               "SDK Package Version: 0.4.1".\
-               format(env=sys.platform, pyversion=sys.version)
+               "SDK Package Version:  {v}".\
+               format(env=sys.platform, pyversion=sys.version, v="0.4.1") # x-release-please-version
 
-# x-release-please-end$
     def get_host_settings(self):
         """Gets an array of host settings
 
