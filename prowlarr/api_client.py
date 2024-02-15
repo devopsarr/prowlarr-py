@@ -87,7 +87,7 @@ class ApiClient:
             self.default_headers[header_name] = header_value
         self.cookie = cookie
         # Set default User-Agent.
-        self.user_agent = 'prowlarr-py/v0.4.1' # x-release-please-version
+        self.user_agent = 'prowlarr-py/v1.0.0' # x-release-please-version
         self.client_side_validation = configuration.client_side_validation
 
     def __enter__(self):
