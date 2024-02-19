@@ -14,7 +14,7 @@
 """  # noqa: E501
 
 
-__version__ = "0.4.1" # x-release-please-version
+__version__ = "1.0.0" # x-release-please-version
 
 # import apis into sdk package
 from prowlarr.api.api_info_api import ApiInfoApi

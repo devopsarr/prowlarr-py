@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.0.0](https://github.com/devopsarr/prowlarr-py/compare/v0.4.1...v1.0.0) (2024-02-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* **devopsarr/prowlarr-py#39:** update sdk generator to use pydantic 2.x
+
+### Features
+
+* **devopsarr/prowlarr-py#39:** update sdk generator to use pydantic 2.x ([11cddcf](https://github.com/devopsarr/prowlarr-py/commit/11cddcfdb32f5e4261f40e4ca80d49cf31845a0c))
+* inject api version into readme ([8800dff](https://github.com/devopsarr/prowlarr-py/commit/8800dffe0707a034d7d49ed8e90b31453a65f8df))
+
+
+### Bug Fixes
+
+* **python:** wrong release versioning on configuration.py ([0d38c66](https://github.com/devopsarr/prowlarr-py/commit/0d38c66456f419445b125fe69db22cb1b8ec0533))
+* release please commented lines ([86c87c7](https://github.com/devopsarr/prowlarr-py/commit/86c87c732fc56f4c5a9139573bcdf898544080ea))
+* remove middle elements from method name ([9499a40](https://github.com/devopsarr/prowlarr-py/commit/9499a40b6376ffe450397f93f3e73b2f4eddb3d4))
+
 ## [0.4.1](https://github.com/devopsarr/prowlarr-py/compare/v0.4.0...v0.4.1) (2023-07-21)
 
 

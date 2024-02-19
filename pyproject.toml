@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "prowlarr"
-version = "0.4.1" # x-release-please-version
+version = "1.0.0" # x-release-please-version
 description = "Prowlarr"
 authors = ["OpenAPI Generator Community <team@openapitools.org>"]
 license = "GPL-3.0"
