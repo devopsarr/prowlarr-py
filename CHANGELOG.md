@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/devopsarr/prowlarr-py/compare/v1.0.0...v1.0.1) (2024-02-21)
+
+
+### Bug Fixes
+
+* map Field to ContractField to avoid pydantic issue ([60d03b2](https://github.com/devopsarr/prowlarr-py/commit/60d03b2f42e17d254c65f448d0728ee90b957865))
+
 ## [1.0.0](https://github.com/devopsarr/prowlarr-py/compare/v1.0.0...v1.0.0) (2024-02-20)
 
 
