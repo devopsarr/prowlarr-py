@@ -81,6 +81,7 @@ from prowlarr.models.command_priority import CommandPriority
 from prowlarr.models.command_resource import CommandResource
 from prowlarr.models.command_status import CommandStatus
 from prowlarr.models.command_trigger import CommandTrigger
+from prowlarr.models.contract_field import ContractField
 from prowlarr.models.custom_filter_resource import CustomFilterResource
 from prowlarr.models.database_type import DatabaseType
 from prowlarr.models.development_config_resource import DevelopmentConfigResource
@@ -89,7 +90,6 @@ from prowlarr.models.download_client_category import DownloadClientCategory
 from prowlarr.models.download_client_config_resource import DownloadClientConfigResource
 from prowlarr.models.download_client_resource import DownloadClientResource
 from prowlarr.models.download_protocol import DownloadProtocol
-from prowlarr.models.field import Field
 from prowlarr.models.health_check_result import HealthCheckResult
 from prowlarr.models.health_resource import HealthResource
 from prowlarr.models.history_event_type import HistoryEventType

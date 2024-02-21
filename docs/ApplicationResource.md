@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] 
 **name** | **str** |  | [optional] 
-**fields** | [**List[Field]**](Field.md) |  | [optional] 
+**fields** | [**List[ContractField]**](ContractField.md) |  | [optional] 
 **implementation_name** | **str** |  | [optional] 
 **implementation** | **str** |  | [optional] 
 **config_contract** | **str** |  | [optional] 

@@ -19,9 +19,9 @@ import json
 
 from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
+from prowlarr.models.contract_field import ContractField
 from prowlarr.models.download_client_category import DownloadClientCategory
 from prowlarr.models.download_protocol import DownloadProtocol
-from prowlarr.models.field import Field
 from prowlarr.models.provider_message import ProviderMessage
 from typing import Optional, Set
 from typing_extensions import Self
@@ -32,7 +32,7 @@ class DownloadClientResource(BaseModel):
     """ # noqa: E501
     id: Optional[StrictInt] = None
     name: Optional[StrictStr] = None
-    fields: Optional[List[Field]] = None
+    fields: Optional[List[ContractField]] = None
     implementation_name: Optional[StrictStr] = Field(default=None, alias="implementationName")
     implementation: Optional[StrictStr] = None
     config_contract: Optional[StrictStr] = Field(default=None, alias="configContract")
@@ -169,7 +169,7 @@ class DownloadClientResource(BaseModel):
         _obj = cls.model_validate({
             "id": obj.get("id"),
             "name": obj.get("name"),
-            "fields": [Field.from_dict(_item) for _item in obj["fields"]] if obj.get("fields") is not None else None,
+            "fields": [ContractField.from_dict(_item) for _item in obj["fields"]] if obj.get("fields") is not None else None,
             "implementationName": obj.get("implementationName"),
             "implementation": obj.get("implementation"),
             "configContract": obj.get("configContract"),

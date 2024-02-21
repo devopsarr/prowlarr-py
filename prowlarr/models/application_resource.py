@@ -20,7 +20,7 @@ import json
 from pydantic import BaseModel, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from prowlarr.models.application_sync_level import ApplicationSyncLevel
-from prowlarr.models.field import Field
+from prowlarr.models.contract_field import ContractField
 from prowlarr.models.provider_message import ProviderMessage
 from typing import Optional, Set
 from typing_extensions import Self
@@ -31,7 +31,7 @@ class ApplicationResource(BaseModel):
     """ # noqa: E501
     id: Optional[StrictInt] = None
     name: Optional[StrictStr] = None
-    fields: Optional[List[Field]] = None
+    fields: Optional[List[ContractField]] = None
     implementation_name: Optional[StrictStr] = Field(default=None, alias="implementationName")
     implementation: Optional[StrictStr] = None
     config_contract: Optional[StrictStr] = Field(default=None, alias="configContract")
@@ -158,7 +158,7 @@ class ApplicationResource(BaseModel):
         _obj = cls.model_validate({
             "id": obj.get("id"),
             "name": obj.get("name"),
-            "fields": [Field.from_dict(_item) for _item in obj["fields"]] if obj.get("fields") is not None else None,
+            "fields": [ContractField.from_dict(_item) for _item in obj["fields"]] if obj.get("fields") is not None else None,
             "implementationName": obj.get("implementationName"),
             "implementation": obj.get("implementation"),
             "configContract": obj.get("configContract"),
