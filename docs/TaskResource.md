@@ -24,7 +24,7 @@ json = "{}"
 # create an instance of TaskResource from a JSON string
 task_resource_instance = TaskResource.from_json(json)
 # print the JSON string representation of the object
-print TaskResource.to_json()
+print(TaskResource.to_json())
 
 # convert the object into a dict
 task_resource_dict = task_resource_instance.to_dict()

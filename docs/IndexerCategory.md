@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of IndexerCategory from a JSON string
 indexer_category_instance = IndexerCategory.from_json(json)
 # print the JSON string representation of the object
-print IndexerCategory.to_json()
+print(IndexerCategory.to_json())
 
 # convert the object into a dict
 indexer_category_dict = indexer_category_instance.to_dict()

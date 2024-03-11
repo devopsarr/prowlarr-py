@@ -22,7 +22,7 @@ json = "{}"
 # create an instance of BackupResource from a JSON string
 backup_resource_instance = BackupResource.from_json(json)
 # print the JSON string representation of the object
-print BackupResource.to_json()
+print(BackupResource.to_json())
 
 # convert the object into a dict
 backup_resource_dict = backup_resource_instance.to_dict()

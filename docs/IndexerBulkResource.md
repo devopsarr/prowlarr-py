@@ -26,7 +26,7 @@ json = "{}"
 # create an instance of IndexerBulkResource from a JSON string
 indexer_bulk_resource_instance = IndexerBulkResource.from_json(json)
 # print the JSON string representation of the object
-print IndexerBulkResource.to_json()
+print(IndexerBulkResource.to_json())
 
 # convert the object into a dict
 indexer_bulk_resource_dict = indexer_bulk_resource_instance.to_dict()

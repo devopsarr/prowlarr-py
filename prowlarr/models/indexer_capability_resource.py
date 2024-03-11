@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictBool, StrictInt
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional
 from prowlarr.models.book_search_param import BookSearchParam
 from prowlarr.models.indexer_category import IndexerCategory
@@ -44,11 +44,11 @@ class IndexerCapabilityResource(BaseModel):
     book_search_params: Optional[List[BookSearchParam]] = Field(default=None, alias="bookSearchParams")
     __properties: ClassVar[List[str]] = ["id", "limitsMax", "limitsDefault", "categories", "supportsRawSearch", "searchParams", "tvSearchParams", "movieSearchParams", "musicSearchParams", "bookSearchParams"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

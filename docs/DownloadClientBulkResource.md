@@ -21,7 +21,7 @@ json = "{}"
 # create an instance of DownloadClientBulkResource from a JSON string
 download_client_bulk_resource_instance = DownloadClientBulkResource.from_json(json)
 # print the JSON string representation of the object
-print DownloadClientBulkResource.to_json()
+print(DownloadClientBulkResource.to_json())
 
 # convert the object into a dict
 download_client_bulk_resource_dict = download_client_bulk_resource_instance.to_dict()

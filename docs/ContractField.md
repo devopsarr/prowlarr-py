@@ -33,7 +33,7 @@ json = "{}"
 # create an instance of ContractField from a JSON string
 contract_field_instance = ContractField.from_json(json)
 # print the JSON string representation of the object
-print ContractField.to_json()
+print(ContractField.to_json())
 
 # convert the object into a dict
 contract_field_dict = contract_field_instance.to_dict()

@@ -22,7 +22,7 @@ json = "{}"
 # create an instance of AppProfileResource from a JSON string
 app_profile_resource_instance = AppProfileResource.from_json(json)
 # print the JSON string representation of the object
-print AppProfileResource.to_json()
+print(AppProfileResource.to_json())
 
 # convert the object into a dict
 app_profile_resource_dict = app_profile_resource_instance.to_dict()

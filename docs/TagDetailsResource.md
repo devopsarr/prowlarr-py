@@ -22,7 +22,7 @@ json = "{}"
 # create an instance of TagDetailsResource from a JSON string
 tag_details_resource_instance = TagDetailsResource.from_json(json)
 # print the JSON string representation of the object
-print TagDetailsResource.to_json()
+print(TagDetailsResource.to_json())
 
 # convert the object into a dict
 tag_details_resource_dict = tag_details_resource_instance.to_dict()

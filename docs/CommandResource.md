@@ -34,7 +34,7 @@ json = "{}"
 # create an instance of CommandResource from a JSON string
 command_resource_instance = CommandResource.from_json(json)
 # print the JSON string representation of the object
-print CommandResource.to_json()
+print(CommandResource.to_json())
 
 # convert the object into a dict
 command_resource_dict = command_resource_instance.to_dict()

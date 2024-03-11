@@ -24,7 +24,7 @@ json = "{}"
 # create an instance of LogResource from a JSON string
 log_resource_instance = LogResource.from_json(json)
 # print the JSON string representation of the object
-print LogResource.to_json()
+print(LogResource.to_json())
 
 # convert the object into a dict
 log_resource_dict = log_resource_instance.to_dict()

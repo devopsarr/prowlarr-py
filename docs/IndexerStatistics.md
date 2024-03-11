@@ -27,7 +27,7 @@ json = "{}"
 # create an instance of IndexerStatistics from a JSON string
 indexer_statistics_instance = IndexerStatistics.from_json(json)
 # print the JSON string representation of the object
-print IndexerStatistics.to_json()
+print(IndexerStatistics.to_json())
 
 # convert the object into a dict
 indexer_statistics_dict = indexer_statistics_instance.to_dict()

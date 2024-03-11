@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of TagResource from a JSON string
 tag_resource_instance = TagResource.from_json(json)
 # print the JSON string representation of the object
-print TagResource.to_json()
+print(TagResource.to_json())
 
 # convert the object into a dict
 tag_resource_dict = tag_resource_instance.to_dict()

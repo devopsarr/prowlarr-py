@@ -28,7 +28,7 @@ json = "{}"
 # create an instance of ApplicationResource from a JSON string
 application_resource_instance = ApplicationResource.from_json(json)
 # print the JSON string representation of the object
-print ApplicationResource.to_json()
+print(ApplicationResource.to_json())
 
 # convert the object into a dict
 application_resource_dict = application_resource_instance.to_dict()

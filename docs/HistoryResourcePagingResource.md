@@ -22,7 +22,7 @@ json = "{}"
 # create an instance of HistoryResourcePagingResource from a JSON string
 history_resource_paging_resource_instance = HistoryResourcePagingResource.from_json(json)
 # print the JSON string representation of the object
-print HistoryResourcePagingResource.to_json()
+print(HistoryResourcePagingResource.to_json())
 
 # convert the object into a dict
 history_resource_paging_resource_dict = history_resource_paging_resource_instance.to_dict()

@@ -38,7 +38,7 @@ json = "{}"
 # create an instance of NotificationResource from a JSON string
 notification_resource_instance = NotificationResource.from_json(json)
 # print the JSON string representation of the object
-print NotificationResource.to_json()
+print(NotificationResource.to_json())
 
 # convert the object into a dict
 notification_resource_dict = notification_resource_instance.to_dict()

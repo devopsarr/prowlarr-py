@@ -21,7 +21,7 @@ json = "{}"
 # create an instance of SelectOption from a JSON string
 select_option_instance = SelectOption.from_json(json)
 # print the JSON string representation of the object
-print SelectOption.to_json()
+print(SelectOption.to_json())
 
 # convert the object into a dict
 select_option_dict = select_option_instance.to_dict()

@@ -18,7 +18,7 @@ import re  # noqa: F401
 import json
 
 from datetime import datetime
-from pydantic import BaseModel, Field, StrictBool, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, Optional
 from prowlarr.models.command_trigger import CommandTrigger
 from typing import Optional, Set
@@ -42,11 +42,11 @@ class Command(BaseModel):
     client_user_agent: Optional[StrictStr] = Field(default=None, alias="clientUserAgent")
     __properties: ClassVar[List[str]] = ["sendUpdatesToClient", "updateScheduledTask", "completionMessage", "requiresDiskAccess", "isExclusive", "isTypeExclusive", "name", "lastExecutionTime", "lastStartTime", "trigger", "suppressMessages", "clientUserAgent"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

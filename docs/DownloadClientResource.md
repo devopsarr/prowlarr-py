@@ -31,7 +31,7 @@ json = "{}"
 # create an instance of DownloadClientResource from a JSON string
 download_client_resource_instance = DownloadClientResource.from_json(json)
 # print the JSON string representation of the object
-print DownloadClientResource.to_json()
+print(DownloadClientResource.to_json())
 
 # convert the object into a dict
 download_client_resource_dict = download_client_resource_instance.to_dict()

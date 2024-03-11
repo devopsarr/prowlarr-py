@@ -19,7 +19,7 @@ json = "{}"
 # create an instance of HostStatistics from a JSON string
 host_statistics_instance = HostStatistics.from_json(json)
 # print the JSON string representation of the object
-print HostStatistics.to_json()
+print(HostStatistics.to_json())
 
 # convert the object into a dict
 host_statistics_dict = host_statistics_instance.to_dict()

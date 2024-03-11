@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, StrictStr
+from pydantic import BaseModel, ConfigDict, StrictStr
 from typing import Any, ClassVar, Dict, Optional
 from prowlarr.models.provider_message_type import ProviderMessageType
 from typing import Optional, Set
@@ -31,11 +31,11 @@ class ProviderMessage(BaseModel):
     type: Optional[ProviderMessageType] = None
     __properties: ClassVar[List[str]] = ["message", "type"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of DownloadClientCategory from a JSON string
 download_client_category_instance = DownloadClientCategory.from_json(json)
 # print the JSON string representation of the object
-print DownloadClientCategory.to_json()
+print(DownloadClientCategory.to_json())
 
 # convert the object into a dict
 download_client_category_dict = download_client_category_instance.to_dict()

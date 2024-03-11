@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of ApiInfoResource from a JSON string
 api_info_resource_instance = ApiInfoResource.from_json(json)
 # print the JSON string representation of the object
-print ApiInfoResource.to_json()
+print(ApiInfoResource.to_json())
 
 # convert the object into a dict
 api_info_resource_dict = api_info_resource_instance.to_dict()

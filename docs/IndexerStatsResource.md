@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of IndexerStatsResource from a JSON string
 indexer_stats_resource_instance = IndexerStatsResource.from_json(json)
 # print the JSON string representation of the object
-print IndexerStatsResource.to_json()
+print(IndexerStatsResource.to_json())
 
 # convert the object into a dict
 indexer_stats_resource_dict = indexer_stats_resource_instance.to_dict()

@@ -28,7 +28,7 @@ json = "{}"
 # create an instance of UpdateResource from a JSON string
 update_resource_instance = UpdateResource.from_json(json)
 # print the JSON string representation of the object
-print UpdateResource.to_json()
+print(UpdateResource.to_json())
 
 # convert the object into a dict
 update_resource_dict = update_resource_instance.to_dict()

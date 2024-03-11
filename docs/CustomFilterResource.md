@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of CustomFilterResource from a JSON string
 custom_filter_resource_instance = CustomFilterResource.from_json(json)
 # print the JSON string representation of the object
-print CustomFilterResource.to_json()
+print(CustomFilterResource.to_json())
 
 # convert the object into a dict
 custom_filter_resource_dict = custom_filter_resource_instance.to_dict()

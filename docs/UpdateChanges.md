@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of UpdateChanges from a JSON string
 update_changes_instance = UpdateChanges.from_json(json)
 # print the JSON string representation of the object
-print UpdateChanges.to_json()
+print(UpdateChanges.to_json())
 
 # convert the object into a dict
 update_changes_dict = update_changes_instance.to_dict()

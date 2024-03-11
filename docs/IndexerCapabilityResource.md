@@ -26,7 +26,7 @@ json = "{}"
 # create an instance of IndexerCapabilityResource from a JSON string
 indexer_capability_resource_instance = IndexerCapabilityResource.from_json(json)
 # print the JSON string representation of the object
-print IndexerCapabilityResource.to_json()
+print(IndexerCapabilityResource.to_json())
 
 # convert the object into a dict
 indexer_capability_resource_dict = indexer_capability_resource_instance.to_dict()
