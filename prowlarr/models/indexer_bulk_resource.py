@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from prowlarr.models.apply_tags import ApplyTags
 from typing import Optional, Set
@@ -39,11 +39,11 @@ class IndexerBulkResource(BaseModel):
     pack_seed_time: Optional[StrictInt] = Field(default=None, alias="packSeedTime")
     __properties: ClassVar[List[str]] = ["ids", "tags", "applyTags", "enable", "appProfileId", "priority", "minimumSeeders", "seedRatio", "seedTime", "packSeedTime"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

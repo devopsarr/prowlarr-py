@@ -22,7 +22,7 @@ json = "{}"
 # create an instance of DevelopmentConfigResource from a JSON string
 development_config_resource_instance = DevelopmentConfigResource.from_json(json)
 # print the JSON string representation of the object
-print DevelopmentConfigResource.to_json()
+print(DevelopmentConfigResource.to_json())
 
 # convert the object into a dict
 development_config_resource_dict = development_config_resource_instance.to_dict()

@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of ProviderMessage from a JSON string
 provider_message_instance = ProviderMessage.from_json(json)
 # print the JSON string representation of the object
-print ProviderMessage.to_json()
+print(ProviderMessage.to_json())
 
 # convert the object into a dict
 provider_message_dict = provider_message_instance.to_dict()

@@ -47,7 +47,7 @@ json = "{}"
 # create an instance of SystemResource from a JSON string
 system_resource_instance = SystemResource.from_json(json)
 # print the JSON string representation of the object
-print SystemResource.to_json()
+print(SystemResource.to_json())
 
 # convert the object into a dict
 system_resource_dict = system_resource_instance.to_dict()

@@ -47,7 +47,7 @@ json = "{}"
 # create an instance of IndexerResource from a JSON string
 indexer_resource_instance = IndexerResource.from_json(json)
 # print the JSON string representation of the object
-print IndexerResource.to_json()
+print(IndexerResource.to_json())
 
 # convert the object into a dict
 indexer_resource_dict = indexer_resource_instance.to_dict()

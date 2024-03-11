@@ -28,7 +28,7 @@ json = "{}"
 # create an instance of Command from a JSON string
 command_instance = Command.from_json(json)
 # print the JSON string representation of the object
-print Command.to_json()
+print(Command.to_json())
 
 # convert the object into a dict
 command_dict = command_instance.to_dict()

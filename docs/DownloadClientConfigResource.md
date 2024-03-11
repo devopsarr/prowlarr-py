@@ -17,7 +17,7 @@ json = "{}"
 # create an instance of DownloadClientConfigResource from a JSON string
 download_client_config_resource_instance = DownloadClientConfigResource.from_json(json)
 # print the JSON string representation of the object
-print DownloadClientConfigResource.to_json()
+print(DownloadClientConfigResource.to_json())
 
 # convert the object into a dict
 download_client_config_resource_dict = download_client_config_resource_instance.to_dict()

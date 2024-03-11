@@ -31,7 +31,7 @@ json = "{}"
 # create an instance of IndexerProxyResource from a JSON string
 indexer_proxy_resource_instance = IndexerProxyResource.from_json(json)
 # print the JSON string representation of the object
-print IndexerProxyResource.to_json()
+print(IndexerProxyResource.to_json())
 
 # convert the object into a dict
 indexer_proxy_resource_dict = indexer_proxy_resource_instance.to_dict()

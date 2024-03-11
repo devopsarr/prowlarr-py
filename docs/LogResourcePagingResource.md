@@ -22,7 +22,7 @@ json = "{}"
 # create an instance of LogResourcePagingResource from a JSON string
 log_resource_paging_resource_instance = LogResourcePagingResource.from_json(json)
 # print the JSON string representation of the object
-print LogResourcePagingResource.to_json()
+print(LogResourcePagingResource.to_json())
 
 # convert the object into a dict
 log_resource_paging_resource_dict = log_resource_paging_resource_instance.to_dict()

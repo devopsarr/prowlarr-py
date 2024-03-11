@@ -21,7 +21,7 @@ json = "{}"
 # create an instance of HealthResource from a JSON string
 health_resource_instance = HealthResource.from_json(json)
 # print the JSON string representation of the object
-print HealthResource.to_json()
+print(HealthResource.to_json())
 
 # convert the object into a dict
 health_resource_dict = health_resource_instance.to_dict()

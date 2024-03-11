@@ -26,7 +26,7 @@ json = "{}"
 # create an instance of UiConfigResource from a JSON string
 ui_config_resource_instance = UiConfigResource.from_json(json)
 # print the JSON string representation of the object
-print UiConfigResource.to_json()
+print(UiConfigResource.to_json())
 
 # convert the object into a dict
 ui_config_resource_dict = ui_config_resource_instance.to_dict()

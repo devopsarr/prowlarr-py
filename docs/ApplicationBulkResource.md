@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of ApplicationBulkResource from a JSON string
 application_bulk_resource_instance = ApplicationBulkResource.from_json(json)
 # print the JSON string representation of the object
-print ApplicationBulkResource.to_json()
+print(ApplicationBulkResource.to_json())
 
 # convert the object into a dict
 application_bulk_resource_dict = application_bulk_resource_instance.to_dict()

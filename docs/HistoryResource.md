@@ -23,7 +23,7 @@ json = "{}"
 # create an instance of HistoryResource from a JSON string
 history_resource_instance = HistoryResource.from_json(json)
 # print the JSON string representation of the object
-print HistoryResource.to_json()
+print(HistoryResource.to_json())
 
 # convert the object into a dict
 history_resource_dict = history_resource_instance.to_dict()
