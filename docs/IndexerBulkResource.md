@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **seed_ratio** | **float** |  | [optional] 
 **seed_time** | **int** |  | [optional] 
 **pack_seed_time** | **int** |  | [optional] 
+**reject_blocklisted_torrent_hashes_while_grabbing** | **bool** |  | [optional] 
 
 ## Example
 
