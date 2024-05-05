@@ -26,7 +26,7 @@ print(LogFileResource.to_json())
 # convert the object into a dict
 log_file_resource_dict = log_file_resource_instance.to_dict()
 # create an instance of LogFileResource from a dict
-log_file_resource_form_dict = log_file_resource.from_dict(log_file_resource_dict)
+log_file_resource_from_dict = LogFileResource.from_dict(log_file_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -33,7 +33,7 @@ print(Command.to_json())
 # convert the object into a dict
 command_dict = command_instance.to_dict()
 # create an instance of Command from a dict
-command_form_dict = command.from_dict(command_dict)
+command_from_dict = Command.from_dict(command_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

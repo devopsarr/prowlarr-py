@@ -43,7 +43,7 @@ print(NotificationResource.to_json())
 # convert the object into a dict
 notification_resource_dict = notification_resource_instance.to_dict()
 # create an instance of NotificationResource from a dict
-notification_resource_form_dict = notification_resource.from_dict(notification_resource_dict)
+notification_resource_from_dict = NotificationResource.from_dict(notification_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

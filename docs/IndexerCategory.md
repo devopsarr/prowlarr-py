@@ -25,7 +25,7 @@ print(IndexerCategory.to_json())
 # convert the object into a dict
 indexer_category_dict = indexer_category_instance.to_dict()
 # create an instance of IndexerCategory from a dict
-indexer_category_form_dict = indexer_category.from_dict(indexer_category_dict)
+indexer_category_from_dict = IndexerCategory.from_dict(indexer_category_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

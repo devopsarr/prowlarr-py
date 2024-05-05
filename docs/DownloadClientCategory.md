@@ -23,7 +23,7 @@ print(DownloadClientCategory.to_json())
 # convert the object into a dict
 download_client_category_dict = download_client_category_instance.to_dict()
 # create an instance of DownloadClientCategory from a dict
-download_client_category_form_dict = download_client_category.from_dict(download_client_category_dict)
+download_client_category_from_dict = DownloadClientCategory.from_dict(download_client_category_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -26,7 +26,7 @@ print(DownloadClientBulkResource.to_json())
 # convert the object into a dict
 download_client_bulk_resource_dict = download_client_bulk_resource_instance.to_dict()
 # create an instance of DownloadClientBulkResource from a dict
-download_client_bulk_resource_form_dict = download_client_bulk_resource.from_dict(download_client_bulk_resource_dict)
+download_client_bulk_resource_from_dict = DownloadClientBulkResource.from_dict(download_client_bulk_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -22,7 +22,7 @@ print(DownloadClientConfigResource.to_json())
 # convert the object into a dict
 download_client_config_resource_dict = download_client_config_resource_instance.to_dict()
 # create an instance of DownloadClientConfigResource from a dict
-download_client_config_resource_form_dict = download_client_config_resource.from_dict(download_client_config_resource_dict)
+download_client_config_resource_from_dict = DownloadClientConfigResource.from_dict(download_client_config_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

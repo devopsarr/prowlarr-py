@@ -32,7 +32,7 @@ print(IndexerStatistics.to_json())
 # convert the object into a dict
 indexer_statistics_dict = indexer_statistics_instance.to_dict()
 # create an instance of IndexerStatistics from a dict
-indexer_statistics_form_dict = indexer_statistics.from_dict(indexer_statistics_dict)
+indexer_statistics_from_dict = IndexerStatistics.from_dict(indexer_statistics_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

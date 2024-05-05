@@ -38,7 +38,7 @@ print(ContractField.to_json())
 # convert the object into a dict
 contract_field_dict = contract_field_instance.to_dict()
 # create an instance of ContractField from a dict
-contract_field_form_dict = contract_field.from_dict(contract_field_dict)
+contract_field_from_dict = ContractField.from_dict(contract_field_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -33,7 +33,7 @@ print(UpdateResource.to_json())
 # convert the object into a dict
 update_resource_dict = update_resource_instance.to_dict()
 # create an instance of UpdateResource from a dict
-update_resource_form_dict = update_resource.from_dict(update_resource_dict)
+update_resource_from_dict = UpdateResource.from_dict(update_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

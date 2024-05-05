@@ -31,7 +31,7 @@ print(UiConfigResource.to_json())
 # convert the object into a dict
 ui_config_resource_dict = ui_config_resource_instance.to_dict()
 # create an instance of UiConfigResource from a dict
-ui_config_resource_form_dict = ui_config_resource.from_dict(ui_config_resource_dict)
+ui_config_resource_from_dict = UiConfigResource.from_dict(ui_config_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
