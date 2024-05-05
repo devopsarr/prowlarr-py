@@ -26,7 +26,7 @@ print(HealthResource.to_json())
 # convert the object into a dict
 health_resource_dict = health_resource_instance.to_dict()
 # create an instance of HealthResource from a dict
-health_resource_form_dict = health_resource.from_dict(health_resource_dict)
+health_resource_from_dict = HealthResource.from_dict(health_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

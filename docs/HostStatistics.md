@@ -24,7 +24,7 @@ print(HostStatistics.to_json())
 # convert the object into a dict
 host_statistics_dict = host_statistics_instance.to_dict()
 # create an instance of HostStatistics from a dict
-host_statistics_form_dict = host_statistics.from_dict(host_statistics_dict)
+host_statistics_from_dict = HostStatistics.from_dict(host_statistics_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

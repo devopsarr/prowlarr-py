@@ -24,7 +24,7 @@ print(UserAgentStatistics.to_json())
 # convert the object into a dict
 user_agent_statistics_dict = user_agent_statistics_instance.to_dict()
 # create an instance of UserAgentStatistics from a dict
-user_agent_statistics_form_dict = user_agent_statistics.from_dict(user_agent_statistics_dict)
+user_agent_statistics_from_dict = UserAgentStatistics.from_dict(user_agent_statistics_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

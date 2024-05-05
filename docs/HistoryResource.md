@@ -28,7 +28,7 @@ print(HistoryResource.to_json())
 # convert the object into a dict
 history_resource_dict = history_resource_instance.to_dict()
 # create an instance of HistoryResource from a dict
-history_resource_form_dict = history_resource.from_dict(history_resource_dict)
+history_resource_from_dict = HistoryResource.from_dict(history_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

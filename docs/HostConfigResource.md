@@ -58,7 +58,7 @@ print(HostConfigResource.to_json())
 # convert the object into a dict
 host_config_resource_dict = host_config_resource_instance.to_dict()
 # create an instance of HostConfigResource from a dict
-host_config_resource_form_dict = host_config_resource.from_dict(host_config_resource_dict)
+host_config_resource_from_dict = HostConfigResource.from_dict(host_config_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

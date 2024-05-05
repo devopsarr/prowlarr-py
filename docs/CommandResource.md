@@ -39,7 +39,7 @@ print(CommandResource.to_json())
 # convert the object into a dict
 command_resource_dict = command_resource_instance.to_dict()
 # create an instance of CommandResource from a dict
-command_resource_form_dict = command_resource.from_dict(command_resource_dict)
+command_resource_from_dict = CommandResource.from_dict(command_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

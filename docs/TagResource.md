@@ -23,7 +23,7 @@ print(TagResource.to_json())
 # convert the object into a dict
 tag_resource_dict = tag_resource_instance.to_dict()
 # create an instance of TagResource from a dict
-tag_resource_form_dict = tag_resource.from_dict(tag_resource_dict)
+tag_resource_from_dict = TagResource.from_dict(tag_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

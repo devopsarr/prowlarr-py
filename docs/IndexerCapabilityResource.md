@@ -31,7 +31,7 @@ print(IndexerCapabilityResource.to_json())
 # convert the object into a dict
 indexer_capability_resource_dict = indexer_capability_resource_instance.to_dict()
 # create an instance of IndexerCapabilityResource from a dict
-indexer_capability_resource_form_dict = indexer_capability_resource.from_dict(indexer_capability_resource_dict)
+indexer_capability_resource_from_dict = IndexerCapabilityResource.from_dict(indexer_capability_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

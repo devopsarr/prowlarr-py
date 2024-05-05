@@ -52,7 +52,7 @@ print(SystemResource.to_json())
 # convert the object into a dict
 system_resource_dict = system_resource_instance.to_dict()
 # create an instance of SystemResource from a dict
-system_resource_form_dict = system_resource.from_dict(system_resource_dict)
+system_resource_from_dict = SystemResource.from_dict(system_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

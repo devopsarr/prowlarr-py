@@ -26,7 +26,7 @@ print(SelectOption.to_json())
 # convert the object into a dict
 select_option_dict = select_option_instance.to_dict()
 # create an instance of SelectOption from a dict
-select_option_form_dict = select_option.from_dict(select_option_dict)
+select_option_from_dict = SelectOption.from_dict(select_option_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

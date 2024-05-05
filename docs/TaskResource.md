@@ -29,7 +29,7 @@ print(TaskResource.to_json())
 # convert the object into a dict
 task_resource_dict = task_resource_instance.to_dict()
 # create an instance of TaskResource from a dict
-task_resource_form_dict = task_resource.from_dict(task_resource_dict)
+task_resource_from_dict = TaskResource.from_dict(task_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

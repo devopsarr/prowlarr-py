@@ -36,7 +36,7 @@ print(IndexerProxyResource.to_json())
 # convert the object into a dict
 indexer_proxy_resource_dict = indexer_proxy_resource_instance.to_dict()
 # create an instance of IndexerProxyResource from a dict
-indexer_proxy_resource_form_dict = indexer_proxy_resource.from_dict(indexer_proxy_resource_dict)
+indexer_proxy_resource_from_dict = IndexerProxyResource.from_dict(indexer_proxy_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

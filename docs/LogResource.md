@@ -29,7 +29,7 @@ print(LogResource.to_json())
 # convert the object into a dict
 log_resource_dict = log_resource_instance.to_dict()
 # create an instance of LogResource from a dict
-log_resource_form_dict = log_resource.from_dict(log_resource_dict)
+log_resource_from_dict = LogResource.from_dict(log_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -25,7 +25,7 @@ print(CustomFilterResource.to_json())
 # convert the object into a dict
 custom_filter_resource_dict = custom_filter_resource_instance.to_dict()
 # create an instance of CustomFilterResource from a dict
-custom_filter_resource_form_dict = custom_filter_resource.from_dict(custom_filter_resource_dict)
+custom_filter_resource_from_dict = CustomFilterResource.from_dict(custom_filter_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
