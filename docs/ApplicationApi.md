@@ -672,7 +672,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **test_applications**
-> test_applications(application_resource=application_resource)
+> test_applications(force_test=force_test, application_resource=application_resource)
 
 
 
@@ -714,10 +714,11 @@ configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
 with prowlarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = prowlarr.ApplicationApi(api_client)
+    force_test = False # bool |  (optional) (default to False)
     application_resource = prowlarr.ApplicationResource() # ApplicationResource |  (optional)
 
     try:
-        api_instance.test_applications(application_resource=application_resource)
+        api_instance.test_applications(force_test=force_test, application_resource=application_resource)
     except Exception as e:
         print("Exception when calling ApplicationApi->test_applications: %s\n" % e)
 ```
@@ -729,6 +730,7 @@ with prowlarr.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **force_test** | **bool**|  | [optional] [default to False]
  **application_resource** | [**ApplicationResource**](ApplicationResource.md)|  | [optional] 
 
 ### Return type

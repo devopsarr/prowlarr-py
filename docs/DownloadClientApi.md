@@ -672,7 +672,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **test_download_client**
-> test_download_client(download_client_resource=download_client_resource)
+> test_download_client(force_test=force_test, download_client_resource=download_client_resource)
 
 
 
@@ -714,10 +714,11 @@ configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
 with prowlarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = prowlarr.DownloadClientApi(api_client)
+    force_test = False # bool |  (optional) (default to False)
     download_client_resource = prowlarr.DownloadClientResource() # DownloadClientResource |  (optional)
 
     try:
-        api_instance.test_download_client(download_client_resource=download_client_resource)
+        api_instance.test_download_client(force_test=force_test, download_client_resource=download_client_resource)
     except Exception as e:
         print("Exception when calling DownloadClientApi->test_download_client: %s\n" % e)
 ```
@@ -729,6 +730,7 @@ with prowlarr.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **force_test** | **bool**|  | [optional] [default to False]
  **download_client_resource** | [**DownloadClientResource**](DownloadClientResource.md)|  | [optional] 
 
 ### Return type
