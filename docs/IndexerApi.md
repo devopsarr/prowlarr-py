@@ -672,7 +672,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **test_indexer**
-> test_indexer(indexer_resource=indexer_resource)
+> test_indexer(force_test=force_test, indexer_resource=indexer_resource)
 
 
 
@@ -714,10 +714,11 @@ configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
 with prowlarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = prowlarr.IndexerApi(api_client)
+    force_test = False # bool |  (optional) (default to False)
     indexer_resource = prowlarr.IndexerResource() # IndexerResource |  (optional)
 
     try:
-        api_instance.test_indexer(indexer_resource=indexer_resource)
+        api_instance.test_indexer(force_test=force_test, indexer_resource=indexer_resource)
     except Exception as e:
         print("Exception when calling IndexerApi->test_indexer: %s\n" % e)
 ```
@@ -729,6 +730,7 @@ with prowlarr.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **force_test** | **bool**|  | [optional] [default to False]
  **indexer_resource** | [**IndexerResource**](IndexerResource.md)|  | [optional] 
 
 ### Return type

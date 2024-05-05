@@ -505,7 +505,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **test_indexer_proxy**
-> test_indexer_proxy(indexer_proxy_resource=indexer_proxy_resource)
+> test_indexer_proxy(force_test=force_test, indexer_proxy_resource=indexer_proxy_resource)
 
 
 
@@ -547,10 +547,11 @@ configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
 with prowlarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = prowlarr.IndexerProxyApi(api_client)
+    force_test = False # bool |  (optional) (default to False)
     indexer_proxy_resource = prowlarr.IndexerProxyResource() # IndexerProxyResource |  (optional)
 
     try:
-        api_instance.test_indexer_proxy(indexer_proxy_resource=indexer_proxy_resource)
+        api_instance.test_indexer_proxy(force_test=force_test, indexer_proxy_resource=indexer_proxy_resource)
     except Exception as e:
         print("Exception when calling IndexerProxyApi->test_indexer_proxy: %s\n" % e)
 ```
@@ -562,6 +563,7 @@ with prowlarr.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **force_test** | **bool**|  | [optional] [default to False]
  **indexer_proxy_resource** | [**IndexerProxyResource**](IndexerProxyResource.md)|  | [optional] 
 
 ### Return type
