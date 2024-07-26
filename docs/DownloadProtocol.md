@@ -1,10 +1,13 @@
 # DownloadProtocol
 
 
-## Properties
+## Enum
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
+* `UNKNOWN` (value: `'unknown'`)
+
+* `USENET` (value: `'usenet'`)
+
+* `TORRENT` (value: `'torrent'`)
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
