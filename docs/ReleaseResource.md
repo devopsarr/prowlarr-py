@@ -36,6 +36,7 @@ Name | Type | Description | Notes
 **leechers** | **int** |  | [optional] 
 **protocol** | [**DownloadProtocol**](DownloadProtocol.md) |  | [optional] 
 **file_name** | **str** |  | [optional] [readonly] 
+**download_client_id** | **int** |  | [optional] 
 
 ## Example
 

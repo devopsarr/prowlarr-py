@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **last_execution** | **datetime** |  | [optional] 
 **last_start_time** | **datetime** |  | [optional] 
 **next_execution** | **datetime** |  | [optional] 
-**last_duration** | **str** |  | [optional] 
+**last_duration** | **str** |  | [optional] [readonly] 
 
 ## Example
 
