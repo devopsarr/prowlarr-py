@@ -1,10 +1,15 @@
 # HealthCheckResult
 
 
-## Properties
+## Enum
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
+* `OK` (value: `'ok'`)
+
+* `NOTICE` (value: `'notice'`)
+
+* `WARNING` (value: `'warning'`)
+
+* `ERROR` (value: `'error'`)
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
