@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **indexer_id** | **int** |  | [optional] 
 **indexer_name** | **str** |  | [optional] 
 **average_response_time** | **int** |  | [optional] 
+**average_grab_response_time** | **int** |  | [optional] 
 **number_of_queries** | **int** |  | [optional] 
 **number_of_grabs** | **int** |  | [optional] 
 **number_of_rss_queries** | **int** |  | [optional] 
