@@ -76,9 +76,9 @@ class IndexerCategory(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in sub_categories (list)
         _items = []
         if self.sub_categories:
-            for _item in self.sub_categories:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_sub_categories in self.sub_categories:
+                if _item_sub_categories:
+                    _items.append(_item_sub_categories.to_dict())
             _dict['subCategories'] = _items
         # set to None if name (nullable) is None
         # and model_fields_set contains the field

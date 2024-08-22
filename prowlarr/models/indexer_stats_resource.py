@@ -77,23 +77,23 @@ class IndexerStatsResource(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in indexers (list)
         _items = []
         if self.indexers:
-            for _item in self.indexers:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_indexers in self.indexers:
+                if _item_indexers:
+                    _items.append(_item_indexers.to_dict())
             _dict['indexers'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in user_agents (list)
         _items = []
         if self.user_agents:
-            for _item in self.user_agents:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_user_agents in self.user_agents:
+                if _item_user_agents:
+                    _items.append(_item_user_agents.to_dict())
             _dict['userAgents'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in hosts (list)
         _items = []
         if self.hosts:
-            for _item in self.hosts:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_hosts in self.hosts:
+                if _item_hosts:
+                    _items.append(_item_hosts.to_dict())
             _dict['hosts'] = _items
         # set to None if indexers (nullable) is None
         # and model_fields_set contains the field
