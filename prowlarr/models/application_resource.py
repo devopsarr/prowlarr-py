@@ -85,9 +85,9 @@ class ApplicationResource(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in fields (list)
         _items = []
         if self.fields:
-            for _item in self.fields:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_fields in self.fields:
+                if _item_fields:
+                    _items.append(_item_fields.to_dict())
             _dict['fields'] = _items
         # override the default output from pydantic by calling `to_dict()` of message
         if self.message:
@@ -95,9 +95,9 @@ class ApplicationResource(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in presets (list)
         _items = []
         if self.presets:
-            for _item in self.presets:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_presets in self.presets:
+                if _item_presets:
+                    _items.append(_item_presets.to_dict())
             _dict['presets'] = _items
         # set to None if name (nullable) is None
         # and model_fields_set contains the field
