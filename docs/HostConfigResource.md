@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **password** | **str** |  | [optional] 
 **password_confirmation** | **str** |  | [optional] 
 **log_level** | **str** |  | [optional] 
+**log_size_limit** | **int** |  | [optional] 
 **console_log_level** | **str** |  | [optional] 
 **branch** | **str** |  | [optional] 
 **api_key** | **str** |  | [optional] 
