@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.2](https://github.com/devopsarr/prowlarr-py/compare/v1.0.1...v1.0.2) (2024-10-16)
+
+
+### Bug Fixes
+
+* **deps:** update dependency prowlarr/prowlarr to v1.24.3.4754 ([5469fbc](https://github.com/devopsarr/prowlarr-py/commit/5469fbccb97cf17f2c93225d0edd3ce43e888feb))
+* **deps:** update openapitools/openapi-generator-cli docker tag to v7.9.0 ([75e4018](https://github.com/devopsarr/prowlarr-py/commit/75e40188baa01a498c57fc1bb20b8c0bdbaba4d5))
+
 ## [1.0.1](https://github.com/devopsarr/prowlarr-py/compare/v1.0.0...v1.0.1) (2024-02-21)
 
 
