@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **seed_ratio** | **float** |  | [optional] 
 **seed_time** | **int** |  | [optional] 
 **pack_seed_time** | **int** |  | [optional] 
+**prefer_magnet_url** | **bool** |  | [optional] 
 
 ## Example
 
