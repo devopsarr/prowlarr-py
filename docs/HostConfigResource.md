@@ -43,6 +43,7 @@ Name | Type | Description | Notes
 **backup_interval** | **int** |  | [optional] 
 **backup_retention** | **int** |  | [optional] 
 **history_cleanup_days** | **int** |  | [optional] 
+**trust_cgnat_ip_addresses** | **bool** |  | [optional] 
 
 ## Example
 
