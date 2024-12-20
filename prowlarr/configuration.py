@@ -535,7 +535,7 @@ conf = prowlarr.Configuration(
                "Python Version: {pyversion}\n"\
                "Version of the API: v1.28.2.4885\n"\
                "SDK Package Version:  {v}".\
-               format(env=sys.platform, pyversion=sys.version, v="1.0.2") # x-release-please-version
+               format(env=sys.platform, pyversion=sys.version, v="1.0.3") # x-release-please-version
 
     def get_host_settings(self) -> List[HostSetting]:
         """Gets an array of host settings
