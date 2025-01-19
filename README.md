@@ -202,7 +202,6 @@ Class | Method | HTTP request | Description
 *SearchApi* | [**create_search**](docs/SearchApi.md#create_search) | **POST** /api/v1/search | 
 *SearchApi* | [**create_search_bulk**](docs/SearchApi.md#create_search_bulk) | **POST** /api/v1/search/bulk | 
 *SearchApi* | [**list_search**](docs/SearchApi.md#list_search) | **GET** /api/v1/search | 
-*StaticResourceApi* | [**get**](docs/StaticResourceApi.md#get) | **GET** / | 
 *StaticResourceApi* | [**get_by_path**](docs/StaticResourceApi.md#get_by_path) | **GET** /{path} | 
 *StaticResourceApi* | [**get_content_by_path**](docs/StaticResourceApi.md#get_content_by_path) | **GET** /content/{path} | 
 *StaticResourceApi* | [**get_login**](docs/StaticResourceApi.md#get_login) | **GET** /login | 
