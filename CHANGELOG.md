@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.1.0](https://github.com/devopsarr/prowlarr-py/compare/v1.0.2...v1.1.0) (2025-01-24)
+
+
+### Features
+
+* remove broken root api path ([40ff690](https://github.com/devopsarr/prowlarr-py/commit/40ff69057cc50eb890fb53bba62f53d232adb25b))
+
+
+### Bug Fixes
+
+* **deps:** update dependency prowlarr/prowlarr to v1.27.0.4852 ([148a6aa](https://github.com/devopsarr/prowlarr-py/commit/148a6aac9640cd47ccfc7e110aa7e3041e8dd28f))
+* **deps:** update dependency prowlarr/prowlarr to v1.28.2.4885 ([66cee8b](https://github.com/devopsarr/prowlarr-py/commit/66cee8b86e145c5504a18b596914759a679b7f38))
+* **deps:** update dependency prowlarr/prowlarr to v1.29.2.4915 ([f5d6c46](https://github.com/devopsarr/prowlarr-py/commit/f5d6c46eba69a004b4b76ea56174101feaa422e3))
+* **deps:** update dependency prowlarr/prowlarr to v1.30.2.4939 ([b3888da](https://github.com/devopsarr/prowlarr-py/commit/b3888dad84bcdcb34da28e256daa0001847a38bb))
+* **deps:** update openapitools/openapi-generator-cli docker tag to v7.10.0 ([8305d02](https://github.com/devopsarr/prowlarr-py/commit/8305d02e25d83edaccdb2b15db2390b9da3a0c9d))
+* **deps:** update openapitools/openapi-generator-cli docker tag to v7.11.0 ([901930b](https://github.com/devopsarr/prowlarr-py/commit/901930b17aeb294e2a7cc9e480594783554db23c))
+
 ## [1.0.2](https://github.com/devopsarr/prowlarr-py/compare/v1.0.1...v1.0.2) (2024-10-16)
 
 
