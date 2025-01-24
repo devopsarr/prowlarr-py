@@ -21,7 +21,7 @@ from setuptools import setup, find_packages  # noqa: H301
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 NAME = "prowlarr-py"
-VERSION = "1.0.2" # x-release-please-version
+VERSION = "1.1.0" # x-release-please-version
 PYTHON_REQUIRES = ">= 3.8"
 REQUIRES = [
     "urllib3 >= 1.25.3, < 3.0.0",
