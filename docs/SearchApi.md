@@ -12,8 +12,6 @@ Method | HTTP request | Description
 # **create_search**
 > ReleaseResource create_search(release_resource=release_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -95,8 +93,6 @@ Name | Type | Description  | Notes
 # **create_search_bulk**
 > ReleaseResource create_search_bulk(release_resource=release_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -177,8 +173,6 @@ Name | Type | Description  | Notes
 
 # **list_search**
 > List[ReleaseResource] list_search(query=query, type=type, indexer_ids=indexer_ids, categories=categories, limit=limit, offset=offset)
-
-
 
 ### Example
 

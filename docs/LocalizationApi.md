@@ -11,8 +11,6 @@ Method | HTTP request | Description
 # **get_localization**
 > get_localization()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -86,8 +84,6 @@ void (empty response body)
 
 # **list_localization_options**
 > List[LocalizationOption] list_localization_options()
-
-
 
 ### Example
 

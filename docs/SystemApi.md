@@ -14,8 +14,6 @@ Method | HTTP request | Description
 # **create_system_restart**
 > create_system_restart()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -89,8 +87,6 @@ void (empty response body)
 
 # **create_system_shutdown**
 > create_system_shutdown()
-
-
 
 ### Example
 
@@ -166,8 +162,6 @@ void (empty response body)
 # **get_system_routes**
 > get_system_routes()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -242,8 +236,6 @@ void (empty response body)
 # **get_system_routes_duplicate**
 > get_system_routes_duplicate()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -317,8 +309,6 @@ void (empty response body)
 
 # **get_system_status**
 > SystemResource get_system_status()
-
-
 
 ### Example
 

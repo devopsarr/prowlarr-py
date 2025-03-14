@@ -15,8 +15,6 @@ Method | HTTP request | Description
 # **create_app_profile**
 > AppProfileResource create_app_profile(app_profile_resource=app_profile_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -98,8 +96,6 @@ Name | Type | Description  | Notes
 # **delete_app_profile**
 > delete_app_profile(id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -177,8 +173,6 @@ void (empty response body)
 
 # **get_app_profile_by_id**
 > AppProfileResource get_app_profile_by_id(id)
-
-
 
 ### Example
 
@@ -263,8 +257,6 @@ Name | Type | Description  | Notes
 # **get_app_profile_schema**
 > AppProfileResource get_app_profile_schema()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -342,8 +334,6 @@ This endpoint does not need any parameter.
 # **list_app_profile**
 > List[AppProfileResource] list_app_profile()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -420,8 +410,6 @@ This endpoint does not need any parameter.
 
 # **update_app_profile**
 > AppProfileResource update_app_profile(id, app_profile_resource=app_profile_resource)
-
-
 
 ### Example
 

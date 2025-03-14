@@ -10,8 +10,6 @@ Method | HTTP request | Description
 # **get_indexer_stats**
 > IndexerStatsResource get_indexer_stats(start_date=start_date, end_date=end_date, indexers=indexers, protocols=protocols, tags=tags)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):

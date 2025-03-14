@@ -11,8 +11,6 @@ Method | HTTP request | Description
 # **get_system_task_by_id**
 > TaskResource get_system_task_by_id(id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -93,8 +91,6 @@ Name | Type | Description  | Notes
 
 # **list_system_task**
 > List[TaskResource] list_system_task()
-
-
 
 ### Example
 

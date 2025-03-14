@@ -11,8 +11,6 @@ Method | HTTP request | Description
 # **get_log_file_by_filename**
 > object get_log_file_by_filename(filename)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -92,8 +90,6 @@ Name | Type | Description  | Notes
 
 # **list_log_file**
 > List[LogFileResource] list_log_file()
-
-
 
 ### Example
 

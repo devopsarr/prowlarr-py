@@ -12,8 +12,6 @@ Method | HTTP request | Description
 # **get_host_config**
 > HostConfigResource get_host_config()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -90,8 +88,6 @@ This endpoint does not need any parameter.
 
 # **get_host_config_by_id**
 > HostConfigResource get_host_config_by_id(id)
-
-
 
 ### Example
 
@@ -173,8 +169,6 @@ Name | Type | Description  | Notes
 
 # **update_host_config**
 > HostConfigResource update_host_config(id, host_config_resource=host_config_resource)
-
-
 
 ### Example
 

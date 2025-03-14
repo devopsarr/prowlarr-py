@@ -11,8 +11,6 @@ Method | HTTP request | Description
 # **get_indexer_download**
 > get_indexer_download(id, link=link, file=file)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -94,8 +92,6 @@ void (empty response body)
 
 # **get_indexer_newznab**
 > get_indexer_newznab(id, t=t, q=q, cat=cat, imdbid=imdbid, tmdbid=tmdbid, extended=extended, limit=limit, offset=offset, minage=minage, maxage=maxage, minsize=minsize, maxsize=maxsize, rid=rid, tvmazeid=tvmazeid, traktid=traktid, tvdbid=tvdbid, doubanid=doubanid, season=season, ep=ep, album=album, artist=artist, label=label, track=track, year=year, genre=genre, author=author, title=title, publisher=publisher, configured=configured, source=source, host=host, server=server)
-
-
 
 ### Example
 

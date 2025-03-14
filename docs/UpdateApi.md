@@ -10,8 +10,6 @@ Method | HTTP request | Description
 # **list_update**
 > List[UpdateResource] list_update()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):

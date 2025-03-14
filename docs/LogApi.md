@@ -10,8 +10,6 @@ Method | HTTP request | Description
 # **get_log**
 > LogResourcePagingResource get_log(page=page, page_size=page_size, sort_key=sort_key, sort_direction=sort_direction, level=level)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):

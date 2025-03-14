@@ -12,8 +12,6 @@ Method | HTTP request | Description
 # **get_download_client_config**
 > DownloadClientConfigResource get_download_client_config()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -90,8 +88,6 @@ This endpoint does not need any parameter.
 
 # **get_download_client_config_by_id**
 > DownloadClientConfigResource get_download_client_config_by_id(id)
-
-
 
 ### Example
 
@@ -173,8 +169,6 @@ Name | Type | Description  | Notes
 
 # **update_download_client_config**
 > DownloadClientConfigResource update_download_client_config(id, download_client_config_resource=download_client_config_resource)
-
-
 
 ### Example
 

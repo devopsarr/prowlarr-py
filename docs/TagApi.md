@@ -14,8 +14,6 @@ Method | HTTP request | Description
 # **create_tag**
 > TagResource create_tag(tag_resource=tag_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -97,8 +95,6 @@ Name | Type | Description  | Notes
 # **delete_tag**
 > delete_tag(id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -176,8 +172,6 @@ void (empty response body)
 
 # **get_tag_by_id**
 > TagResource get_tag_by_id(id)
-
-
 
 ### Example
 
@@ -260,8 +254,6 @@ Name | Type | Description  | Notes
 # **list_tag**
 > List[TagResource] list_tag()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -338,8 +330,6 @@ This endpoint does not need any parameter.
 
 # **update_tag**
 > TagResource update_tag(id, tag_resource=tag_resource)
-
-
 
 ### Example
 

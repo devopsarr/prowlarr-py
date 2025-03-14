@@ -11,8 +11,6 @@ Method | HTTP request | Description
 # **create_login**
 > create_login(return_url=return_url, username=username, password=password, remember_me=remember_me)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -96,8 +94,6 @@ void (empty response body)
 
 # **get_logout**
 > get_logout()
-
-
 
 ### Example
 

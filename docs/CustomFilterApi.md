@@ -14,8 +14,6 @@ Method | HTTP request | Description
 # **create_custom_filter**
 > CustomFilterResource create_custom_filter(custom_filter_resource=custom_filter_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -97,8 +95,6 @@ Name | Type | Description  | Notes
 # **delete_custom_filter**
 > delete_custom_filter(id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -176,8 +172,6 @@ void (empty response body)
 
 # **get_custom_filter_by_id**
 > CustomFilterResource get_custom_filter_by_id(id)
-
-
 
 ### Example
 
@@ -260,8 +254,6 @@ Name | Type | Description  | Notes
 # **list_custom_filter**
 > List[CustomFilterResource] list_custom_filter()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -338,8 +330,6 @@ This endpoint does not need any parameter.
 
 # **update_custom_filter**
 > CustomFilterResource update_custom_filter(id, custom_filter_resource=custom_filter_resource)
-
-
 
 ### Example
 

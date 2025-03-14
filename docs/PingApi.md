@@ -11,8 +11,6 @@ Method | HTTP request | Description
 # **get_ping**
 > PingResource get_ping()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -89,8 +87,6 @@ This endpoint does not need any parameter.
 
 # **head_ping**
 > PingResource head_ping()
-
-
 
 ### Example
 

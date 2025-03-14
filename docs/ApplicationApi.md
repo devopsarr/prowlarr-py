@@ -20,8 +20,6 @@ Method | HTTP request | Description
 # **create_applications**
 > ApplicationResource create_applications(force_save=force_save, application_resource=application_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -105,8 +103,6 @@ Name | Type | Description  | Notes
 # **create_applications_action_by_name**
 > create_applications_action_by_name(name, application_resource=application_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -188,8 +184,6 @@ void (empty response body)
 # **delete_applications**
 > delete_applications(id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -267,8 +261,6 @@ void (empty response body)
 
 # **delete_applications_bulk**
 > delete_applications_bulk(application_bulk_resource=application_bulk_resource)
-
-
 
 ### Example
 
@@ -348,8 +340,6 @@ void (empty response body)
 
 # **get_applications_by_id**
 > ApplicationResource get_applications_by_id(id)
-
-
 
 ### Example
 
@@ -432,8 +422,6 @@ Name | Type | Description  | Notes
 # **list_applications**
 > List[ApplicationResource] list_applications()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -511,8 +499,6 @@ This endpoint does not need any parameter.
 # **list_applications_schema**
 > List[ApplicationResource] list_applications_schema()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -589,8 +575,6 @@ This endpoint does not need any parameter.
 
 # **put_applications_bulk**
 > ApplicationResource put_applications_bulk(application_bulk_resource=application_bulk_resource)
-
-
 
 ### Example
 
@@ -674,8 +658,6 @@ Name | Type | Description  | Notes
 # **test_applications**
 > test_applications(force_test=force_test, application_resource=application_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -757,8 +739,6 @@ void (empty response body)
 # **testall_applications**
 > testall_applications()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -832,8 +812,6 @@ void (empty response body)
 
 # **update_applications**
 > ApplicationResource update_applications(id, force_save=force_save, application_resource=application_resource)
-
-
 
 ### Example
 

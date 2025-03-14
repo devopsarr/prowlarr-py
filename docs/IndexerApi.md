@@ -20,8 +20,6 @@ Method | HTTP request | Description
 # **create_indexer**
 > IndexerResource create_indexer(force_save=force_save, indexer_resource=indexer_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -105,8 +103,6 @@ Name | Type | Description  | Notes
 # **create_indexer_action_by_name**
 > create_indexer_action_by_name(name, indexer_resource=indexer_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -188,8 +184,6 @@ void (empty response body)
 # **delete_indexer**
 > delete_indexer(id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -267,8 +261,6 @@ void (empty response body)
 
 # **delete_indexer_bulk**
 > delete_indexer_bulk(indexer_bulk_resource=indexer_bulk_resource)
-
-
 
 ### Example
 
@@ -348,8 +340,6 @@ void (empty response body)
 
 # **get_indexer_by_id**
 > IndexerResource get_indexer_by_id(id)
-
-
 
 ### Example
 
@@ -432,8 +422,6 @@ Name | Type | Description  | Notes
 # **list_indexer**
 > List[IndexerResource] list_indexer()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -511,8 +499,6 @@ This endpoint does not need any parameter.
 # **list_indexer_schema**
 > List[IndexerResource] list_indexer_schema()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -589,8 +575,6 @@ This endpoint does not need any parameter.
 
 # **put_indexer_bulk**
 > IndexerResource put_indexer_bulk(indexer_bulk_resource=indexer_bulk_resource)
-
-
 
 ### Example
 
@@ -674,8 +658,6 @@ Name | Type | Description  | Notes
 # **test_indexer**
 > test_indexer(force_test=force_test, indexer_resource=indexer_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -757,8 +739,6 @@ void (empty response body)
 # **testall_indexer**
 > testall_indexer()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -832,8 +812,6 @@ void (empty response body)
 
 # **update_indexer**
 > IndexerResource update_indexer(id, force_save=force_save, indexer_resource=indexer_resource)
-
-
 
 ### Example
 

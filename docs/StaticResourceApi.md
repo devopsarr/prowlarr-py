@@ -12,8 +12,6 @@ Method | HTTP request | Description
 # **get_by_path**
 > get_by_path(path)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -92,8 +90,6 @@ void (empty response body)
 # **get_content_by_path**
 > get_content_by_path(path)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -171,8 +167,6 @@ void (empty response body)
 
 # **get_login**
 > get_login()
-
-
 
 ### Example
 

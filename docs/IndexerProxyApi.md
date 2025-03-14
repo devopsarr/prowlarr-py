@@ -18,8 +18,6 @@ Method | HTTP request | Description
 # **create_indexer_proxy**
 > IndexerProxyResource create_indexer_proxy(force_save=force_save, indexer_proxy_resource=indexer_proxy_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -103,8 +101,6 @@ Name | Type | Description  | Notes
 # **create_indexer_proxy_action_by_name**
 > create_indexer_proxy_action_by_name(name, indexer_proxy_resource=indexer_proxy_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -186,8 +182,6 @@ void (empty response body)
 # **delete_indexer_proxy**
 > delete_indexer_proxy(id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -265,8 +259,6 @@ void (empty response body)
 
 # **get_indexer_proxy_by_id**
 > IndexerProxyResource get_indexer_proxy_by_id(id)
-
-
 
 ### Example
 
@@ -349,8 +341,6 @@ Name | Type | Description  | Notes
 # **list_indexer_proxy**
 > List[IndexerProxyResource] list_indexer_proxy()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -428,8 +418,6 @@ This endpoint does not need any parameter.
 # **list_indexer_proxy_schema**
 > List[IndexerProxyResource] list_indexer_proxy_schema()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -506,8 +494,6 @@ This endpoint does not need any parameter.
 
 # **test_indexer_proxy**
 > test_indexer_proxy(force_test=force_test, indexer_proxy_resource=indexer_proxy_resource)
-
-
 
 ### Example
 
@@ -590,8 +576,6 @@ void (empty response body)
 # **testall_indexer_proxy**
 > testall_indexer_proxy()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -665,8 +649,6 @@ void (empty response body)
 
 # **update_indexer_proxy**
 > IndexerProxyResource update_indexer_proxy(id, force_save=force_save, indexer_proxy_resource=indexer_proxy_resource)
-
-
 
 ### Example
 
