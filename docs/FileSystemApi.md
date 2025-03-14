@@ -11,8 +11,6 @@ Method | HTTP request | Description
 # **get_file_system**
 > get_file_system(path=path, include_files=include_files, allow_folders_without_trailing_slashes=allow_folders_without_trailing_slashes)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -94,8 +92,6 @@ void (empty response body)
 
 # **get_file_system_type**
 > get_file_system_type(path=path)
-
-
 
 ### Example
 

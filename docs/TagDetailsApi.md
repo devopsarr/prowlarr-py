@@ -11,8 +11,6 @@ Method | HTTP request | Description
 # **get_tag_detail_by_id**
 > TagDetailsResource get_tag_detail_by_id(id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -93,8 +91,6 @@ Name | Type | Description  | Notes
 
 # **list_tag_detail**
 > List[TagDetailsResource] list_tag_detail()
-
-
 
 ### Example
 

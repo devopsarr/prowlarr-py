@@ -10,8 +10,6 @@ Method | HTTP request | Description
 # **list_indexer_status**
 > List[IndexerStatusResource] list_indexer_status()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):

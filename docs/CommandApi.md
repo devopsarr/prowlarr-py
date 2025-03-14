@@ -13,8 +13,6 @@ Method | HTTP request | Description
 # **create_command**
 > CommandResource create_command(command_resource=command_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -96,8 +94,6 @@ Name | Type | Description  | Notes
 # **delete_command**
 > delete_command(id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -175,8 +171,6 @@ void (empty response body)
 
 # **get_command_by_id**
 > CommandResource get_command_by_id(id)
-
-
 
 ### Example
 
@@ -258,8 +252,6 @@ Name | Type | Description  | Notes
 
 # **list_command**
 > List[CommandResource] list_command()
-
-
 
 ### Example
 

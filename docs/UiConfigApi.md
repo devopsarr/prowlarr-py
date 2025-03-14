@@ -12,8 +12,6 @@ Method | HTTP request | Description
 # **get_ui_config**
 > UiConfigResource get_ui_config()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -90,8 +88,6 @@ This endpoint does not need any parameter.
 
 # **get_ui_config_by_id**
 > UiConfigResource get_ui_config_by_id(id)
-
-
 
 ### Example
 
@@ -173,8 +169,6 @@ Name | Type | Description  | Notes
 
 # **update_ui_config**
 > UiConfigResource update_ui_config(id, ui_config_resource=ui_config_resource)
-
-
 
 ### Example
 

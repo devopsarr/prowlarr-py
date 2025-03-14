@@ -12,8 +12,6 @@ Method | HTTP request | Description
 # **get_history**
 > HistoryResourcePagingResource get_history(page=page, page_size=page_size, sort_key=sort_key, sort_direction=sort_direction, event_type=event_type, successful=successful, download_id=download_id, indexer_ids=indexer_ids)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -110,8 +108,6 @@ Name | Type | Description  | Notes
 # **list_history_indexer**
 > List[HistoryResource] list_history_indexer(indexer_id=indexer_id, event_type=event_type, limit=limit)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -197,8 +193,6 @@ Name | Type | Description  | Notes
 
 # **list_history_since**
 > List[HistoryResource] list_history_since(var_date=var_date, event_type=event_type)
-
-
 
 ### Example
 

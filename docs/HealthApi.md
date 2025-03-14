@@ -10,8 +10,6 @@ Method | HTTP request | Description
 # **list_health**
 > List[HealthResource] list_health()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):

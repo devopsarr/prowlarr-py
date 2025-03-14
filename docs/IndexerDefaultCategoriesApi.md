@@ -10,8 +10,6 @@ Method | HTTP request | Description
 # **list_indexer_categories**
 > List[IndexerCategory] list_indexer_categories()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):

@@ -20,8 +20,6 @@ Method | HTTP request | Description
 # **create_download_client**
 > DownloadClientResource create_download_client(force_save=force_save, download_client_resource=download_client_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -105,8 +103,6 @@ Name | Type | Description  | Notes
 # **create_download_client_action_by_name**
 > create_download_client_action_by_name(name, download_client_resource=download_client_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -188,8 +184,6 @@ void (empty response body)
 # **delete_download_client**
 > delete_download_client(id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -267,8 +261,6 @@ void (empty response body)
 
 # **delete_download_client_bulk**
 > delete_download_client_bulk(download_client_bulk_resource=download_client_bulk_resource)
-
-
 
 ### Example
 
@@ -348,8 +340,6 @@ void (empty response body)
 
 # **get_download_client_by_id**
 > DownloadClientResource get_download_client_by_id(id)
-
-
 
 ### Example
 
@@ -432,8 +422,6 @@ Name | Type | Description  | Notes
 # **list_download_client**
 > List[DownloadClientResource] list_download_client()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -511,8 +499,6 @@ This endpoint does not need any parameter.
 # **list_download_client_schema**
 > List[DownloadClientResource] list_download_client_schema()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -589,8 +575,6 @@ This endpoint does not need any parameter.
 
 # **put_download_client_bulk**
 > DownloadClientResource put_download_client_bulk(download_client_bulk_resource=download_client_bulk_resource)
-
-
 
 ### Example
 
@@ -674,8 +658,6 @@ Name | Type | Description  | Notes
 # **test_download_client**
 > test_download_client(force_test=force_test, download_client_resource=download_client_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -757,8 +739,6 @@ void (empty response body)
 # **testall_download_client**
 > testall_download_client()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -832,8 +812,6 @@ void (empty response body)
 
 # **update_download_client**
 > DownloadClientResource update_download_client(id, force_save=force_save, download_client_resource=download_client_resource)
-
-
 
 ### Example
 

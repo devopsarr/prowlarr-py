@@ -13,8 +13,6 @@ Method | HTTP request | Description
 # **create_system_backup_restore_by_id**
 > create_system_backup_restore_by_id(id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -93,8 +91,6 @@ void (empty response body)
 # **create_system_backup_restore_upload**
 > create_system_backup_restore_upload()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -168,8 +164,6 @@ void (empty response body)
 
 # **delete_system_backup**
 > delete_system_backup(id)
-
-
 
 ### Example
 
@@ -248,8 +242,6 @@ void (empty response body)
 
 # **list_system_backup**
 > List[BackupResource] list_system_backup()
-
-
 
 ### Example
 

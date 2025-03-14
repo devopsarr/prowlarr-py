@@ -18,8 +18,6 @@ Method | HTTP request | Description
 # **create_notification**
 > NotificationResource create_notification(force_save=force_save, notification_resource=notification_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -103,8 +101,6 @@ Name | Type | Description  | Notes
 # **create_notification_action_by_name**
 > create_notification_action_by_name(name, notification_resource=notification_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -186,8 +182,6 @@ void (empty response body)
 # **delete_notification**
 > delete_notification(id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -265,8 +259,6 @@ void (empty response body)
 
 # **get_notification_by_id**
 > NotificationResource get_notification_by_id(id)
-
-
 
 ### Example
 
@@ -349,8 +341,6 @@ Name | Type | Description  | Notes
 # **list_notification**
 > List[NotificationResource] list_notification()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -428,8 +418,6 @@ This endpoint does not need any parameter.
 # **list_notification_schema**
 > List[NotificationResource] list_notification_schema()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -506,8 +494,6 @@ This endpoint does not need any parameter.
 
 # **test_notification**
 > test_notification(force_test=force_test, notification_resource=notification_resource)
-
-
 
 ### Example
 
@@ -590,8 +576,6 @@ void (empty response body)
 # **testall_notification**
 > testall_notification()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -665,8 +649,6 @@ void (empty response body)
 
 # **update_notification**
 > NotificationResource update_notification(id, force_save=force_save, notification_resource=notification_resource)
-
-
 
 ### Example
 

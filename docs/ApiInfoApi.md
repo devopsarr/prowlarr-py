@@ -10,8 +10,6 @@ Method | HTTP request | Description
 # **get_api**
 > ApiInfoResource get_api()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):

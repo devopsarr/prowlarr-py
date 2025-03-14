@@ -12,8 +12,6 @@ Method | HTTP request | Description
 # **get_development_config**
 > DevelopmentConfigResource get_development_config()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -90,8 +88,6 @@ This endpoint does not need any parameter.
 
 # **get_development_config_by_id**
 > DevelopmentConfigResource get_development_config_by_id(id)
-
-
 
 ### Example
 
@@ -173,8 +169,6 @@ Name | Type | Description  | Notes
 
 # **update_development_config**
 > DevelopmentConfigResource update_development_config(id, development_config_resource=development_config_resource)
-
-
 
 ### Example
 
