@@ -16,120 +16,369 @@
 
 __version__ = "1.1.0" # x-release-please-version
 
-# import apis into sdk package
-from prowlarr.api.api_info_api import ApiInfoApi
-from prowlarr.api.app_profile_api import AppProfileApi
-from prowlarr.api.application_api import ApplicationApi
-from prowlarr.api.authentication_api import AuthenticationApi
-from prowlarr.api.backup_api import BackupApi
-from prowlarr.api.command_api import CommandApi
-from prowlarr.api.custom_filter_api import CustomFilterApi
-from prowlarr.api.development_config_api import DevelopmentConfigApi
-from prowlarr.api.download_client_api import DownloadClientApi
-from prowlarr.api.download_client_config_api import DownloadClientConfigApi
-from prowlarr.api.file_system_api import FileSystemApi
-from prowlarr.api.health_api import HealthApi
-from prowlarr.api.history_api import HistoryApi
-from prowlarr.api.host_config_api import HostConfigApi
-from prowlarr.api.indexer_api import IndexerApi
-from prowlarr.api.indexer_default_categories_api import IndexerDefaultCategoriesApi
-from prowlarr.api.indexer_proxy_api import IndexerProxyApi
-from prowlarr.api.indexer_stats_api import IndexerStatsApi
-from prowlarr.api.indexer_status_api import IndexerStatusApi
-from prowlarr.api.localization_api import LocalizationApi
-from prowlarr.api.log_api import LogApi
-from prowlarr.api.log_file_api import LogFileApi
-from prowlarr.api.newznab_api import NewznabApi
-from prowlarr.api.notification_api import NotificationApi
-from prowlarr.api.ping_api import PingApi
-from prowlarr.api.search_api import SearchApi
-from prowlarr.api.static_resource_api import StaticResourceApi
-from prowlarr.api.system_api import SystemApi
-from prowlarr.api.tag_api import TagApi
-from prowlarr.api.tag_details_api import TagDetailsApi
-from prowlarr.api.task_api import TaskApi
-from prowlarr.api.ui_config_api import UiConfigApi
-from prowlarr.api.update_api import UpdateApi
-from prowlarr.api.update_log_file_api import UpdateLogFileApi
+# Define package exports
+__all__ = [
+    "ApiInfoApi",
+    "AppProfileApi",
+    "ApplicationApi",
+    "AuthenticationApi",
+    "BackupApi",
+    "CommandApi",
+    "CustomFilterApi",
+    "DevelopmentConfigApi",
+    "DownloadClientApi",
+    "DownloadClientConfigApi",
+    "FileSystemApi",
+    "HealthApi",
+    "HistoryApi",
+    "HostConfigApi",
+    "IndexerApi",
+    "IndexerDefaultCategoriesApi",
+    "IndexerProxyApi",
+    "IndexerStatsApi",
+    "IndexerStatusApi",
+    "LocalizationApi",
+    "LogApi",
+    "LogFileApi",
+    "NewznabApi",
+    "NotificationApi",
+    "PingApi",
+    "SearchApi",
+    "StaticResourceApi",
+    "SystemApi",
+    "TagApi",
+    "TagDetailsApi",
+    "TaskApi",
+    "UiConfigApi",
+    "UpdateApi",
+    "UpdateLogFileApi",
+    "ApiResponse",
+    "ApiClient",
+    "Configuration",
+    "OpenApiException",
+    "ApiTypeError",
+    "ApiValueError",
+    "ApiKeyError",
+    "ApiAttributeError",
+    "ApiException",
+    "ApiInfoResource",
+    "AppProfileResource",
+    "ApplicationBulkResource",
+    "ApplicationResource",
+    "ApplicationSyncLevel",
+    "ApplyTags",
+    "AuthenticationRequiredType",
+    "AuthenticationType",
+    "BackupResource",
+    "BackupType",
+    "BookSearchParam",
+    "CertificateValidationType",
+    "Command",
+    "CommandPriority",
+    "CommandResource",
+    "CommandStatus",
+    "CommandTrigger",
+    "ContractField",
+    "CustomFilterResource",
+    "DatabaseType",
+    "DevelopmentConfigResource",
+    "DownloadClientBulkResource",
+    "DownloadClientCategory",
+    "DownloadClientConfigResource",
+    "DownloadClientResource",
+    "DownloadProtocol",
+    "HealthCheckResult",
+    "HealthResource",
+    "HistoryEventType",
+    "HistoryResource",
+    "HistoryResourcePagingResource",
+    "HostConfigResource",
+    "HostStatistics",
+    "IndexerBulkResource",
+    "IndexerCapabilityResource",
+    "IndexerCategory",
+    "IndexerPrivacy",
+    "IndexerProxyResource",
+    "IndexerResource",
+    "IndexerStatistics",
+    "IndexerStatsResource",
+    "IndexerStatusResource",
+    "LocalizationOption",
+    "LogFileResource",
+    "LogResource",
+    "LogResourcePagingResource",
+    "MovieSearchParam",
+    "MusicSearchParam",
+    "NotificationResource",
+    "PingResource",
+    "PrivacyLevel",
+    "ProviderMessage",
+    "ProviderMessageType",
+    "ProxyType",
+    "ReleaseResource",
+    "RuntimeMode",
+    "SearchParam",
+    "SelectOption",
+    "SortDirection",
+    "SystemResource",
+    "TagDetailsResource",
+    "TagResource",
+    "TaskResource",
+    "TvSearchParam",
+    "UiConfigResource",
+    "UpdateChanges",
+    "UpdateMechanism",
+    "UpdateResource",
+    "UserAgentStatistics",
+]
+
+if __import__("typing").TYPE_CHECKING:
+    # import apis into sdk package
+    from prowlarr.api.api_info_api import ApiInfoApi as ApiInfoApi
+    from prowlarr.api.app_profile_api import AppProfileApi as AppProfileApi
+    from prowlarr.api.application_api import ApplicationApi as ApplicationApi
+    from prowlarr.api.authentication_api import AuthenticationApi as AuthenticationApi
+    from prowlarr.api.backup_api import BackupApi as BackupApi
+    from prowlarr.api.command_api import CommandApi as CommandApi
+    from prowlarr.api.custom_filter_api import CustomFilterApi as CustomFilterApi
+    from prowlarr.api.development_config_api import DevelopmentConfigApi as DevelopmentConfigApi
+    from prowlarr.api.download_client_api import DownloadClientApi as DownloadClientApi
+    from prowlarr.api.download_client_config_api import DownloadClientConfigApi as DownloadClientConfigApi
+    from prowlarr.api.file_system_api import FileSystemApi as FileSystemApi
+    from prowlarr.api.health_api import HealthApi as HealthApi
+    from prowlarr.api.history_api import HistoryApi as HistoryApi
+    from prowlarr.api.host_config_api import HostConfigApi as HostConfigApi
+    from prowlarr.api.indexer_api import IndexerApi as IndexerApi
+    from prowlarr.api.indexer_default_categories_api import IndexerDefaultCategoriesApi as IndexerDefaultCategoriesApi
+    from prowlarr.api.indexer_proxy_api import IndexerProxyApi as IndexerProxyApi
+    from prowlarr.api.indexer_stats_api import IndexerStatsApi as IndexerStatsApi
+    from prowlarr.api.indexer_status_api import IndexerStatusApi as IndexerStatusApi
+    from prowlarr.api.localization_api import LocalizationApi as LocalizationApi
+    from prowlarr.api.log_api import LogApi as LogApi
+    from prowlarr.api.log_file_api import LogFileApi as LogFileApi
+    from prowlarr.api.newznab_api import NewznabApi as NewznabApi
+    from prowlarr.api.notification_api import NotificationApi as NotificationApi
+    from prowlarr.api.ping_api import PingApi as PingApi
+    from prowlarr.api.search_api import SearchApi as SearchApi
+    from prowlarr.api.static_resource_api import StaticResourceApi as StaticResourceApi
+    from prowlarr.api.system_api import SystemApi as SystemApi
+    from prowlarr.api.tag_api import TagApi as TagApi
+    from prowlarr.api.tag_details_api import TagDetailsApi as TagDetailsApi
+    from prowlarr.api.task_api import TaskApi as TaskApi
+    from prowlarr.api.ui_config_api import UiConfigApi as UiConfigApi
+    from prowlarr.api.update_api import UpdateApi as UpdateApi
+    from prowlarr.api.update_log_file_api import UpdateLogFileApi as UpdateLogFileApi
+    
+    # import ApiClient
+    from prowlarr.api_response import ApiResponse as ApiResponse
+    from prowlarr.api_client import ApiClient as ApiClient
+    from prowlarr.configuration import Configuration as Configuration
+    from prowlarr.exceptions import OpenApiException as OpenApiException
+    from prowlarr.exceptions import ApiTypeError as ApiTypeError
+    from prowlarr.exceptions import ApiValueError as ApiValueError
+    from prowlarr.exceptions import ApiKeyError as ApiKeyError
+    from prowlarr.exceptions import ApiAttributeError as ApiAttributeError
+    from prowlarr.exceptions import ApiException as ApiException
+    
+    # import models into sdk package
+    from prowlarr.models.api_info_resource import ApiInfoResource as ApiInfoResource
+    from prowlarr.models.app_profile_resource import AppProfileResource as AppProfileResource
+    from prowlarr.models.application_bulk_resource import ApplicationBulkResource as ApplicationBulkResource
+    from prowlarr.models.application_resource import ApplicationResource as ApplicationResource
+    from prowlarr.models.application_sync_level import ApplicationSyncLevel as ApplicationSyncLevel
+    from prowlarr.models.apply_tags import ApplyTags as ApplyTags
+    from prowlarr.models.authentication_required_type import AuthenticationRequiredType as AuthenticationRequiredType
+    from prowlarr.models.authentication_type import AuthenticationType as AuthenticationType
+    from prowlarr.models.backup_resource import BackupResource as BackupResource
+    from prowlarr.models.backup_type import BackupType as BackupType
+    from prowlarr.models.book_search_param import BookSearchParam as BookSearchParam
+    from prowlarr.models.certificate_validation_type import CertificateValidationType as CertificateValidationType
+    from prowlarr.models.command import Command as Command
+    from prowlarr.models.command_priority import CommandPriority as CommandPriority
+    from prowlarr.models.command_resource import CommandResource as CommandResource
+    from prowlarr.models.command_status import CommandStatus as CommandStatus
+    from prowlarr.models.command_trigger import CommandTrigger as CommandTrigger
+    from prowlarr.models.contract_field import ContractField as ContractField
+    from prowlarr.models.custom_filter_resource import CustomFilterResource as CustomFilterResource
+    from prowlarr.models.database_type import DatabaseType as DatabaseType
+    from prowlarr.models.development_config_resource import DevelopmentConfigResource as DevelopmentConfigResource
+    from prowlarr.models.download_client_bulk_resource import DownloadClientBulkResource as DownloadClientBulkResource
+    from prowlarr.models.download_client_category import DownloadClientCategory as DownloadClientCategory
+    from prowlarr.models.download_client_config_resource import DownloadClientConfigResource as DownloadClientConfigResource
+    from prowlarr.models.download_client_resource import DownloadClientResource as DownloadClientResource
+    from prowlarr.models.download_protocol import DownloadProtocol as DownloadProtocol
+    from prowlarr.models.health_check_result import HealthCheckResult as HealthCheckResult
+    from prowlarr.models.health_resource import HealthResource as HealthResource
+    from prowlarr.models.history_event_type import HistoryEventType as HistoryEventType
+    from prowlarr.models.history_resource import HistoryResource as HistoryResource
+    from prowlarr.models.history_resource_paging_resource import HistoryResourcePagingResource as HistoryResourcePagingResource
+    from prowlarr.models.host_config_resource import HostConfigResource as HostConfigResource
+    from prowlarr.models.host_statistics import HostStatistics as HostStatistics
+    from prowlarr.models.indexer_bulk_resource import IndexerBulkResource as IndexerBulkResource
+    from prowlarr.models.indexer_capability_resource import IndexerCapabilityResource as IndexerCapabilityResource
+    from prowlarr.models.indexer_category import IndexerCategory as IndexerCategory
+    from prowlarr.models.indexer_privacy import IndexerPrivacy as IndexerPrivacy
+    from prowlarr.models.indexer_proxy_resource import IndexerProxyResource as IndexerProxyResource
+    from prowlarr.models.indexer_resource import IndexerResource as IndexerResource
+    from prowlarr.models.indexer_statistics import IndexerStatistics as IndexerStatistics
+    from prowlarr.models.indexer_stats_resource import IndexerStatsResource as IndexerStatsResource
+    from prowlarr.models.indexer_status_resource import IndexerStatusResource as IndexerStatusResource
+    from prowlarr.models.localization_option import LocalizationOption as LocalizationOption
+    from prowlarr.models.log_file_resource import LogFileResource as LogFileResource
+    from prowlarr.models.log_resource import LogResource as LogResource
+    from prowlarr.models.log_resource_paging_resource import LogResourcePagingResource as LogResourcePagingResource
+    from prowlarr.models.movie_search_param import MovieSearchParam as MovieSearchParam
+    from prowlarr.models.music_search_param import MusicSearchParam as MusicSearchParam
+    from prowlarr.models.notification_resource import NotificationResource as NotificationResource
+    from prowlarr.models.ping_resource import PingResource as PingResource
+    from prowlarr.models.privacy_level import PrivacyLevel as PrivacyLevel
+    from prowlarr.models.provider_message import ProviderMessage as ProviderMessage
+    from prowlarr.models.provider_message_type import ProviderMessageType as ProviderMessageType
+    from prowlarr.models.proxy_type import ProxyType as ProxyType
+    from prowlarr.models.release_resource import ReleaseResource as ReleaseResource
+    from prowlarr.models.runtime_mode import RuntimeMode as RuntimeMode
+    from prowlarr.models.search_param import SearchParam as SearchParam
+    from prowlarr.models.select_option import SelectOption as SelectOption
+    from prowlarr.models.sort_direction import SortDirection as SortDirection
+    from prowlarr.models.system_resource import SystemResource as SystemResource
+    from prowlarr.models.tag_details_resource import TagDetailsResource as TagDetailsResource
+    from prowlarr.models.tag_resource import TagResource as TagResource
+    from prowlarr.models.task_resource import TaskResource as TaskResource
+    from prowlarr.models.tv_search_param import TvSearchParam as TvSearchParam
+    from prowlarr.models.ui_config_resource import UiConfigResource as UiConfigResource
+    from prowlarr.models.update_changes import UpdateChanges as UpdateChanges
+    from prowlarr.models.update_mechanism import UpdateMechanism as UpdateMechanism
+    from prowlarr.models.update_resource import UpdateResource as UpdateResource
+    from prowlarr.models.user_agent_statistics import UserAgentStatistics as UserAgentStatistics
+    
+else:
+    from lazy_imports import LazyModule, as_package, load
+
+    load(
+        LazyModule(
+            *as_package(__file__),
+            ("__version__", __version__),
+            ("__all__", __all__),
+            """# import apis into sdk package
+from prowlarr.api.api_info_api import ApiInfoApi as ApiInfoApi
+from prowlarr.api.app_profile_api import AppProfileApi as AppProfileApi
+from prowlarr.api.application_api import ApplicationApi as ApplicationApi
+from prowlarr.api.authentication_api import AuthenticationApi as AuthenticationApi
+from prowlarr.api.backup_api import BackupApi as BackupApi
+from prowlarr.api.command_api import CommandApi as CommandApi
+from prowlarr.api.custom_filter_api import CustomFilterApi as CustomFilterApi
+from prowlarr.api.development_config_api import DevelopmentConfigApi as DevelopmentConfigApi
+from prowlarr.api.download_client_api import DownloadClientApi as DownloadClientApi
+from prowlarr.api.download_client_config_api import DownloadClientConfigApi as DownloadClientConfigApi
+from prowlarr.api.file_system_api import FileSystemApi as FileSystemApi
+from prowlarr.api.health_api import HealthApi as HealthApi
+from prowlarr.api.history_api import HistoryApi as HistoryApi
+from prowlarr.api.host_config_api import HostConfigApi as HostConfigApi
+from prowlarr.api.indexer_api import IndexerApi as IndexerApi
+from prowlarr.api.indexer_default_categories_api import IndexerDefaultCategoriesApi as IndexerDefaultCategoriesApi
+from prowlarr.api.indexer_proxy_api import IndexerProxyApi as IndexerProxyApi
+from prowlarr.api.indexer_stats_api import IndexerStatsApi as IndexerStatsApi
+from prowlarr.api.indexer_status_api import IndexerStatusApi as IndexerStatusApi
+from prowlarr.api.localization_api import LocalizationApi as LocalizationApi
+from prowlarr.api.log_api import LogApi as LogApi
+from prowlarr.api.log_file_api import LogFileApi as LogFileApi
+from prowlarr.api.newznab_api import NewznabApi as NewznabApi
+from prowlarr.api.notification_api import NotificationApi as NotificationApi
+from prowlarr.api.ping_api import PingApi as PingApi
+from prowlarr.api.search_api import SearchApi as SearchApi
+from prowlarr.api.static_resource_api import StaticResourceApi as StaticResourceApi
+from prowlarr.api.system_api import SystemApi as SystemApi
+from prowlarr.api.tag_api import TagApi as TagApi
+from prowlarr.api.tag_details_api import TagDetailsApi as TagDetailsApi
+from prowlarr.api.task_api import TaskApi as TaskApi
+from prowlarr.api.ui_config_api import UiConfigApi as UiConfigApi
+from prowlarr.api.update_api import UpdateApi as UpdateApi
+from prowlarr.api.update_log_file_api import UpdateLogFileApi as UpdateLogFileApi
 
 # import ApiClient
-from prowlarr.api_response import ApiResponse
-from prowlarr.api_client import ApiClient
-from prowlarr.configuration import Configuration
-from prowlarr.exceptions import OpenApiException
-from prowlarr.exceptions import ApiTypeError
-from prowlarr.exceptions import ApiValueError
-from prowlarr.exceptions import ApiKeyError
-from prowlarr.exceptions import ApiAttributeError
-from prowlarr.exceptions import ApiException
+from prowlarr.api_response import ApiResponse as ApiResponse
+from prowlarr.api_client import ApiClient as ApiClient
+from prowlarr.configuration import Configuration as Configuration
+from prowlarr.exceptions import OpenApiException as OpenApiException
+from prowlarr.exceptions import ApiTypeError as ApiTypeError
+from prowlarr.exceptions import ApiValueError as ApiValueError
+from prowlarr.exceptions import ApiKeyError as ApiKeyError
+from prowlarr.exceptions import ApiAttributeError as ApiAttributeError
+from prowlarr.exceptions import ApiException as ApiException
 
 # import models into sdk package
-from prowlarr.models.api_info_resource import ApiInfoResource
-from prowlarr.models.app_profile_resource import AppProfileResource
-from prowlarr.models.application_bulk_resource import ApplicationBulkResource
-from prowlarr.models.application_resource import ApplicationResource
-from prowlarr.models.application_sync_level import ApplicationSyncLevel
-from prowlarr.models.apply_tags import ApplyTags
-from prowlarr.models.authentication_required_type import AuthenticationRequiredType
-from prowlarr.models.authentication_type import AuthenticationType
-from prowlarr.models.backup_resource import BackupResource
-from prowlarr.models.backup_type import BackupType
-from prowlarr.models.book_search_param import BookSearchParam
-from prowlarr.models.certificate_validation_type import CertificateValidationType
-from prowlarr.models.command import Command
-from prowlarr.models.command_priority import CommandPriority
-from prowlarr.models.command_resource import CommandResource
-from prowlarr.models.command_status import CommandStatus
-from prowlarr.models.command_trigger import CommandTrigger
-from prowlarr.models.contract_field import ContractField
-from prowlarr.models.custom_filter_resource import CustomFilterResource
-from prowlarr.models.database_type import DatabaseType
-from prowlarr.models.development_config_resource import DevelopmentConfigResource
-from prowlarr.models.download_client_bulk_resource import DownloadClientBulkResource
-from prowlarr.models.download_client_category import DownloadClientCategory
-from prowlarr.models.download_client_config_resource import DownloadClientConfigResource
-from prowlarr.models.download_client_resource import DownloadClientResource
-from prowlarr.models.download_protocol import DownloadProtocol
-from prowlarr.models.health_check_result import HealthCheckResult
-from prowlarr.models.health_resource import HealthResource
-from prowlarr.models.history_event_type import HistoryEventType
-from prowlarr.models.history_resource import HistoryResource
-from prowlarr.models.history_resource_paging_resource import HistoryResourcePagingResource
-from prowlarr.models.host_config_resource import HostConfigResource
-from prowlarr.models.host_statistics import HostStatistics
-from prowlarr.models.indexer_bulk_resource import IndexerBulkResource
-from prowlarr.models.indexer_capability_resource import IndexerCapabilityResource
-from prowlarr.models.indexer_category import IndexerCategory
-from prowlarr.models.indexer_privacy import IndexerPrivacy
-from prowlarr.models.indexer_proxy_resource import IndexerProxyResource
-from prowlarr.models.indexer_resource import IndexerResource
-from prowlarr.models.indexer_statistics import IndexerStatistics
-from prowlarr.models.indexer_stats_resource import IndexerStatsResource
-from prowlarr.models.indexer_status_resource import IndexerStatusResource
-from prowlarr.models.localization_option import LocalizationOption
-from prowlarr.models.log_file_resource import LogFileResource
-from prowlarr.models.log_resource import LogResource
-from prowlarr.models.log_resource_paging_resource import LogResourcePagingResource
-from prowlarr.models.movie_search_param import MovieSearchParam
-from prowlarr.models.music_search_param import MusicSearchParam
-from prowlarr.models.notification_resource import NotificationResource
-from prowlarr.models.ping_resource import PingResource
-from prowlarr.models.privacy_level import PrivacyLevel
-from prowlarr.models.provider_message import ProviderMessage
-from prowlarr.models.provider_message_type import ProviderMessageType
-from prowlarr.models.proxy_type import ProxyType
-from prowlarr.models.release_resource import ReleaseResource
-from prowlarr.models.runtime_mode import RuntimeMode
-from prowlarr.models.search_param import SearchParam
-from prowlarr.models.select_option import SelectOption
-from prowlarr.models.sort_direction import SortDirection
-from prowlarr.models.system_resource import SystemResource
-from prowlarr.models.tag_details_resource import TagDetailsResource
-from prowlarr.models.tag_resource import TagResource
-from prowlarr.models.task_resource import TaskResource
-from prowlarr.models.tv_search_param import TvSearchParam
-from prowlarr.models.ui_config_resource import UiConfigResource
-from prowlarr.models.update_changes import UpdateChanges
-from prowlarr.models.update_mechanism import UpdateMechanism
-from prowlarr.models.update_resource import UpdateResource
-from prowlarr.models.user_agent_statistics import UserAgentStatistics
+from prowlarr.models.api_info_resource import ApiInfoResource as ApiInfoResource
+from prowlarr.models.app_profile_resource import AppProfileResource as AppProfileResource
+from prowlarr.models.application_bulk_resource import ApplicationBulkResource as ApplicationBulkResource
+from prowlarr.models.application_resource import ApplicationResource as ApplicationResource
+from prowlarr.models.application_sync_level import ApplicationSyncLevel as ApplicationSyncLevel
+from prowlarr.models.apply_tags import ApplyTags as ApplyTags
+from prowlarr.models.authentication_required_type import AuthenticationRequiredType as AuthenticationRequiredType
+from prowlarr.models.authentication_type import AuthenticationType as AuthenticationType
+from prowlarr.models.backup_resource import BackupResource as BackupResource
+from prowlarr.models.backup_type import BackupType as BackupType
+from prowlarr.models.book_search_param import BookSearchParam as BookSearchParam
+from prowlarr.models.certificate_validation_type import CertificateValidationType as CertificateValidationType
+from prowlarr.models.command import Command as Command
+from prowlarr.models.command_priority import CommandPriority as CommandPriority
+from prowlarr.models.command_resource import CommandResource as CommandResource
+from prowlarr.models.command_status import CommandStatus as CommandStatus
+from prowlarr.models.command_trigger import CommandTrigger as CommandTrigger
+from prowlarr.models.contract_field import ContractField as ContractField
+from prowlarr.models.custom_filter_resource import CustomFilterResource as CustomFilterResource
+from prowlarr.models.database_type import DatabaseType as DatabaseType
+from prowlarr.models.development_config_resource import DevelopmentConfigResource as DevelopmentConfigResource
+from prowlarr.models.download_client_bulk_resource import DownloadClientBulkResource as DownloadClientBulkResource
+from prowlarr.models.download_client_category import DownloadClientCategory as DownloadClientCategory
+from prowlarr.models.download_client_config_resource import DownloadClientConfigResource as DownloadClientConfigResource
+from prowlarr.models.download_client_resource import DownloadClientResource as DownloadClientResource
+from prowlarr.models.download_protocol import DownloadProtocol as DownloadProtocol
+from prowlarr.models.health_check_result import HealthCheckResult as HealthCheckResult
+from prowlarr.models.health_resource import HealthResource as HealthResource
+from prowlarr.models.history_event_type import HistoryEventType as HistoryEventType
+from prowlarr.models.history_resource import HistoryResource as HistoryResource
+from prowlarr.models.history_resource_paging_resource import HistoryResourcePagingResource as HistoryResourcePagingResource
+from prowlarr.models.host_config_resource import HostConfigResource as HostConfigResource
+from prowlarr.models.host_statistics import HostStatistics as HostStatistics
+from prowlarr.models.indexer_bulk_resource import IndexerBulkResource as IndexerBulkResource
+from prowlarr.models.indexer_capability_resource import IndexerCapabilityResource as IndexerCapabilityResource
+from prowlarr.models.indexer_category import IndexerCategory as IndexerCategory
+from prowlarr.models.indexer_privacy import IndexerPrivacy as IndexerPrivacy
+from prowlarr.models.indexer_proxy_resource import IndexerProxyResource as IndexerProxyResource
+from prowlarr.models.indexer_resource import IndexerResource as IndexerResource
+from prowlarr.models.indexer_statistics import IndexerStatistics as IndexerStatistics
+from prowlarr.models.indexer_stats_resource import IndexerStatsResource as IndexerStatsResource
+from prowlarr.models.indexer_status_resource import IndexerStatusResource as IndexerStatusResource
+from prowlarr.models.localization_option import LocalizationOption as LocalizationOption
+from prowlarr.models.log_file_resource import LogFileResource as LogFileResource
+from prowlarr.models.log_resource import LogResource as LogResource
+from prowlarr.models.log_resource_paging_resource import LogResourcePagingResource as LogResourcePagingResource
+from prowlarr.models.movie_search_param import MovieSearchParam as MovieSearchParam
+from prowlarr.models.music_search_param import MusicSearchParam as MusicSearchParam
+from prowlarr.models.notification_resource import NotificationResource as NotificationResource
+from prowlarr.models.ping_resource import PingResource as PingResource
+from prowlarr.models.privacy_level import PrivacyLevel as PrivacyLevel
+from prowlarr.models.provider_message import ProviderMessage as ProviderMessage
+from prowlarr.models.provider_message_type import ProviderMessageType as ProviderMessageType
+from prowlarr.models.proxy_type import ProxyType as ProxyType
+from prowlarr.models.release_resource import ReleaseResource as ReleaseResource
+from prowlarr.models.runtime_mode import RuntimeMode as RuntimeMode
+from prowlarr.models.search_param import SearchParam as SearchParam
+from prowlarr.models.select_option import SelectOption as SelectOption
+from prowlarr.models.sort_direction import SortDirection as SortDirection
+from prowlarr.models.system_resource import SystemResource as SystemResource
+from prowlarr.models.tag_details_resource import TagDetailsResource as TagDetailsResource
+from prowlarr.models.tag_resource import TagResource as TagResource
+from prowlarr.models.task_resource import TaskResource as TaskResource
+from prowlarr.models.tv_search_param import TvSearchParam as TvSearchParam
+from prowlarr.models.ui_config_resource import UiConfigResource as UiConfigResource
+from prowlarr.models.update_changes import UpdateChanges as UpdateChanges
+from prowlarr.models.update_mechanism import UpdateMechanism as UpdateMechanism
+from prowlarr.models.update_resource import UpdateResource as UpdateResource
+from prowlarr.models.user_agent_statistics import UserAgentStatistics as UserAgentStatistics
+
+""",
+            name=__name__,
+            doc=__doc__,
+        )
+    )
