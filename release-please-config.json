@@ -1,0 +1,16 @@
+{
+    "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+    "release-type": "python",
+    "packages": {
+        ".": {
+            "extra-files": [
+                "README.md",
+                "pyproject.toml",
+                "setup.py",
+                "prowlarr/__init__.py",
+                "prowlarr/configuration.py",
+                "prowlarr/api_client.py"
+            ]
+        }
+    }
+}
