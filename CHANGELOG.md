@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.1.2](https://github.com/devopsarr/prowlarr-py/compare/v1.1.1...v1.1.2) (2026-03-27)
+
+
+### Bug Fixes
+
+* **deps:** update dependency prowlarr/prowlarr to v2.1.5.5216 ([e61443f](https://github.com/devopsarr/prowlarr-py/commit/e61443f5ff15368db7cd0d759e7ae042ce3525ff))
+* **deps:** update dependency prowlarr/prowlarr to v2.3.0.5236 ([9f52300](https://github.com/devopsarr/prowlarr-py/commit/9f523008bdeba17803eb985b63d655913845d15d))
+* **deps:** update openapitools/openapi-generator-cli docker tag to v7.16.0 ([79589a4](https://github.com/devopsarr/prowlarr-py/commit/79589a4338dec8bf740ae9f7b3962fe510e6d9b9))
+* **deps:** update openapitools/openapi-generator-cli docker tag to v7.17.0 ([99207da](https://github.com/devopsarr/prowlarr-py/commit/99207da7828871864181f166d10153eaa7de62a5))
+* **deps:** update openapitools/openapi-generator-cli docker tag to v7.18.0 ([0743f7b](https://github.com/devopsarr/prowlarr-py/commit/0743f7b2b825649e141b9508b3c6ecef0d860ae9))
+* **deps:** update openapitools/openapi-generator-cli docker tag to v7.18.0 ([42bc47e](https://github.com/devopsarr/prowlarr-py/commit/42bc47e0f8e924872891ec5a973f13e07e0ea4ec))
+* **deps:** update openapitools/openapi-generator-cli docker tag to v7.19.0 ([981854e](https://github.com/devopsarr/prowlarr-py/commit/981854eab16b85783a7ea2d7933bc265476dcb55))
+* **deps:** update openapitools/openapi-generator-cli docker tag to v7.19.0 ([e8a56a1](https://github.com/devopsarr/prowlarr-py/commit/e8a56a12c9c7a1133fafd424d338b57d9d5a3b31))
+* **deps:** update openapitools/openapi-generator-cli docker tag to v7.20.0 ([fed5ccf](https://github.com/devopsarr/prowlarr-py/commit/fed5ccf16992f42c031feb807a1281c39d9cb232))
+* **deps:** update openapitools/openapi-generator-cli docker tag to v7.20.0 ([3b669e9](https://github.com/devopsarr/prowlarr-py/commit/3b669e92e62d948070fe0f8999adc4949517bd1b))
+* **deps:** update openapitools/openapi-generator-cli docker tag to v7.21.0 ([c97bbf6](https://github.com/devopsarr/prowlarr-py/commit/c97bbf6cfd767602ba062a28f0acf81aaa0004b9))
+* **deps:** update openapitools/openapi-generator-cli docker tag to v7.21.0 ([f0a5824](https://github.com/devopsarr/prowlarr-py/commit/f0a5824e1a753e10de48dc9b048e891a0c2ca600))
+
 ## [1.1.1](https://github.com/devopsarr/prowlarr-py/compare/v1.1.0...v1.1.1) (2025-09-02)
 
 
