@@ -91,8 +91,7 @@ class ContractField(BaseModel):
         _items = []
         if self.select_options:
             for _item_select_options in self.select_options:
-                if _item_select_options:
-                    _items.append(_item_select_options.to_dict())
+                _items.append(_item_select_options.to_dict() if _item_select_options is not None else None)
             _dict['selectOptions'] = _items
         # set to None if name (nullable) is None
         # and model_fields_set contains the field
