@@ -78,8 +78,7 @@ class IndexerCategory(BaseModel):
         _items = []
         if self.sub_categories:
             for _item_sub_categories in self.sub_categories:
-                if _item_sub_categories:
-                    _items.append(_item_sub_categories.to_dict())
+                _items.append(_item_sub_categories.to_dict() if _item_sub_categories is not None else None)
             _dict['subCategories'] = _items
         # set to None if name (nullable) is None
         # and model_fields_set contains the field

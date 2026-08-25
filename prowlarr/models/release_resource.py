@@ -109,8 +109,7 @@ class ReleaseResource(BaseModel):
         _items = []
         if self.categories:
             for _item_categories in self.categories:
-                if _item_categories:
-                    _items.append(_item_categories.to_dict())
+                _items.append(_item_categories.to_dict() if _item_categories is not None else None)
             _dict['categories'] = _items
         # set to None if guid (nullable) is None
         # and model_fields_set contains the field
