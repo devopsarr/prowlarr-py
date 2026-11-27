@@ -1,5 +1,35 @@
 # Changelog
 
+## 1.1.2 (2026-11-27)
+
+## What's Changed
+* fix(deps): update openapitools/openapi-generator-cli docker tag to v7.16.0 by @devopsarr[bot] in https://github.com/devopsarr/prowlarr-py/pull/81
+* fix(deps): update dependency prowlarr/prowlarr to v2.1.5.5216 by @devopsarr[bot] in https://github.com/devopsarr/prowlarr-py/pull/83
+* fix(deps): update openapitools/openapi-generator-cli docker tag to v7.18.0 by @devopsarr[bot] in https://github.com/devopsarr/prowlarr-py/pull/84
+* fix(deps): update openapitools/openapi-generator-cli docker tag to v7.19.0 by @devopsarr[bot] in https://github.com/devopsarr/prowlarr-py/pull/85
+* fix(deps): update openapitools/openapi-generator-cli docker tag to v7.20.0 by @devopsarr[bot] in https://github.com/devopsarr/prowlarr-py/pull/86
+* chore: add files for relase please v4 migration by @devopsarr[bot] in https://github.com/devopsarr/prowlarr-py/pull/87
+* fix(deps): update openapitools/openapi-generator-cli docker tag to v7.21.0 by @devopsarr[bot] in https://github.com/devopsarr/prowlarr-py/pull/88
+* fix(deps): update dependency prowlarr/prowlarr to v2.3.5.5327 by @devopsarr[bot] in https://github.com/devopsarr/prowlarr-py/pull/89
+* fix(deps): update openapitools/openapi-generator-cli docker tag to v7.22.0 by @devopsarr[bot] in https://github.com/devopsarr/prowlarr-py/pull/90
+* fix(deps): update openapitools/openapi-generator-cli docker tag to v7.23.0 by @devopsarr[bot] in https://github.com/devopsarr/prowlarr-py/pull/91
+* fix(deps): update dependency prowlarr/prowlarr to v2.4.0.5397 by @devopsarr[bot] in https://github.com/devopsarr/prowlarr-py/pull/92
+* fix(deps): update openapitools/openapi-generator-cli docker tag to v7.24.0 by @devopsarr[bot] in https://github.com/devopsarr/prowlarr-py/pull/93
+* fix(deps): update dependency prowlarr/prowlarr to v2.5.2.5491 by @devopsarr[bot] in https://github.com/devopsarr/prowlarr-py/pull/94
+* fix(deps): update openapitools/openapi-generator-cli docker tag to v7.25.0 by @devopsarr[bot] in https://github.com/devopsarr/prowlarr-py/pull/95
+* fix(deps): update dependency prowlarr/prowlarr to v2.6.5.5623 by @devopsarr[bot] in https://github.com/devopsarr/prowlarr-py/pull/96
+* fix(deps): update openapitools/openapi-generator-cli docker tag to v7.26.0 by @devopsarr[bot] in https://github.com/devopsarr/prowlarr-py/pull/97
+* fix(deps): update dependency prowlarr/prowlarr to v2.7.0.5723 by @devopsarr[bot] in https://github.com/devopsarr/prowlarr-py/pull/98
+* chore: align-versions by @devopsarr[bot] in https://github.com/devopsarr/prowlarr-py/pull/99
+* chore: edit changelog type to github by @devopsarr[bot] in https://github.com/devopsarr/prowlarr-py/pull/100
+* fix(deps): update dependency seerr-team/seerr to v3.5.2 by @devopsarr[bot] in https://github.com/devopsarr/prowlarr-py/pull/101
+* fix(deps): update dependency prowlarr/prowlarr to v3 by @devopsarr[bot] in https://github.com/devopsarr/prowlarr-py/pull/102
+* fix(deps): update dependency prowlarr/prowlarr to v3.1.0.5799 by @devopsarr[bot] in https://github.com/devopsarr/prowlarr-py/pull/103
+* fix(deps): update openapitools/openapi-generator-cli docker tag to v7.28.0 by @devopsarr[bot] in https://github.com/devopsarr/prowlarr-py/pull/104
+
+
+**Full Changelog**: https://github.com/devopsarr/prowlarr-py/compare/v1.1.1...v1.1.2
+
 ## [1.1.1](https://github.com/devopsarr/prowlarr-py/compare/v1.1.0...v1.1.1) (2025-09-02)
 
 
